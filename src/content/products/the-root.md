@@ -4,6 +4,8 @@ subtitle: "Book II"
 kind: book
 priceLabel: "$27"
 gumroadUrl: "https://yochay4.gumroad.com/l/return"
+image: "/covers/the-root-600.jpg"
+imageLarge: "/covers/the-root-1200.jpg"
 status: published
 order: 2
 pages: "80 pages + 9 guided audios"

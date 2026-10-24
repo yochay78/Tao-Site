@@ -5,7 +5,7 @@ const products = defineCollection({
   schema: z.object({
     title: z.string(), subtitle: z.string().optional(), kind: z.enum(['book','free','music']),
     priceLabel: z.string(), gumroadUrl: z.string().url().optional(),
-    amazonUrl: z.string().url().optional(), image: z.string().optional(),
+    amazonUrl: z.string().url().optional(), image: z.string().optional(), imageLarge: z.string().optional(),
     status: z.enum(['published','coming-soon']), order: z.number().default(10),
     cardNote: z.string(), pages: z.string().optional(),
   }),

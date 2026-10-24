@@ -6,8 +6,8 @@ const buyable = d.status==='published' && d.gumroadUrl;
 const glyph = d.kind==='music' ? '音' : d.kind==='free' ? '道' : '守';
 ---
 <article class="card">
-  <div class="cover" role="img" aria-label={`Cover placeholder for ${d.title}`}>
-    {d.image ? <img src={d.image} alt={d.title} loading="lazy" /> : <>
+  <div class="cover">
+    {d.image ? <img src={d.image} alt={`Cover of ${d.title}`} loading="lazy" width="600" height="800" /> : <>
     <span class="c">{glyph}</span><span class="t">{d.title}</span><span class="a">Yod Mem · Silent Power</span></>}
   </div>
   <h3>{d.title}</h3>

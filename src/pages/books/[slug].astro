@@ -14,7 +14,7 @@ const ld = { '@context':'https://schema.org','@type':'Book',name:d.title,author:
 ---
 <Base title={d.title} description={d.cardNote} type="book" jsonLd={ld}>
 <section><div class="wrap" style="display:grid;gap:48px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
-<div class="cover" style="max-width:320px;width:100%;margin:0 auto" role="img" aria-label="Cover placeholder"><span class="c">守</span><span class="t">{d.title}</span><span class="a">Yod Mem · Silent Power</span></div>
+<div class="cover" style="max-width:320px;width:100%;margin:0 auto">{d.imageLarge ? <img src={d.imageLarge} alt={`Cover of ${d.title}`} width="1200" height="1600" /> : <><span class="c">守</span><span class="t">{d.title}</span><span class="a">Yod Mem · Silent Power</span></>}</div>
 <div class="prose"><div class="label">{d.subtitle}</div><h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>
 <p class="note sans">{d.pages} · by Yod Mem</p>
 <Content />

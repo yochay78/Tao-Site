@@ -27,7 +27,7 @@ const articles = (await getCollection('journal')).sort((a,b)=>+b.data.date-+a.da
 </div></section>
 <hr class="rule">
 <section><div class="wrap" style="display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center">
-<div class="cover" style="max-width:300px;width:100%;margin:0 auto" role="img" aria-label="Cover placeholder"><span class="c">守</span><span class="t">{book.data.title}</span><span class="a">Yod Mem · Silent Power</span></div>
+<div class="cover" style="max-width:300px;width:100%;margin:0 auto">{book.data.image ? <img src={book.data.image} alt={`Cover of ${book.data.title}`} /> : <><span class="c">守</span><span class="t">{book.data.title}</span><span class="a">Yod Mem · Silent Power</span></>}</div>
 <div><div class="label">Featured book</div><h2>{book.data.title}</h2>
 <p>{book.data.cardNote} Strength that does not push, in {book.data.pages}.</p>
 <p><a class="btn" href={`/books/${book.id}/`}>Read more</a></p></div>
