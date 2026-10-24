@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+interface Props { title: string; description: string; type?: string; jsonLd?: object }
+const { title, description, type = 'website', jsonLd } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const full = title === site.name ? `${site.name} | Tao Te Ching` : `${title} | ${site.name}`;
+const path = Astro.url.pathname;
+const links = [['Books','/books/'],['Free','/free/'],['Music','/music/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{full}</title><meta name="description" content={description}>
+<link rel="canonical" href={canonical}>
+<meta property="og:title" content={full}><meta property="og:description" content={description}>
+<meta property="og:type" content={type}><meta property="og:url" content={canonical}>
+<meta property="og:image" content={new URL("/og.png", Astro.site)}><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+{site.ga4 && <><script async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4}`}></script>
+<script is:inline define:vars={{id: site.ga4}}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',id);</script></>}
+</head>
+<body>
+<a href="#main" class="sans" style="position:absolute;left:-999px">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="/"><span>道</span>SILENT POWER</a>
+<nav aria-label="Main">{links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined} class={['Free','Music'].includes(n)?'hide-m':''}>{n}</a>)}</nav>
+</div></header>
+<main id="main"><slot /></main>
+<footer class="site"><div class="wrap">
+<div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>The Way of Lao Tzu · by {site.author}</div>
+<div class="sans"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
+<div class="sans"><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
+</div></footer>
+<script is:inline>
+// Analytics hooks: any element with data-track sends a GA4 event if GA4 is configured.
+document.addEventListener('click',function(e){var el=e.target.closest('[data-track]');if(!el||typeof gtag!=='function')return;gtag('event',el.dataset.track,{item:el.dataset.item||'',page:location.pathname});});
+// Lazy YouTube: no third-party requests until the visitor presses play.
+document.addEventListener('click',function(e){var b=e.target.closest('[data-yt]');if(!b)return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title=b.dataset.title;b.replaceWith(f);});
+</script>
+</body></html>

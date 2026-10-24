@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths(){
+  return (await getCollection('journal')).map(p=>({params:{slug:p.id},props:{p}}));
+}
+const { p } = Astro.props;
+const { Content } = await render(p);
+const d = p.data;
+const ctas = {
+ 'stop-pushing':['Stop Pushing So Hard (free)','/free/'],
+ 'still':["When Your Mind Won't Slow Down (free)",'/free/'],
+ 'unshakable':['The Taoist Secret to Becoming Unshakable','/books/becoming-unshakable/'],
+ 'root':['The Taoist Secret of the Root','/books/the-root/'] } as const;
+const [ctaTitle, ctaHref] = ctas[d.cta];
+const ld = { '@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,datePublished:d.date.toISOString(),author:{'@type':'Person',name:'Yod Mem'} };
+---
+<Base title={d.title} description={d.description} type="article" jsonLd={ld}>
+<article><section><div class="wrap narrow prose">
+<div class="label">{d.chapter}</div><h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>
+<Content />
+<hr class="rule" style="margin:40px 0">
+<p class="sans"><a class="btn" href={ctaHref} data-track="article_cta" data-item={d.cta}>{ctaTitle} →</a></p>
+</div></section></article>
+</Base>

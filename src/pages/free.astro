@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+const items = (await getCollection('products')).filter(p=>p.data.kind==='free').sort((a,b)=>a.data.order-b.data.order);
+---
+<Base title="Free Books" description="Two free short books on the Tao: Stop Pushing So Hard, and When Your Mind Won't Slow Down.">
+<section><div class="wrap"><div class="label">Free</div><h1>Start here.</h1>
+<p style="max-width:560px">Two short books, free. On the Gumroad page, type <strong>0</strong> in the price box to get yours.</p>
+<div class="grid">{items.map(p=><ProductCard p={p}/>)}</div></div></section>
+</Base>

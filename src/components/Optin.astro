@@ -1,0 +1,12 @@
+---
+import { site } from '../data/site';
+---
+<section class="optin"><div class="wrap narrow">
+<div class="label">Stay in the quiet</div>
+<h2>Occasional notes on the Tao.</h2>
+<p>Short emails, no noise. Unsubscribe any time.</p>
+{site.gumroadSubscribeEmbed
+  ? <iframe src={site.gumroadSubscribeEmbed} title="Subscribe by email" loading="lazy"></iframe>
+  : <a class="btn" href={site.gumroadProfile} rel="noopener" data-track="subscribe_click">Subscribe on Gumroad</a>}
+<p class="note" style="margin-top:18px">Emails are sent through Gumroad. See the <a href="/privacy/">privacy page</a>.</p>
+</div></section>

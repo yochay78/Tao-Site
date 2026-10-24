@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import VideoCard from '../components/VideoCard.astro';
+import { videos, site } from '../data/site';
+---
+<Base title="Watch" description="Selected Silent Power videos on the Tao Te Ching.">
+<section><div class="wrap"><div class="label">Watch</div><h1>Videos</h1>
+<div class="grid">{videos.map(v=><VideoCard {...v}/>)}</div>
+<p style="margin-top:32px"><a class="btn ghost" href={site.youtubeChannel} rel="noopener">All videos on YouTube</a></p>
+<p class="note">Videos load from YouTube only when you press play.</p></div></section>
+</Base>

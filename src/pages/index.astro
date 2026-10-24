@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import VideoCard from '../components/VideoCard.astro';
+import Optin from '../components/Optin.astro';
+import { getCollection } from 'astro:content';
+import { videos } from '../data/site';
+const products = (await getCollection('products')).sort((a,b)=>a.data.order-b.data.order);
+const free = products.filter(p=>p.data.kind==='free');
+const book = products.find(p=>p.id==='becoming-unshakable')!;
+const articles = (await getCollection('journal')).sort((a,b)=>+b.data.date-+a.data.date).slice(0,3);
+---
+<Base title="Silent Power" description="Ancient Taoist wisdom for a world that never stops. Books, free reading, music and videos from Silent Power, the way of Lao Tzu.">
+<section class="hero"><div class="wrap">
+<div class="seal" aria-hidden="true">道</div>
+<div class="label">The Way of Lao Tzu</div>
+<h1>Stop Fighting Life.<br>Start Living It.</h1>
+<p class="sub">Ancient Taoist wisdom for a world that never stops.</p>
+<a class="btn" href="/free/" data-track="hero_cta">Begin Your Journey →</a>
+<p class="label" style="margin-top:34px;color:var(--ink-soft)">Read · Watch · Listen · Practice</p>
+</div></section>
+<hr class="rule">
+<section><div class="wrap">
+<div class="label">Start here</div><h2>Two free books.</h2>
+<p style="max-width:560px">Short, plain and free. A good way to meet the Tao before deciding anything else.</p>
+<div class="grid">{free.map(p=><ProductCard p={p}/>)}</div>
+</div></section>
+<hr class="rule">
+<section><div class="wrap" style="display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center">
+<div class="cover" style="max-width:300px;width:100%;margin:0 auto" role="img" aria-label="Cover placeholder"><span class="c">守</span><span class="t">{book.data.title}</span><span class="a">Yod Mem · Silent Power</span></div>
+<div><div class="label">Featured book</div><h2>{book.data.title}</h2>
+<p>{book.data.cardNote} Strength that does not push, in {book.data.pages}.</p>
+<p><a class="btn" href={`/books/${book.id}/`}>Read more</a></p></div>
+</div></section>
+<hr class="rule">
+<section><div class="wrap"><div class="label">Watch</div><h2>Selected videos</h2>
+<div class="grid">{videos.slice(0,3).map(v=><VideoCard {...v}/>)}</div>
+<p style="margin-top:28px"><a href="/watch/">More videos →</a></p></div></section>
+<hr class="rule">
+<section><div class="wrap"><div class="label">The Tao Journal</div><h2>Short essays on the Tao Te Ching</h2>
+<div class="grid">{articles.map(a=><a class="card" href={`/journal/${a.id}/`} style="text-decoration:none"><h3>{a.data.title}</h3><p>{a.data.description}</p></a>)}</div></div></section>
+<Optin />
+<section><div class="wrap narrow"><div class="label">About</div><h2>Who is behind Silent Power</h2>
+<p>Silent Power is an independent project by Yod Mem: videos, books and music that make the Tao Te Ching accessible without making it shallow.</p>
+<p><a href="/about/">Read more →</a></p></div></section>
+</Base>

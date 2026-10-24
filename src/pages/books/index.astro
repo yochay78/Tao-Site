@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+const items = (await getCollection('products')).filter(p=>p.data.kind==='book').sort((a,b)=>a.data.order-b.data.order);
+---
+<Base title="Books" description="Books on the Tao Te Ching by Yod Mem: The Taoist Secret to Becoming Unshakable and The Taoist Secret of the Root.">
+<section><div class="wrap"><div class="label">Books</div><h1>Books</h1>
+<p style="max-width:560px">Written for people who never read the Tao Te Ching. Delivered as phone-friendly PDFs through Gumroad.</p>
+<div class="grid">{items.map(p=><ProductCard p={p}/>)}</div></div></section>
+</Base>

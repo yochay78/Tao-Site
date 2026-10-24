@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const a = (await getCollection('journal')).sort((x,y)=>+y.data.date-+x.data.date);
+---
+<Base title="The Tao Journal" description="Short essays on the Tao Te Ching, organized by chapter and theme.">
+<section><div class="wrap"><div class="label">Journal</div><h1>The Tao Journal</h1>
+<div class="grid">{a.map(x=><a class="card" href={`/journal/${x.id}/`} style="text-decoration:none"><div class="label">{x.data.chapter}</div><h3>{x.data.title}</h3><p>{x.data.description}</p></a>)}</div></div></section>
+</Base>

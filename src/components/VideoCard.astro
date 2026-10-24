@@ -1,0 +1,6 @@
+---
+const { id, title } = Astro.props;
+---
+<div class="video-card"><button type="button" data-yt={id} data-title={title} aria-label={`Play: ${title}`}>
+<img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" loading="lazy" width="480" height="360"><span class="play">▶</span></button>
+<p style="font-size:1rem;margin:10px 0 0">{title}</p></div>

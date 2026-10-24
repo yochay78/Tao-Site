@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+const items = (await getCollection('products')).filter(p=>p.data.kind==='music');
+---
+<Base title="Music" description="The Sound of the Tao: twelve tracks of cello and ambient music, about 56 minutes, ending with sleep.">
+<section><div class="wrap"><div class="label">Listen</div><h1>The Sound of the Tao</h1>
+<p style="max-width:560px">The music from the videos, in one album.</p>
+<div class="grid">{items.map(p=><ProductCard p={p}/>)}</div></div></section>
+</Base>

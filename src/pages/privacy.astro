@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Privacy" description="How Silent Power handles your data.">
+<section><div class="wrap narrow prose"><h1>Privacy</h1>
+<p>This site does not have accounts and does not process payments.</p>
+<h2>Purchases and email</h2>
+<p>Purchases, downloads and email subscriptions are handled by Gumroad, which collects the details you enter there under its own privacy policy. If you subscribe by email, messages are sent through Gumroad and every email includes an unsubscribe link.</p>
+<h2>Analytics</h2>
+<p>If analytics are enabled, we use Google Analytics 4 to count visits and button clicks. No personal profiles are built by this site.</p>
+<h2>Videos</h2>
+<p>YouTube videos load only after you press play, using YouTube's privacy-enhanced mode. Thumbnails are loaded from YouTube's image servers.</p>
+<h2>Contact</h2>
+<p>To ask about your data, write to <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+</div></section></Base>
