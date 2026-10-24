@@ -9,7 +9,7 @@ A name that can be named
 is not the lasting name.
 
 The Nameless, root of heaven and earth.
-The named, mother of ten thousand things.
+The named, mother of myriad things.
 
 Free of wanting, you see the darkness.
 Full of wanting, you see only its edges.
@@ -24,7 +24,7 @@ he: `הדרך שאפשר לומר
 איננו השם הקבוע.
 
 חסר השם, שורש שמים וארץ.
-בעל השם, אם עשרת אלפים הדברים.
+בעל השם, אם רבבות הדברים.
 
 בלי חשק, אתה רואה את החושך.
 מלא חשק, אתה רואה רק את גבולותיו.
@@ -37,7 +37,7 @@ he: `הדרך שאפשר לומר
 en: `Beauty is known
 because there is ugliness.
 Good is known
-because there is its lack.
+because there is bad.
 
 Everything and Nothing give birth to each other.
 Hard and easy complete each other.
@@ -57,7 +57,7 @@ it never leaves him.`,
 he: `היופי ידוע
 כי יש כיעור.
 הטוב ידוע
-כי יש חסרונו.
+כי יש רע.
 
 הכול והאין מולידים זה את זה.
 קשה וקל משלימים זה את זה.
@@ -121,7 +121,7 @@ joins the dust.
 
 Hidden, yet always here.
 I do not know whose child it is.
-It seems older than any god.`,
+It was before any god.`,
 he: `הדרך היא קערה ריקה.
 משתמשים בה, והיא לעולם לא מלאה.
 עמוקה, אב קדמון לכל הדברים.
@@ -133,10 +133,10 @@ he: `הדרך היא קערה ריקה.
 
 נסתרת, ובכל זאת תמיד כאן.
 איני יודע בן מי היא.
-נראה שקדמה לכל אל.` },
+היא הייתה לפני כל אל.` },
 { n: 5,
 en: `Heaven and earth are not sentimental.
-They treat the ten thousand things
+They treat the myriad things
 like straw dogs.
 The Nameless is not sentimental.
 He treats people
@@ -150,7 +150,7 @@ Move it, and more comes out.
 Words wear out.
 Better to keep to the center.`,
 he: `שמים וארץ אינם רגשניים.
-הם נוהגים בעשרת אלפים הדברים
+הם נוהגים ברבבות הדברים
 ככלבי קש.
 חסר השם אינו רגשני.
 הוא נוהג באנשים
@@ -194,8 +194,8 @@ and ends up ahead.
 Let go of self,
 and the self remains.
 
-Is it not because he asks nothing for himself
-that all he needs is given?`,
+He asks nothing for himself,
+and so everything he needs comes to him.`,
 he: `השמים מחזיקים. הארץ מחזיקה מעמד.
 הם מחזיקים מפני
 שאינם חיים לעצמם.
@@ -205,11 +205,11 @@ he: `השמים מחזיקים. הארץ מחזיקה מעמד.
 מרפים מהעצמי,
 והעצמי נשאר.
 
-האין זה משום שאינו מבקש דבר לעצמו
-שכל מה שהוא צריך ניתן לו?` },
+הוא לא מבקש דבר לעצמו,
+ולכן כל מה שהוא צריך בא אליו.` },
 { n: 8,
 en: `The highest good is like water.
-Water serves ten thousand things
+Water serves myriad things
 and never competes.
 It settles where others refuse to go,
 and so it is near the Way.
@@ -225,7 +225,7 @@ Move at the right time.
 Do not fight,
 and no one can blame you.`,
 he: `הטוב העליון דומה למים.
-המים משרתים את עשרת אלפים הדברים
+המים משרתים את רבבות הדברים
 ואינם מתחרים.
 הם מתיישבים במקום שאחרים מסרבים ללכת אליו,
 ולכן הם קרובים לדרך.
