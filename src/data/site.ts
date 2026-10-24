@@ -9,7 +9,7 @@ export const site = {
   // Gumroad follow form (official embed): posts the email straight to Gumroad.
   gumroadFollow: { action: 'https://gumroad.com/follow_from_embed_form', sellerId: '2563885526218' },
   // Optional GA4 measurement id, e.g. 'G-XXXXXXXXXX'
-  ga4: '',
+  ga4: 'G-N8PFLTXLSH',
 };
 export const videos = [
   { id: '7EIF8r4aHRk', title: 'The Ancient Taoist Secret to Becoming Unshakable' },
