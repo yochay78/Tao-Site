@@ -1,46 +1,81 @@
 ---
 import Base from '../layouts/Base.astro';
-import ProductCard from '../components/ProductCard.astro';
 import VideoCard from '../components/VideoCard.astro';
 import Optin from '../components/Optin.astro';
 import { getCollection } from 'astro:content';
 import { videos } from '../data/site';
 const products = (await getCollection('products')).sort((a,b)=>a.data.order-b.data.order);
+const books = products.filter(p=>p.data.kind==='book');
 const free = products.filter(p=>p.data.kind==='free');
-const book = products.find(p=>p.id==='becoming-unshakable')!;
+const img = (id: string) => products.find(p=>p.id===id)!.data.image!;
 const articles = (await getCollection('journal')).sort((a,b)=>+b.data.date-+a.data.date).slice(0,3);
 ---
-<Base title="Silent Power" description="Ancient Taoist wisdom for a world that never stops. Books, free reading, music and videos from Silent Power, the way of Lao Tzu.">
+<Base title="Silent Power" description="There is a secret in the oldest book on strength. Taoist books, free reading, music and videos from Silent Power.">
 <section class="hero"><div class="wrap">
-<div class="seal" aria-hidden="true">道</div>
-<div class="label">The Way of Lao Tzu</div>
-<h1>Stop Fighting Life.<br>Start Living It.</h1>
-<p class="sub">Ancient Taoist wisdom for a world that never stops.</p>
-<a class="btn" href="/free/" data-track="hero_cta">Begin Your Journey →</a>
-<p class="label" style="margin-top:34px;color:var(--ink-soft)">Read · Watch · Listen · Practice</p>
+  <div class="label">3,000 years old. Still unspoken.</div>
+  <h1 style="margin-top:.3em">There is a <em>secret</em><br>in the oldest<br>book on strength.</h1>
+  <div style="display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between;margin-top:30px">
+    <p class="sub">Not about pushing harder.<br>Hidden in plain sight.</p>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <a class="btn" href="/books/becoming-unshakable/" data-track="hero_cta">Uncover the secret</a>
+      <a class="link-soft" href="/free/" data-track="hero_free">Begin with a free book</a>
+    </div>
+  </div>
+  <div class="covers">
+    <img class="c1" src={img('stop-pushing')} alt="Cover of Stop Pushing So Hard" width="1200" height="1600">
+    <img class="c2" src={img('becoming-unshakable')} alt="Cover of The Taoist Secret to Becoming Unshakable" width="1200" height="1600">
+    <img class="c3" src={img('the-root')} alt="Cover of The Taoist Secret of the Root" width="1200" height="1600">
+    <img class="c4" src={img('mind-wont-slow-down')} alt="Cover of When Your Mind Won't Slow Down" width="1200" height="1600">
+  </div>
 </div></section>
-<hr class="rule">
+
+<section class="band"><div class="wrap">
+  <div class="label">Two doors</div>
+  <h2>Into the same secret</h2>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))">
+    {books.map(b => (
+      <article class="card" style="flex-direction:row;gap:24px;align-items:center;flex-wrap:wrap">
+        <a href={`/books/${b.id}/`} style="flex:0 0 150px"><img src={b.data.image} alt={`Cover of ${b.data.title}`} style="width:150px;border-radius:3px" loading="lazy" width="1200" height="1600"></a>
+        <div style="flex:1 1 200px">
+          <div class="label" style="font-size:.7rem">{b.data.subtitle} · {b.data.pages}</div>
+          <h3>{b.data.title}</h3>
+          <p style="margin:6px 0 14px;font-size:.98rem">{b.data.cardNote}</p>
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+            <span style="font-family:'Cormorant Garamond',serif;font-size:2.2rem">{b.data.priceLabel}</span>
+            <a class="btn" href={b.data.gumroadUrl} rel="noopener" data-track="buy_click" data-item={b.id}>Get the book</a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</div></section>
+
 <section><div class="wrap">
-<div class="label">Start here</div><h2>Two free books.</h2>
-<p style="max-width:560px">Short, plain and free. A good way to meet the Tao before deciding anything else.</p>
-<div class="grid">{free.map(p=><ProductCard p={p}/>)}</div>
+  <div class="steps">
+    <div><div class="n">01</div><div class="t">Not what you think.</div><p>Strength points the other way.</p></div>
+    <div><div class="n">02</div><div class="t">One page. One idea.</div><p>Simple to say. Harder to live.</p></div>
+    <div><div class="n">03</div><div class="t">Once seen, never unseen.</div><p>The loud world loosens its grip.</p></div>
+  </div>
 </div></section>
-<hr class="rule">
-<section><div class="wrap" style="display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center">
-<div class="cover" style="max-width:300px;width:100%;margin:0 auto">{book.data.image ? <img src={book.data.image} alt={`Cover of ${book.data.title}`} /> : <><span class="c">守</span><span class="t">{book.data.title}</span><span class="a">Yod Mem · Silent Power</span></>}</div>
-<div><div class="label">Featured book</div><h2>{book.data.title}</h2>
-<p>{book.data.cardNote} Strength that does not push, in {book.data.pages}.</p>
-<p><a class="btn" href={`/books/${book.id}/`}>Read more</a></p></div>
+
+<section class="band"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:36px;align-items:center;justify-content:space-between">
+  <div style="flex:1 1 300px"><div class="label">A first taste</div><h2 style="margin:8px 0 0">Begin with a free book</h2></div>
+  <div style="display:flex;gap:26px;flex-wrap:wrap">
+    {free.map(f => (
+      <a href={f.data.gumroadUrl} rel="noopener" data-track="free_book_click" data-item={f.id} style="text-decoration:none;display:flex;gap:16px;align-items:center;width:310px">
+        <img src={f.data.image} alt={`Cover of ${f.data.title}`} style="width:92px;border-radius:3px" loading="lazy" width="1200" height="1600">
+        <span style="font-weight:500;line-height:1.35">{f.data.title.replace('The Way of the Tao: ','')}<br><span style="color:var(--gold)">Free →</span></span>
+      </a>
+    ))}
+  </div>
 </div></section>
-<hr class="rule">
+
 <section><div class="wrap"><div class="label">Watch</div><h2>Selected videos</h2>
-<div class="grid">{videos.slice(0,3).map(v=><VideoCard {...v}/>)}</div>
-<p style="margin-top:28px"><a href="/watch/">More videos →</a></p></div></section>
+  <div class="grid">{videos.slice(0,3).map(v=><VideoCard {...v}/>)}</div>
+  <p style="margin-top:28px"><a href="/watch/">More videos →</a></p></div></section>
 <hr class="rule">
 <section><div class="wrap"><div class="label">The Tao Journal</div><h2>Short essays on the Tao Te Ching</h2>
-<div class="grid">{articles.map(a=><a class="card" href={`/journal/${a.id}/`} style="text-decoration:none"><h3>{a.data.title}</h3><p>{a.data.description}</p></a>)}</div></div></section>
+  <div class="grid">{articles.map(a=><a class="card" href={`/journal/${a.id}/`} style="text-decoration:none"><h3>{a.data.title}</h3><p>{a.data.description}</p></a>)}</div></div></section>
+
 <Optin />
-<section><div class="wrap narrow"><div class="label">About</div><h2>Who is behind Silent Power</h2>
-<p>Silent Power is an independent project by Yod Mem: videos, books and music that make the Tao Te Ching accessible without making it shallow.</p>
-<p><a href="/about/">Read more →</a></p></div></section>
 </Base>

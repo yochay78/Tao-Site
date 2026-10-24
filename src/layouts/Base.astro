@@ -19,7 +19,7 @@ const links = [['Books','/books/'],['Free','/free/'],['Music','/music/'],['Watch
 <meta property="og:image" content={new URL("/og.png", Astro.site)}><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 {site.ga4 && <><script async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4}`}></script>
 <script is:inline define:vars={{id: site.ga4}}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',id);</script></>}
@@ -28,7 +28,7 @@ const links = [['Books','/books/'],['Free','/free/'],['Music','/music/'],['Watch
 <a href="#main" class="sans" style="position:absolute;left:-999px">Skip to content</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="/"><span>道</span>SILENT POWER</a>
-<nav aria-label="Main">{links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined} class={['Free','Music'].includes(n)?'hide-m':''}>{n}</a>)}</nav>
+<nav aria-label="Main">{links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined} class={['Free','Music','Journal'].includes(n)?'hide-m':''}>{n}</a>)}</nav>
 </div></header>
 <main id="main"><slot /></main>
 <footer class="site"><div class="wrap">
