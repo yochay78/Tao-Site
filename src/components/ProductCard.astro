@@ -7,11 +7,11 @@ const img = d.cover ?? d.coverWide;
 const free = d.priceLabel === 'Free' || d.priceLabel === 'חינם';
 ---
 <article class={`card pcard${he ? ' rtl' : ''}`} dir={he ? 'rtl' : undefined} lang={he ? 'he' : undefined}>
-  <a class={`pcover ${tall ? 'tall' : 'wide'}`} href={`/shop/${p.id}/`} tabindex="-1" aria-hidden="true">
+  <a class={`pcover ${tall ? 'tall' : 'wide'}`} href={`${he ? "/he" : ""}/shop/${p.id}/`} tabindex="-1" aria-hidden="true">
     <img src={img} alt="" loading="lazy" width={tall ? 1200 : 1005} height={tall ? 1600 : 565} />
   </a>
-  <h3><a href={`/shop/${p.id}/`} style="text-decoration:none">{d.title}</a></h3>
+  <h3><a href={`${he ? "/he" : ""}/shop/${p.id}/`} style="text-decoration:none">{d.title}</a></h3>
   <p>{d.shortDescription}</p>
   <div class="price">{d.priceLabel}<span class="fmt"> · {d.format.split('·')[0].trim()}</span></div>
-  <a class={`btn${free ? ' ghost' : ''}`} href={`/shop/${p.id}/`} data-track="product_card_click" data-item={p.id}>{he ? 'לפרטים' : free ? 'See what’s inside' : 'Read more'}</a>
+  <a class={`btn${free ? ' ghost' : ''}`} href={`${he ? "/he" : ""}/shop/${p.id}/`} data-track="product_card_click" data-item={p.id}>{he ? 'לפרטים' : free ? 'See what’s inside' : 'Read more'}</a>
 </article>

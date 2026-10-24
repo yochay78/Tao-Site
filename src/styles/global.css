@@ -69,8 +69,8 @@ footer a{margin-right:16px}
 @media(max-width:640px){header.site .wrap{padding:0 16px}section{padding:56px 0}.hero{padding:44px 0 10px}.brand{font-size:1.05rem;letter-spacing:.08em;white-space:nowrap}.covers .c1,.covers .c4{display:none}.covers .c2{width:240px}.covers .c3{width:170px}}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 /* ---- Upgrade: nav, shop, product pages ---- */
-.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--gold-ink);padding:10px 16px;z-index:50}
-.skip:focus{left:8px;top:8px}
+.skip{position:absolute;inset-inline-start:0;top:0;transform:translateY(-120%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;z-index:50}
+.skip:focus{transform:none}
 nav{display:flex;align-items:center}
 .nav-cta{background:var(--gold);color:var(--gold-ink)!important;padding:9px 16px;border-radius:3px;font-weight:600;margin-left:24px}
 .nav-cta:hover{background:#e3bb6b}
@@ -108,3 +108,13 @@ nav{display:flex;align-items:center}
 .followform{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto}
 .followform input{flex:1 1 240px;padding:15px 16px;font:inherit;border:1px solid #4a3a14;border-radius:3px;background:#fff;color:#111}
 .followform .btn{flex:0 0 auto}
+/* Hebrew (RTL) */
+html[dir=rtl] body{font-family:'Heebo','Inter',system-ui,sans-serif}
+html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3{font-family:'Frank Ruhl Libre','Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.15}
+html[dir=rtl] .label{letter-spacing:.04em;text-transform:none}
+html[dir=rtl] nav a{margin-left:0;margin-right:24px}
+html[dir=rtl] .nav-cta{margin-right:24px;margin-left:0}
+html[dir=rtl] .brand span{margin-right:0;margin-left:.6em}
+html[dir=rtl] .hero h1{font-size:clamp(2.4rem,7vw,5.4rem)}
+html[dir=rtl] .covers .c1{transform:rotate(4deg)}html[dir=rtl] .covers .c3{transform:rotate(-3deg)}
+@media(max-width:760px){html[dir=rtl] nav a{margin:0}html[dir=rtl] .nav-cta{margin:14px 0 0}}

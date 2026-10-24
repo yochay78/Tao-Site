@@ -1,28 +1,33 @@
 ---
 import '../styles/global.css';
 import { site } from '../data/site';
-interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string }
-const { title, description, type = 'website', jsonLd, ogImage = '/og.png' } = Astro.props;
+interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: 'en'|'he'; alt?: string }
+const { title, description, type = 'website', jsonLd, ogImage = '/og.png', lang = 'en', alt } = Astro.props;
+const he = lang === 'he';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const full = title === site.name ? `${site.name} | Tao Te Ching` : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
 const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
-const links = [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const links = he ? [['ספרים ואודיו','/he/shop/'],['צפייה','/he/watch/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const homeHref = he ? '/he/' : '/';
+const ctaText = he ? 'להתחיל בחינם' : 'Start for Free';
+const ctaHref = he ? '/he/free/' : '/free/';
 const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang} dir={he ? 'rtl' : 'ltr'}>
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{full}</title><meta name="description" content={description}>
 {noindex && <meta name="robots" content="noindex, nofollow">}
 <link rel="canonical" href={canonical}>
+{alt && <><link rel="alternate" hreflang={he ? 'he' : 'en'} href={canonical} /><link rel="alternate" hreflang={he ? 'en' : 'he'} href={new URL(alt, Astro.site)} /></>}
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
 <meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
 <slot name="head" />
 {ld.map(o =><script type="application/ld+json" set:html={JSON.stringify(o)} />)}
 {site.ga4 && <><script async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4}`}></script>
@@ -31,11 +36,11 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <body>
 <a href="#main" class="skip">Skip to content</a>
 <header class="site"><div class="wrap">
-<a class="brand" href="/"><span>道</span>SILENT POWER</a>
+<a class="brand" href={homeHref}><span>道</span>SILENT POWER</a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
 <nav id="site-nav" aria-label="Main">
   {links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined}>{n}</a>)}
-  <a class="nav-cta" href="/free/" data-track="nav_free_click">Start for Free</a>
+  <a class="nav-cta" href={ctaHref} data-track="nav_free_click">{ctaText}</a>
 </nav>
 </div></header>
 <main id="main"><slot /></main>

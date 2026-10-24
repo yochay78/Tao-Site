@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../../data/site';
+const he = (await getCollection('products')).filter(p => p.data.language === 'he' && p.data.published).sort((a,b)=>a.data.order-b.data.order);
+const free = he.find(p => p.data.priceLabel === 'חינם')!;
+const paid = he.find(p => p.data.priceLabel !== 'חינם')!;
+---
+<Base lang="he" alt="/" title="Silent Power" description="יש סוד בספר העתיק ביותר על כוח. ספרים, מדריכים וצפייה על הטאו טה צ'ינג, בעברית." jsonLd={{'@context':'https://schema.org','@type':'WebSite',name:'Silent Power',inLanguage:'he',url:'https://silentpower.me/he/'}}>
+<section class="hero"><div class="wrap">
+  <div class="label">בן 2,500 שנה. ועדיין לא נאמר.</div>
+  <h1 style="margin-top:.3em">יש <em>סוד</em><br>בספר העתיק ביותר<br>על כוח.</h1>
+  <div class="heroRow">
+    <p class="sub">לא על דחיפה חזקה יותר.<br>מוסתר לעיני כולם.</p>
+    <div class="heroBtns">
+      <a class="btn" href={`/he/shop/${paid.id}/`} data-track="he_hero_explore">לספר</a>
+      <a class="link-soft" href={`/he/shop/${free.id}/`} data-track="he_hero_free">להתחיל בחינם</a>
+    </div>
+  </div>
+  <div class="covers" style="padding-bottom:60px">
+    <img class="c2" src={paid.data.coverWide} alt={paid.data.title} style="width:min(560px,100%)" width="1005" height="565">
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="label">טעימה ראשונה</div>
+  <h2>להתחיל במדריך חינמי</h2>
+  <p class="lede">שבע דקות קריאה. שלושה ניסויים של עשר שניות.</p>
+  <div class="grid"><ProductCard p={free} /></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">הספר</div>
+  <h2>לעבוד בלי חיכוך</h2>
+  <div class="grid"><ProductCard p={paid} /></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div class="steps">
+    <div><div class="n">01</div><div class="t">לא מה שחשבת.</div><p>כוח מצביע לכיוון ההפוך.</p></div>
+    <div><div class="n">02</div><div class="t">עמוד אחד. רעיון אחד.</div><p>פשוט לומר. קשה יותר לחיות.</p></div>
+    <div><div class="n">03</div><div class="t">אחרי שרואים, לא חוזרים.</div><p>העולם הרועש מרפה.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap narrow">
+  <div class="label">מי עומד מאחורי זה</div>
+  <h2>שלום, אני יוד מם.</h2>
+  <p class="lede">Silent Power הוא פרויקט עצמאי קטן. אני יוצר ספרים, מוזיקה וסרטונים שמנסים להפוך את הטאו טה צ'ינג לברור, בלי להפוך אותו לשטחי.</p>
+</div></section>
+</Base>
