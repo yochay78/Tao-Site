@@ -3,7 +3,7 @@ title: "The Taoist Secret to Becoming Unshakable"
 subtitle: "Book I"
 kind: book
 priceLabel: "$19"
-gumroadUrl: "https://gum.co/frictionless-tao"
+gumroadUrl: "https://yochay4.gumroad.com/l/frictionless-tao"
 status: published
 order: 1
 pages: "84 pages"

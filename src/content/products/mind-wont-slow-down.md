@@ -2,7 +2,7 @@
 title: "The Way of the Tao: When Your Mind Won't Slow Down"
 kind: free
 priceLabel: "Free"
-gumroadUrl: "https://gum.co/still"
+gumroadUrl: "https://yochay4.gumroad.com/l/still"
 status: published
 order: 4
 pages: "18 pages + Sleepless Nights audio"

@@ -3,7 +3,7 @@ title: "The Taoist Secret of the Root"
 subtitle: "Book II"
 kind: book
 priceLabel: "$27"
-gumroadUrl: "https://gum.co/return"
+gumroadUrl: "https://yochay4.gumroad.com/l/return"
 status: published
 order: 2
 pages: "80 pages + 9 guided audios"

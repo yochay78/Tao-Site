@@ -36,6 +36,7 @@ const links = [['Books','/books/'],['Free','/free/'],['Music','/music/'],['Watch
 <div class="sans"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
 <div class="sans"><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
 </div></footer>
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
 <script is:inline>
 // Analytics hooks: any element with data-track sends a GA4 event if GA4 is configured.
 document.addEventListener('click',function(e){var el=e.target.closest('[data-track]');if(!el||typeof gtag!=='function')return;gtag('event',el.dataset.track,{item:el.dataset.item||'',page:location.pathname});});

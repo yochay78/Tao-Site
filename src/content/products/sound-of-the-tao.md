@@ -2,7 +2,7 @@
 title: "The Sound of the Tao"
 kind: music
 priceLabel: "$9"
-gumroadUrl: "https://gum.co/sound-of-tao"
+gumroadUrl: "https://yochay4.gumroad.com/l/sound-of-tao"
 status: published
 order: 5
 pages: "12 tracks, about 56 minutes"
