@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
-  const all = (await getCollection('products')).filter(p => p.data.published);
+  const all = (await getCollection('products')).filter(p => p.data.published && p.data.language==='en');
   return all.map(p => ({ params: { slug: p.id }, props: { p, all } }));
 }
 const { p, all } = Astro.props;

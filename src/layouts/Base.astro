@@ -8,7 +8,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const full = title === site.name ? `${site.name} | Tao Te Ching` : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
 const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
-const links = he ? [['ספרים ואודיו','/he/shop/'],['צפייה','/he/watch/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const links = he ? [['ספרים','/he/shop/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
 const homeHref = he ? '/he/' : '/';
 const ctaText = he ? 'להתחיל בחינם' : 'Start for Free';
 const ctaHref = he ? '/he/free/' : '/free/';
@@ -34,21 +34,28 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <script is:inline define:vars={{id: site.ga4}}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',id);</script></>}
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
+<a href="#main" class="skip">{he ? 'דלג לתוכן' : 'Skip to content'}</a>
 <header class="site"><div class="wrap">
 <a class="brand" href={homeHref}><span>道</span>SILENT POWER</a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
 <nav id="site-nav" aria-label="Main">
   {links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined}>{n}</a>)}
   <a class="nav-cta" href={ctaHref} data-track="nav_free_click">{ctaText}</a>
+  {alt && <a class="langsw" href={alt} hreflang={he ? 'en' : 'he'} lang={he ? 'en' : 'he'} data-track="lang_switch">{he ? 'EN' : 'עב'}</a>}
 </nav>
 </div></header>
 <main id="main"><slot /></main>
-<footer class="site"><div class="wrap">
+{he ? (
+<footer class="site" dir="rtl" lang="he"><div class="wrap">
+<div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>דרכו של לאו־דזה · מאת {site.author}</div>
+<div><a href="/he/shop/">ספרים</a><a href="/he/free/">חינם</a><a href="/he/about/">אודות</a><a href="/privacy/">פרטיות</a><a href="/terms/">תנאים</a><a href={`mailto:${site.email}`}>יצירת קשר</a></div>
+<div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
+</div></footer>
+) : (<footer class="site"><div class="wrap">
 <div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>The Way of Lao Tzu · by {site.author}</div>
 <div><a href="/shop/">Shop</a><a href="/free/">Free</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
 <div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
-</div></footer>
+</div></footer>)}
 <script src="https://gumroad.com/js/gumroad.js" defer></script>
 <script is:inline>
 // Mobile menu

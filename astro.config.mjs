@@ -9,6 +9,8 @@ export default defineConfig({
     '/books': '/shop/',
     '/books/becoming-unshakable': '/shop/becoming-unshakable/',
     '/books/the-root': '/shop/the-root/',
+    '/shop/effortless-he': '/he/shop/effortless-he/',
+    '/shop/frictionless-he': '/he/shop/frictionless-he/',
     '/music': '/shop/sound-of-the-tao/',
   },
 });

@@ -2,12 +2,12 @@
 import Base from '../../layouts/Base.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
-const all = (await getCollection('products')).filter(p => p.data.published).sort((a,b)=>a.data.order-b.data.order);
+const all = (await getCollection('products')).filter(p => p.data.published && p.data.language==='en').sort((a,b)=>a.data.order-b.data.order);
 const by = (c: string) => all.filter(p => p.data.category === c);
 const ld = { '@context':'https://schema.org','@type':'CollectionPage',name:'Books & Audio | Silent Power',
   hasPart: all.map(p => ({'@type':'Product',name:p.data.title,url:new URL(`/shop/${p.id}/`, Astro.site).href})) };
 ---
-<Base title="Books & Audio" description="Taoist books, free guides, guided audio and music from Silent Power. Start with a free book or go straight to the main titles." jsonLd={ld}>
+<Base alt="/he/shop/" title="Books & Audio" description="Taoist books, free guides, guided audio and music from Silent Power. Start with a free book or go straight to the main titles." jsonLd={ld}>
 <section><div class="wrap">
   <div class="label">Books & Audio</div>
   <h1 style="font-size:clamp(2.4rem,6vw,4.4rem)">Everything in one quiet place.</h1>
@@ -24,8 +24,4 @@ const ld = { '@context':'https://schema.org','@type':'CollectionPage',name:'Book
   <div class="grid">{by('audio').map(p => <ProductCard p={p} />)}</div>
 </div></section>
 
-<section class="band" id="hebrew" dir="rtl" lang="he"><div class="wrap">
-  <div class="label">עברית</div><h2>מהדורות בעברית</h2>
-  <div class="grid">{by('hebrew').map(p => <ProductCard p={p} />)}</div>
-</div></section>
 </Base>

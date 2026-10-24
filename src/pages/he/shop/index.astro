@@ -1,0 +1,16 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+const all = (await getCollection('products')).filter(p => p.data.published && p.data.language === 'he').sort((a,b)=>a.data.order-b.data.order);
+const ld = { '@context':'https://schema.org','@type':'CollectionPage',name:'ספרים | Silent Power',inLanguage:'he',
+  hasPart: all.map(p => ({'@type':'Product',name:p.data.title,url:new URL(`/he/shop/${p.id}/`, Astro.site).href})) };
+---
+<Base lang="he" alt="/shop/" title="ספרים" description="ספרים ומדריכים על הטאו טה צ'ינג בעברית מאת Silent Power. להתחיל במדריך חינמי, או ישר לספר." jsonLd={ld}>
+<section><div class="wrap">
+  <div class="label">ספרים</div>
+  <h1 style="font-size:clamp(2.2rem,6vw,4rem)">הכול במקום שקט אחד.</h1>
+  <p class="lede">להתחיל במדריך חינמי, או ישר לספר המלא. התשלום נפתח ישר בעמוד, ומתבצע דרך Gumroad.</p>
+  <div class="grid" style="margin-top:36px">{all.map(p => <ProductCard p={p} />)}</div>
+</div></section>
+</Base>

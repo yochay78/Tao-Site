@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Optin from '../../components/Optin.astro';
+import { getCollection } from 'astro:content';
+const items = (await getCollection('products')).filter(p => p.data.published && p.data.language === 'he' && p.data.priceLabel === 'חינם');
+---
+<Base lang="he" alt="/free/" title="להתחיל בחינם" description="מדריך חינמי בעברית על הטאו: ביצוע ללא מאמץ. מקום עדין להתחיל בו.">
+<section><div class="wrap">
+  <div class="label">חינם</div>
+  <h1 style="font-size:clamp(2.2rem,6vw,4rem)">מתחילים כאן.</h1>
+  <p class="lede">קצר, חינמי, ומיועד לשימוש באותו יום. פותחים את העמוד, מזינים 0 כמחיר אם Gumroad מבקש, וזה שלכם. בלי כרטיס אשראי.</p>
+  <div class="grid" style="margin-top:36px">{items.map(p => <ProductCard p={p} />)}</div>
+</div></section>
+<section class="band"><div class="wrap">
+  <p class="lede">כשתרצו עוד, הספר המלא נמצא ב<a href="/he/shop/">עמוד הספרים</a>.</p>
+</div></section>
+<Optin he />
+</Base>

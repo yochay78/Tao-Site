@@ -1,0 +1,69 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import { getCollection, render } from 'astro:content';
+export async function getStaticPaths() {
+  const all = (await getCollection('products')).filter(p => p.data.published && p.data.language==='he');
+  return all.map(p => ({ params: { slug: p.id }, props: { p, all } }));
+}
+const { p, all } = Astro.props;
+const d = p.data;
+const { Content } = await render(p);
+const he = d.language === 'he';
+const free = d.priceLabel === 'Free' || d.priceLabel === 'חינם';
+const related = d.related.map((id: string) => all.find((x: any) => x.id === id)).filter(Boolean);
+const t = he ? {
+  buy: free ? 'להורדה חינם' : 'לרכישה', via: 'התשלום וההורדה מתבצעים בבטחה דרך Gumroad.',
+  explores: 'מה בפנים', who: 'למי זה מתאים', notfor: 'למי זה פחות מתאים', exp: 'איך זה מרגיש', inc: 'מה מקבלים', rel: 'אולי גם', back: 'כל הספרים'
+} : {
+  buy: free ? 'Get it free' : `Get it for ${d.priceLabel}`, via: 'Checkout and download are handled securely by Gumroad.',
+  explores: 'What it explores', who: 'Who it is for', notfor: 'Who it is not for', exp: 'What it feels like', inc: 'What is included', rel: 'You may also want', back: 'All books & audio'
+};
+const priceNum = d.priceValue ?? (free ? '0' : d.priceLabel.replace(/[^0-9.]/g, ''));
+const cur = d.priceCurrency ?? 'USD';
+const img = new URL(d.cover ?? d.coverWide, Astro.site).href;
+const ld = {
+  '@context': 'https://schema.org', '@type': 'Product', name: d.title, description: d.shortDescription,
+  image: img, brand: { '@type': 'Brand', name: 'Silent Power' }, author: { '@type': 'Person', name: 'Yod Mem' },
+  inLanguage: d.language,
+  offers: { '@type': 'Offer', price: priceNum, priceCurrency: cur, url: d.gumroadUrl, availability: 'https://schema.org/InStock' }
+};
+---
+<Base lang="he" title={d.title} description={d.shortDescription} type="product" jsonLd={ld} ogImage={d.cover ?? d.coverWide}>
+<meta name="x-product" content={p.id} slot="head" />
+<article dir={he ? 'rtl' : undefined} lang={he ? 'he' : undefined} class={he ? 'rtl' : ''}>
+<section class="phero"><div class="wrap pgrid">
+  <div class={`pimg ${d.cover ? 'tall' : 'wide'}`}>
+    <img src={d.cover ?? d.coverWide} alt={he ? `עטיפת ${d.title}` : `Cover of ${d.title}`} width={d.cover ? 1200 : 1005} height={d.cover ? 1600 : 565}>
+  </div>
+  <div class="pinfo">
+    <a class="label" href="/he/shop/" style="text-decoration:none">← {t.back}</a>
+    <h1 style="font-size:clamp(2rem,5vw,3.4rem);margin-top:.4em">{d.title}</h1>
+    <p class="lede">{d.headline}</p>
+    <div class="buyrow">
+      <span class="bigprice">{d.priceLabel}</span>
+      <a class="btn" href={d.gumroadUrl} rel="noopener" data-track={free ? 'free_click' : 'buy_click'} data-item={p.id}>{t.buy}</a>
+    </div>
+    <p class="note">{t.via}</p>
+    <p class="note">{d.format}</p>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap narrow prose"><Content /></div></section>
+
+<section><div class="wrap narrow prose">
+  {d.explores.length > 0 && <><h2>{t.explores}</h2><ul>{d.explores.map((x: string) => <li>{x}</li>)}</ul></>}
+  <h2>{t.who}</h2><p>{d.whoFor}</p>
+  {d.notFor && <><h2>{t.notfor}</h2><p>{d.notFor}</p></>}
+  {d.experience.length > 0 && <><h2>{t.exp}</h2><ul>{d.experience.map((x: string) => <li>{x}</li>)}</ul></>}
+  {d.included.length > 0 && <><h2>{t.inc}</h2><ul>{d.included.map((x: string) => <li>{x}</li>)}</ul></>}
+  <p style="margin-top:36px"><a class="btn" href={d.gumroadUrl} rel="noopener" data-track={free ? 'free_click' : 'buy_click'} data-item={p.id}>{t.buy}</a></p>
+  <p class="note">{t.via}</p>
+</div></section>
+
+{related.length > 0 && <section class="band"><div class="wrap">
+  <h2>{t.rel}</h2>
+  <div class="grid">{related.map((r: any) => <ProductCard p={r} />)}</div>
+</div></section>}
+</article>
+</Base>

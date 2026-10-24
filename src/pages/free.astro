@@ -5,9 +5,8 @@ import Optin from '../components/Optin.astro';
 import { getCollection } from 'astro:content';
 const all = (await getCollection('products')).filter(p => p.data.published).sort((a,b)=>a.data.order-b.data.order);
 const items = all.filter(p => p.data.language === 'en' && (p.data.priceLabel === 'Free'));
-const he = all.filter(p => p.data.priceLabel === 'חינם');
 ---
-<Base title="Free Books" description="Free short books on the Tao from Silent Power: Stop Pushing So Hard, When Your Mind Won't Slow Down, and the nine guided audios. A gentle place to begin.">
+<Base alt="/he/free/" title="Free Books" description="Free short books on the Tao from Silent Power: Stop Pushing So Hard, When Your Mind Won't Slow Down, and the nine guided audios. A gentle place to begin.">
 <section><div class="wrap">
   <div class="label">Free</div>
   <h1 style="font-size:clamp(2.4rem,6vw,4.4rem)">Start here.</h1>
@@ -18,7 +17,6 @@ const he = all.filter(p => p.data.priceLabel === 'חינם');
   <div class="label">Not sure which?</div>
   <h2>If your mind is loud, begin with <em style="color:var(--gold);font-style:normal">When Your Mind Won't Slow Down</em>.</h2>
   <p class="lede">If you push too hard, begin with <strong>Stop Pushing So Hard</strong>. Each takes about ten minutes. When you want more, the main books are on the <a href="/shop/">shop page</a>.</p>
-  {he.length > 0 && <p dir="rtl" lang="he" style="margin-top:22px">בעברית: <a href={`/shop/${he[0].id}/`}>{he[0].data.title}</a> (חינם)</p>}
 </div></section>
 <Optin />
 </Base>

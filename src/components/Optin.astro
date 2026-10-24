@@ -1,18 +1,19 @@
 ---
 import { site } from '../data/site';
 const f = site.gumroadFollow;
+const { he = false } = Astro.props;
 ---
 {f && (
-<section class="optin"><div class="wrap narrow">
-<div class="label">Stay in the quiet</div>
-<h2>Occasional notes on the Tao.</h2>
-<p>Short emails, no noise. Unsubscribe any time.</p>
+<section class="optin" dir={he ? 'rtl' : undefined} lang={he ? 'he' : undefined}><div class="wrap narrow">
+<div class="label">{he ? 'להישאר בשקט' : 'Stay in the quiet'}</div>
+<h2>{he ? 'הערות מעת לעת על הטאו.' : 'Occasional notes on the Tao.'}</h2>
+<p>{he ? 'מיילים קצרים, בלי רעש. אפשר להסיר בכל עת.' : 'Short emails, no noise. Unsubscribe any time.'}</p>
 <form class="followform" action={f.action} method="post" target="_blank" >
   <input type="hidden" name="seller_id" value={f.sellerId} />
-  <label class="sr" for="follow-email">Email address</label>
-  <input id="follow-email" type="email" name="email" placeholder="Your email address" required autocomplete="email" />
-  <button class="btn" type="submit">Subscribe</button>
+  <label class="sr" for="follow-email">{he ? 'כתובת מייל' : 'Email address'}</label>
+  <input id="follow-email" type="email" name="email" placeholder={he ? 'כתובת המייל שלך' : 'Your email address'} required autocomplete="email" />
+  <button class="btn" type="submit">{he ? 'להרשמה' : 'Subscribe'}</button>
 </form>
-<p class="note" style="margin-top:18px">Emails are sent through Gumroad. See the <a href="/privacy/">privacy page</a>.</p>
+<p class="note" style="margin-top:18px">{he ? <>המיילים נשלחים דרך Gumroad. ראו את <a href="/privacy/">עמוד הפרטיות</a> (באנגלית).</> : <>Emails are sent through Gumroad. See the <a href="/privacy/">privacy page</a>.</>}</p>
 </div></section>
 )}

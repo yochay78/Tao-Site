@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
+import Optin from '../../components/Optin.astro';
 import { site } from '../../data/site';
 const he = (await getCollection('products')).filter(p => p.data.language === 'he' && p.data.published).sort((a,b)=>a.data.order-b.data.order);
 const free = he.find(p => p.data.priceLabel === 'חינם')!;
@@ -50,4 +51,5 @@ const paid = he.find(p => p.data.priceLabel !== 'חינם')!;
   <h2>שלום, אני יוד מם.</h2>
   <p class="lede">Silent Power הוא פרויקט עצמאי קטן. אני יוצר ספרים, מוזיקה וסרטונים שמנסים להפוך את הטאו טה צ'ינג לברור, בלי להפוך אותו לשטחי.</p>
 </div></section>
+<Optin he />
 </Base>

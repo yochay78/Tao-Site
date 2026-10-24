@@ -118,3 +118,8 @@ html[dir=rtl] .brand span{margin-right:0;margin-left:.6em}
 html[dir=rtl] .hero h1{font-size:clamp(2.4rem,7vw,5.4rem)}
 html[dir=rtl] .covers .c1{transform:rotate(4deg)}html[dir=rtl] .covers .c3{transform:rotate(-3deg)}
 @media(max-width:760px){html[dir=rtl] nav a{margin:0}html[dir=rtl] .nav-cta{margin:14px 0 0}}
+.langsw{border:1px solid var(--line,#3a342a);border-radius:6px;padding:4px 9px;font-size:.8rem;opacity:.85}
+html[dir=rtl] footer a{margin-right:0;margin-left:16px}
+footer.site .wrap>div{min-width:0;max-width:100%}
+.langsw{margin-inline-start:14px}
+@media(max-width:760px){.langsw{align-self:flex-start;margin:12px 0 0}}

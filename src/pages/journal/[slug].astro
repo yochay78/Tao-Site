@@ -7,7 +7,7 @@ export async function getStaticPaths(){
 const { p } = Astro.props;
 const { Content } = await render(p);
 const d = p.data;
-const prods = await getCollection('products');
+const prods = (await getCollection('products')).filter(x=>x.data.language==='en');
 const map: Record<string,string> = { still:'mind-wont-slow-down', unshakable:'becoming-unshakable', root:'the-root' };
 const target = prods.find(x => x.id === (map[d.cta] ?? d.cta)) ?? prods.find(x => x.id === 'stop-pushing')!;
 const ctaTitle = target.data.title + (target.data.priceLabel === 'Free' ? ' (free)' : '');

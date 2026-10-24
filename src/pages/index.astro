@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard.astro';
 import Optin from '../components/Optin.astro';
 import { getCollection } from 'astro:content';
 import { videos, site } from '../data/site';
-const products = (await getCollection('products')).filter(p => p.data.published).sort((a,b)=>a.data.order-b.data.order);
+const products = (await getCollection('products')).filter(p => p.data.published && p.data.language==='en').sort((a,b)=>a.data.order-b.data.order);
 const get = (id: string) => products.find(p => p.id === id)!;
 const featured = products.filter(p => p.data.featured);
 const free = ['stop-pushing','mind-wont-slow-down'].map(get);
@@ -14,7 +14,7 @@ const articles = (await getCollection('journal')).sort((a,b)=>+b.data.date-+a.da
 const ld = [{ '@context':'https://schema.org','@type':'WebSite',name:'Silent Power',url:Astro.site?.href },
   { '@context':'https://schema.org','@type':'Person',name:site.author,url:Astro.site?.href,sameAs:[site.youtubeChannel,site.instagram,site.tiktok,site.facebook] }];
 ---
-<Base title="Silent Power" description="There is a secret in the oldest book on strength. Taoist books, free reading, music and videos from Silent Power." jsonLd={ld}>
+<Base alt="/he/" title="Silent Power" description="There is a secret in the oldest book on strength. Taoist books, free reading, music and videos from Silent Power." jsonLd={ld}>
 <section class="hero"><div class="wrap">
   <div class="label">3,000 years old. Still unspoken.</div>
   <h1 style="margin-top:.3em">There is a <em>secret</em><br>in the oldest<br>book on strength.</h1>
