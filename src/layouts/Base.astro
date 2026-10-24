@@ -1,45 +1,59 @@
 ---
 import '../styles/global.css';
 import { site } from '../data/site';
-interface Props { title: string; description: string; type?: string; jsonLd?: object }
-const { title, description, type = 'website', jsonLd } = Astro.props;
+interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string }
+const { title, description, type = 'website', jsonLd, ogImage = '/og.png' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const full = title === site.name ? `${site.name} | Tao Te Ching` : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
-const links = [['Books','/books/'],['Free','/free/'],['Music','/music/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
+const links = [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{full}</title><meta name="description" content={description}>
+{noindex && <meta name="robots" content="noindex, nofollow">}
 <link rel="canonical" href={canonical}>
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
-<meta property="og:image" content={new URL("/og.png", Astro.site)}><meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+<slot name="head" />
+{ld.map(o =><script type="application/ld+json" set:html={JSON.stringify(o)} />)}
 {site.ga4 && <><script async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4}`}></script>
 <script is:inline define:vars={{id: site.ga4}}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',id);</script></>}
 </head>
 <body>
-<a href="#main" class="sans" style="position:absolute;left:-999px">Skip to content</a>
+<a href="#main" class="skip">Skip to content</a>
 <header class="site"><div class="wrap">
 <a class="brand" href="/"><span>道</span>SILENT POWER</a>
-<nav aria-label="Main">{links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined} class={['Free','Music','Journal'].includes(n)?'hide-m':''}>{n}</a>)}</nav>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+<nav id="site-nav" aria-label="Main">
+  {links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined}>{n}</a>)}
+  <a class="nav-cta" href="/free/" data-track="nav_free_click">Start for Free</a>
+</nav>
 </div></header>
 <main id="main"><slot /></main>
 <footer class="site"><div class="wrap">
 <div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>The Way of Lao Tzu · by {site.author}</div>
-<div class="sans"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
-<div class="sans"><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
+<div><a href="/shop/">Shop</a><a href="/free/">Free</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
+<div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
 </div></footer>
 <script src="https://gumroad.com/js/gumroad.js" defer></script>
 <script is:inline>
+// Mobile menu
+(function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('site-nav');if(!b)return;
+b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open menu':'Close menu');n.classList.toggle('open',!o);});})();
 // Analytics hooks: any element with data-track sends a GA4 event if GA4 is configured.
+// A Gumroad button click is a click only, never a completed sale.
 document.addEventListener('click',function(e){var el=e.target.closest('[data-track]');if(!el||typeof gtag!=='function')return;gtag('event',el.dataset.track,{item:el.dataset.item||'',page:location.pathname});});
+// Product page view event
+(function(){var m=document.querySelector('meta[name="x-product"]');if(m&&typeof gtag==='function')gtag('event','view_item',{item:m.content,page:location.pathname});})();
 // Lazy YouTube: no third-party requests until the visitor presses play.
 document.addEventListener('click',function(e){var b=e.target.closest('[data-yt]');if(!b)return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title=b.dataset.title;b.replaceWith(f);});
 </script>

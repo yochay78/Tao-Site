@@ -1,19 +1,17 @@
 ---
 const { p } = Astro.props;
 const d = p.data;
-const href = d.kind==='book' ? `/books/${p.id}/` : (d.gumroadUrl ?? '#');
-const buyable = d.status==='published' && d.gumroadUrl;
-const glyph = d.kind==='music' ? '音' : d.kind==='free' ? '道' : '守';
+const he = d.language === 'he';
+const tall = !!d.cover;
+const img = d.cover ?? d.coverWide;
+const free = d.priceLabel === 'Free' || d.priceLabel === 'חינם';
 ---
-<article class="card">
-  <div class="cover">
-    {d.image ? <img src={d.image} alt={`Cover of ${d.title}`} loading="lazy" width="1200" height="1600" /> : <>
-    <span class="c">{glyph}</span><span class="t">{d.title}</span><span class="a">Yod Mem · Silent Power</span></>}
-  </div>
-  <h3>{d.title}</h3>
-  <p>{d.cardNote}</p>
-  <div class="price">{d.status==='published' ? d.priceLabel : 'Coming soon'}{d.pages ? ` · ${d.pages}` : ''}</div>
-  {d.status==='published' && (d.kind==='book'
-    ? <a class="btn ghost" href={href}>Read more</a>
-    : <a class="btn" href={d.gumroadUrl} rel="noopener" data-track={d.kind==='free'?'free_book_click':'buy_click'} data-item={p.id}>{d.kind==='free'?'Get it free':'Buy now'}</a>)}
+<article class={`card pcard${he ? ' rtl' : ''}`} dir={he ? 'rtl' : undefined} lang={he ? 'he' : undefined}>
+  <a class={`pcover ${tall ? 'tall' : 'wide'}`} href={`/shop/${p.id}/`} tabindex="-1" aria-hidden="true">
+    <img src={img} alt="" loading="lazy" width={tall ? 1200 : 1005} height={tall ? 1600 : 565} />
+  </a>
+  <h3><a href={`/shop/${p.id}/`} style="text-decoration:none">{d.title}</a></h3>
+  <p>{d.shortDescription}</p>
+  <div class="price">{d.priceLabel}<span class="fmt"> · {d.format.split('·')[0].trim()}</span></div>
+  <a class={`btn${free ? ' ghost' : ''}`} href={`/shop/${p.id}/`} data-track="product_card_click" data-item={p.id}>{he ? 'לפרטים' : free ? 'See what’s inside' : 'Read more'}</a>
 </article>
