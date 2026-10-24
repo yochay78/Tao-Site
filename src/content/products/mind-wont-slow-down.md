@@ -3,7 +3,7 @@ title: "The Way of the Tao: When Your Mind Won't Slow Down"
 kind: free
 priceLabel: "Free"
 gumroadUrl: "https://yochay4.gumroad.com/l/still"
-image: "/covers/mind-wont-slow-down-600.jpg"
+image: "/covers/mind-wont-slow-down-1200.jpg"
 imageLarge: "/covers/mind-wont-slow-down-1200.jpg"
 status: published
 order: 4

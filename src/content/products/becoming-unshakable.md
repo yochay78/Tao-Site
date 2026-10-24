@@ -4,7 +4,7 @@ subtitle: "Book I"
 kind: book
 priceLabel: "$19"
 gumroadUrl: "https://yochay4.gumroad.com/l/frictionless-tao"
-image: "/covers/becoming-unshakable-600.jpg"
+image: "/covers/becoming-unshakable-1200.jpg"
 imageLarge: "/covers/becoming-unshakable-1200.jpg"
 status: published
 order: 1

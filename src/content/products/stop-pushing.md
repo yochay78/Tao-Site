@@ -3,7 +3,7 @@ title: "The Way of the Tao: Stop Pushing So Hard"
 kind: free
 priceLabel: "Free"
 gumroadUrl: "https://yochay4.gumroad.com/l/effortless-tao"
-image: "/covers/stop-pushing-600.jpg"
+image: "/covers/stop-pushing-1200.jpg"
 imageLarge: "/covers/stop-pushing-1200.jpg"
 status: published
 order: 3

@@ -19,7 +19,7 @@ const ld = { '@context':'https://schema.org','@type':'Book',name:d.title,author:
 <p class="note sans">{d.pages} · by Yod Mem</p>
 <Content />
 {buyable && <p class="price" style="font-size:1.4rem">{d.priceLabel}</p>}
-{buyable && <p><a class="btn" href={d.gumroadUrl} rel="noopener" data-gumroad-overlay-checkout="true" data-track="buy_click" data-item={p.id}>Buy now</a></p>}
+{buyable && <p><a class="btn" href={d.gumroadUrl} rel="noopener" data-track="buy_click" data-item={p.id}>Buy now</a></p>}
 {d.amazonUrl && <p><a href={d.amazonUrl} rel="noopener" data-track="amazon_click" data-item={p.id}>Also on Amazon →</a></p>}
 <p class="note">Checkout and delivery are handled securely by Gumroad.</p></div>
 </div></section>

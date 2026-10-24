@@ -7,7 +7,7 @@ const glyph = d.kind==='music' ? '音' : d.kind==='free' ? '道' : '守';
 ---
 <article class="card">
   <div class="cover">
-    {d.image ? <img src={d.image} alt={`Cover of ${d.title}`} loading="lazy" width="600" height="800" /> : <>
+    {d.image ? <img src={d.image} alt={`Cover of ${d.title}`} loading="lazy" width="1200" height="1600" /> : <>
     <span class="c">{glyph}</span><span class="t">{d.title}</span><span class="a">Yod Mem · Silent Power</span></>}
   </div>
   <h3>{d.title}</h3>
@@ -15,5 +15,5 @@ const glyph = d.kind==='music' ? '音' : d.kind==='free' ? '道' : '守';
   <div class="price">{d.status==='published' ? d.priceLabel : 'Coming soon'}{d.pages ? ` · ${d.pages}` : ''}</div>
   {d.status==='published' && (d.kind==='book'
     ? <a class="btn ghost" href={href}>Read more</a>
-    : <a class="btn" href={d.gumroadUrl} rel="noopener" data-gumroad-overlay-checkout="true" data-track={d.kind==='free'?'free_book_click':'buy_click'} data-item={p.id}>{d.kind==='free'?'Get it free':'Buy now'}</a>)}
+    : <a class="btn" href={d.gumroadUrl} rel="noopener" data-track={d.kind==='free'?'free_book_click':'buy_click'} data-item={p.id}>{d.kind==='free'?'Get it free':'Buy now'}</a>)}
 </article>
