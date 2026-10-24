@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+import { i18n } from '../../data/i18n';
+export function getStaticPaths() { return Object.keys(i18n).map(lang => ({ params: { lang } })); }
+const { lang } = Astro.params as { lang: string };
+const L = i18n[lang]; const A = L.about;
+---
+<Base lang={lang} alt="/about/" title={A.title} description={A.desc}>
+<section><div class="wrap narrow prose"><div class="label">{A.label}</div><h1>Silent Power</h1>
+<p>{A.p[0]}</p><p>{A.p[1]}</p>
+<p>{A.p[2]} <a href={`mailto:${site.email}`}>{site.email}</a></p>
+</div></section>
+</Base>

@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import LCard from '../../components/LCard.astro';
+import Optin from '../../components/Optin.astro';
+import { getCollection } from 'astro:content';
+import { i18n } from '../../data/i18n';
+export function getStaticPaths() { return Object.keys(i18n).map(lang => ({ params: { lang } })); }
+const { lang } = Astro.params as { lang: string };
+const L = i18n[lang]; const F = L.free;
+const p = (await getCollection('products')).find(x => x.id === 'stop-pushing')!;
+---
+<Base lang={lang} alt="/free/" title={F.title} description={F.desc}>
+<section><div class="wrap">
+  <div class="label">{F.label}</div>
+  <h1 style="font-size:clamp(2.2rem,6vw,4rem)">{F.h1}</h1>
+  <p class="lede">{F.lede}</p>
+  <div class="ennote">{L.prod.enNote}</div>
+  <div class="grid" style="margin-top:36px"><LCard lang={lang} id="stop-pushing" p={p} /></div>
+</div></section>
+<section class="band"><div class="wrap"><p class="lede">{F.more}<a href={`/${lang}/shop/`}>{F.moreLink}</a>{F.moreEnd}</p></div></section>
+<Optin lang={lang} />
+</Base>

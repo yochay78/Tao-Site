@@ -1,32 +1,36 @@
 ---
 import '../styles/global.css';
 import { site } from '../data/site';
-interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: 'en'|'he'; alt?: string }
+import { i18n, langMenu } from '../data/i18n';
+interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: string; alt?: string }
 const { title, description, type = 'website', jsonLd, ogImage = '/og.png', lang = 'en', alt } = Astro.props;
 const he = lang === 'he';
+const T = i18n[lang];
+const other = lang === 'en' ? 'he' : 'en';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const full = title === site.name ? `${site.name} | Tao Te Ching` : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
 const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
-const links = he ? [['ספרים','/he/shop/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
-const homeHref = he ? '/he/' : '/';
-const ctaText = he ? 'להתחיל בחינם' : 'Start for Free';
-const ctaHref = he ? '/he/free/' : '/free/';
+const links = T ? [[T.navShop,`/${lang}/shop/`],[T.navAbout,`/${lang}/about/`]] : he ? [['ספרים','/he/shop/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const homeHref = T ? `/${lang}/` : he ? '/he/' : '/';
+const ctaText = T ? T.cta : he ? 'להתחיל בחינם' : 'Start for Free';
+const ctaHref = T ? `/${lang}/free/` : he ? '/he/free/' : '/free/';
 const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 <!doctype html>
-<html lang={lang} dir={he ? 'rtl' : 'ltr'}>
+<html lang={T ? T.htmlLang : lang} dir={he ? 'rtl' : 'ltr'}>
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{full}</title><meta name="description" content={description}>
 {noindex && <meta name="robots" content="noindex, nofollow">}
 <link rel="canonical" href={canonical}>
-{alt && <><link rel="alternate" hreflang={he ? 'he' : 'en'} href={canonical} /><link rel="alternate" hreflang={he ? 'en' : 'he'} href={new URL(alt, Astro.site)} /></>}
+{alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /></>}
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
 <meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{lang === 'hi' && <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">}
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=Heebo:wght@400;500;600&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
 <slot name="head" />
 {ld.map(o =><script type="application/ld+json" set:html={JSON.stringify(o)} />)}
@@ -34,33 +38,42 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <script is:inline define:vars={{id: site.ga4}}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',id);</script></>}
 </head>
 <body>
-<a href="#main" class="skip">{he ? 'דלג לתוכן' : 'Skip to content'}</a>
+<a href="#main" class="skip">{T ? T.skip : he ? 'דלג לתוכן' : 'Skip to content'}</a>
 <header class="site"><div class="wrap">
 <a class="brand" href={homeHref}><span>道</span>SILENT POWER</a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
 <nav id="site-nav" aria-label="Main">
   {links.map(([n,h]) => <a href={h} aria-current={path.startsWith(h)?'page':undefined}>{n}</a>)}
   <a class="nav-cta" href={ctaHref} data-track="nav_free_click">{ctaText}</a>
-  {alt && <a class="langsw" href={alt} hreflang={he ? 'en' : 'he'} lang={he ? 'en' : 'he'} data-track="lang_switch">{he ? 'EN' : 'עב'}</a>}
+  {alt && <a class="langsw" href={alt} hreflang={other} lang={other} data-track="lang_switch">{lang === 'en' ? 'עב' : 'EN'}</a>}
 </nav>
 </div></header>
 <main id="main"><slot /></main>
-{he ? (
+{T ? (
+<footer class="site" lang={T.htmlLang}><div class="wrap">
+<div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>{T.footTag} {site.author}</div>
+<div><a href={`/${lang}/shop/`}>{T.fShop}</a><a href={`/${lang}/free/`}>{T.fFree}</a><a href={`/${lang}/about/`}>{T.fAbout}</a><a href="/privacy/">{T.fPrivacy}</a><a href="/terms/">{T.fTerms}</a><a href={`mailto:${site.email}`}>{T.fContact}</a></div>
+<div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
+<div class="langrow">{langMenu.map(([n,h,c]) => <a href={h} hreflang={c} lang={c}>{n}</a>)}</div>
+</div></footer>
+) : he ? (
 <footer class="site" dir="rtl" lang="he"><div class="wrap">
 <div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>דרכו של לאו־דזה · מאת {site.author}</div>
 <div><a href="/he/shop/">ספרים</a><a href="/he/free/">חינם</a><a href="/he/about/">אודות</a><a href="/privacy/">פרטיות</a><a href="/terms/">תנאים</a><a href={`mailto:${site.email}`}>יצירת קשר</a></div>
 <div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
+<div class="langrow">{langMenu.map(([n,h,c]) => <a href={h} hreflang={c} lang={c}>{n}</a>)}</div>
 </div></footer>
 ) : (<footer class="site"><div class="wrap">
 <div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>The Way of Lao Tzu · by {site.author}</div>
 <div><a href="/shop/">Shop</a><a href="/free/">Free</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
 <div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
+<div class="langrow">{langMenu.map(([n,h,c]) => <a href={h} hreflang={c} lang={c}>{n}</a>)}</div>
 </div></footer>)}
 <script src="https://gumroad.com/js/gumroad.js" defer></script>
 <script is:inline>
 // Mobile menu
 (function(){var b=document.querySelector('.menu-btn'),n=document.getElementById('site-nav');if(!b)return;
-b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open menu':'Close menu');n.classList.toggle('open',!o);});})();
+b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));;n.classList.toggle('open',!o);});})();
 // Analytics hooks: any element with data-track sends a GA4 event if GA4 is configured.
 // A Gumroad button click is a click only, never a completed sale.
 document.addEventListener('click',function(e){var el=e.target.closest('[data-track]');if(!el||typeof gtag!=='function')return;gtag('event',el.dataset.track,{item:el.dataset.item||'',page:location.pathname});});

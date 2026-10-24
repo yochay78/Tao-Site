@@ -1,0 +1,13 @@
+---
+import { i18n } from '../data/i18n';
+const { lang, id, p } = Astro.props;
+const L = i18n[lang]; const t = L.products[id];
+const free = t.price === L.prod.free || t.price === 'Gratis' || id === 'stop-pushing';
+---
+<article class="card pcard" lang={L.htmlLang}>
+  <a class="pcover tall" href={`/${lang}/shop/${id}/`} tabindex="-1" aria-hidden="true"><img src={p.data.cover} alt="" loading="lazy" width="1200" height="1600" /></a>
+  <h3><a href={`/${lang}/shop/${id}/`} style="text-decoration:none">{t.title}</a></h3>
+  <p>{t.short}</p>
+  <div class="price">{free ? L.prod.free : t.price}<span class="fmt"> · PDF</span></div>
+  <a class={`btn${free ? ' ghost' : ''}`} href={`/${lang}/shop/${id}/`} data-track="product_card_click" data-item={id}>{L.prod.details}</a>
+</article>

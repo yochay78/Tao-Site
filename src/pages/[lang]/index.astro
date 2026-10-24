@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import LCard from '../../components/LCard.astro';
+import Optin from '../../components/Optin.astro';
+import { getCollection } from 'astro:content';
+import { i18n } from '../../data/i18n';
+export function getStaticPaths() { return Object.keys(i18n).map(lang => ({ params: { lang } })); }
+const { lang } = Astro.params as { lang: string };
+const L = i18n[lang]; const H = L.home;
+const all = await getCollection('products');
+const paid = all.find(p => p.id === 'becoming-unshakable')!;
+const free = all.find(p => p.id === 'stop-pushing')!;
+---
+<Base lang={lang} alt="/" title={H.title} description={H.desc} jsonLd={{'@context':'https://schema.org','@type':'WebSite',name:'Silent Power',inLanguage:L.htmlLang,url:`https://silentpower.me/${lang}/`}}>
+<section class="hero"><div class="wrap">
+  <div class="label">{H.label}</div>
+  <h1 style="margin-top:.3em" set:html={H.h1}></h1>
+  <div class="heroRow">
+    <p class="sub" set:html={H.sub}></p>
+    <div class="heroBtns">
+      <a class="btn" href={`/${lang}/shop/becoming-unshakable/`} data-track={`${lang}_hero_explore`}>{H.btnBook}</a>
+      <a class="link-soft" href={`/${lang}/shop/stop-pushing/`} data-track={`${lang}_hero_free`}>{H.btnFree}</a>
+    </div>
+  </div>
+  <div class="covers">
+    <img class="c1" src={free.data.cover} alt={L.products['stop-pushing'].title} width="1200" height="1600">
+    <img class="c2" src={paid.data.cover} alt={L.products['becoming-unshakable'].title} width="1200" height="1600">
+  </div>
+</div></section>
+<section class="band"><div class="wrap">
+  <div class="label">{H.freeLabel}</div><h2>{H.freeH2}</h2><p class="lede">{H.freeLede}</p>
+  <div class="grid"><LCard lang={lang} id="stop-pushing" p={free} /></div>
+</div></section>
+<section><div class="wrap">
+  <div class="label">{H.bookLabel}</div><h2>{L.products['becoming-unshakable'].title}</h2>
+  <div class="grid"><LCard lang={lang} id="becoming-unshakable" p={paid} /></div>
+</div></section>
+<section class="band"><div class="wrap"><div class="steps">
+  {H.steps.map((s, i) => <div><div class="n">0{i+1}</div><div class="t">{s.t}</div><p>{s.p}</p></div>)}
+</div></div></section>
+<section><div class="wrap narrow"><div class="label">{H.whoLabel}</div><h2>{H.whoH2}</h2><p class="lede">{H.whoLede}</p></div></section>
+<Optin lang={lang} />
+</Base>

@@ -1,0 +1,20 @@
+---
+import Base from '../../../layouts/Base.astro';
+import LCard from '../../../components/LCard.astro';
+import { getCollection } from 'astro:content';
+import { i18n } from '../../../data/i18n';
+export function getStaticPaths() { return Object.keys(i18n).map(lang => ({ params: { lang } })); }
+const { lang } = Astro.params as { lang: string };
+const L = i18n[lang]; const S = L.shop;
+const all = await getCollection('products');
+const items = ['stop-pushing','becoming-unshakable'].map(id => [id, all.find(p => p.id === id)!] as const);
+---
+<Base lang={lang} alt="/shop/" title={S.title} description={S.desc}>
+<section><div class="wrap">
+  <div class="label">{S.label}</div>
+  <h1 style="font-size:clamp(2.2rem,6vw,4rem)">{S.h1}</h1>
+  <p class="lede">{S.lede}</p>
+  <div class="ennote">{L.prod.enNote}</div>
+  <div class="grid" style="margin-top:36px">{items.map(([id,p]) => <LCard lang={lang} id={id} p={p} />)}</div>
+</div></section>
+</Base>
