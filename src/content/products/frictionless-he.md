@@ -1,5 +1,5 @@
 ---
-title: "הסוד הטאואיסטי להיות בלתי מתערער"
+title: "סוד הטאו לשקט שאי אפשר לערער"
 language: he
 category: hebrew
 kind: book
