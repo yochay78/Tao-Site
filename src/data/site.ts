@@ -6,9 +6,8 @@ export const site = {
   facebook: 'https://www.facebook.com/profile.php?id=61575425264786',
   tiktok: 'https://www.tiktok.com/@yod.mem',
   gumroadProfile: 'https://yochay4.gumroad.com',
-  // Gumroad subscribe form: paste the embed URL from Gumroad (Settings > Audience / subscribe page).
-  // While empty, the opt-in section shows a button to the Gumroad profile instead of a fake form.
-  gumroadSubscribeEmbed: '',
+  // Gumroad follow form (official embed): posts the email straight to Gumroad.
+  gumroadFollow: { action: 'https://gumroad.com/follow_from_embed_form', sellerId: '2563885526218' },
   // Optional GA4 measurement id, e.g. 'G-XXXXXXXXXX'
   ga4: '',
 };

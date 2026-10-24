@@ -1,13 +1,18 @@
 ---
 import { site } from '../data/site';
-// Shown only when a working Gumroad subscribe embed is configured. No fake forms.
+const f = site.gumroadFollow;
 ---
-{site.gumroadSubscribeEmbed && (
+{f && (
 <section class="optin"><div class="wrap narrow">
 <div class="label">Stay in the quiet</div>
 <h2>Occasional notes on the Tao.</h2>
 <p>Short emails, no noise. Unsubscribe any time.</p>
-<iframe src={site.gumroadSubscribeEmbed} title="Subscribe by email" loading="lazy"></iframe>
+<form class="followform" action={f.action} method="post" target="_blank" >
+  <input type="hidden" name="seller_id" value={f.sellerId} />
+  <label class="sr" for="follow-email">Email address</label>
+  <input id="follow-email" type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+  <button class="btn" type="submit">Subscribe</button>
+</form>
 <p class="note" style="margin-top:18px">Emails are sent through Gumroad. See the <a href="/privacy/">privacy page</a>.</p>
 </div></section>
 )}

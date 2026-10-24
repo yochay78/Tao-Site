@@ -52,6 +52,7 @@ b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='t
 // Analytics hooks: any element with data-track sends a GA4 event if GA4 is configured.
 // A Gumroad button click is a click only, never a completed sale.
 document.addEventListener('click',function(e){var el=e.target.closest('[data-track]');if(!el||typeof gtag!=='function')return;gtag('event',el.dataset.track,{item:el.dataset.item||'',page:location.pathname});});
+document.addEventListener('submit',function(e){if(e.target.classList.contains('followform')&&typeof gtag==='function')gtag('event','subscribe_submit',{page:location.pathname});});
 // Product page view event
 (function(){var m=document.querySelector('meta[name="x-product"]');if(m&&typeof gtag==='function')gtag('event','view_item',{item:m.content,page:location.pathname});})();
 // Lazy YouTube: no third-party requests until the visitor presses play.

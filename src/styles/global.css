@@ -104,3 +104,7 @@ nav{display:flex;align-items:center}
   .nav-cta{margin:14px 0 0;text-align:center;border:0;padding:14px}
 }
 @media(max-width:360px){.brand{font-size:.9rem;letter-spacing:.04em}.brand span{margin-right:.3em}.wrap{padding:0 16px}.card{padding:20px}.btn{padding:14px 22px}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.followform{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto}
+.followform input{flex:1 1 240px;padding:15px 16px;font:inherit;border:1px solid #4a3a14;border-radius:3px;background:#fff;color:#111}
+.followform .btn{flex:0 0 auto}
