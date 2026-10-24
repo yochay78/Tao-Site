@@ -1,0 +1,12 @@
+---
+import Base from '../../../layouts/Base.astro';
+import TaoSlides from '../../../components/TaoSlides.astro';
+import { tao } from '../../../data/tao';
+export function getStaticPaths() { return tao.map(c => ({ params: { n: String(c.n) } })); }
+const n = Number(Astro.params.n);
+const c = tao.find(x => x.n === n)!;
+const first = c.he.split('\n')[0];
+---
+<Base lang="he" noindex title={`פרק ${c.n} בטאו טה צ\x27ינג`} description={first + ' ...'}>
+<TaoSlides n={n} lang="he" />
+</Base>

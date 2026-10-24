@@ -2,8 +2,8 @@
 import '../styles/global.css';
 import { site } from '../data/site';
 import { i18n, langMenu } from '../data/i18n';
-interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: string; alt?: string }
-const { title, description, type = 'website', jsonLd, ogImage = '/og.png', lang = 'en', alt } = Astro.props;
+interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: string; alt?: string; noindex?: boolean }
+const { title, description, type = 'website', jsonLd, ogImage = '/og.png', lang = 'en', alt, noindex: pageNoindex = false } = Astro.props;
 const he = lang === 'he';
 const T = i18n[lang];
 const other = lang === 'en' ? 'he' : 'en';
@@ -33,7 +33,7 @@ const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{full}</title><meta name="description" content={description}>
-{noindex && <meta name="robots" content="noindex, nofollow">}
+{(noindex || pageNoindex) && <meta name="robots" content="noindex, nofollow">}
 <link rel="canonical" href={canonical}>
 {alternates && <>{alternates.map(([c,h]) => <link rel="alternate" hreflang={c} href={new URL(h, Astro.site)} />)}<link rel="alternate" hreflang="x-default" href={new URL(alternates[0][1], Astro.site)} /></>}
 {!alternates && alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /></>}

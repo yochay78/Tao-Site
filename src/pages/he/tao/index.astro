@@ -1,0 +1,13 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { tao, TOTAL } from '../../../data/tao';
+const have = new Set(tao.map(c => c.n));
+---
+<Base lang="he" noindex title="הטאו טה צ'ינג, פרק אחרי פרק" description="הטאו טה צ'ינג, פרק אחד בכל פעם, בתרגום עברי שקט ומהודק.">
+<section dir="rtl"><div class="wrap">
+  <div class="label">טאו טה צ'ינג</div>
+  <h1 style="font-size:clamp(2.2rem,6vw,4rem)">פרק אחרי פרק.</h1>
+  <p class="lede">שמונים ואחד פרקים קצרים. שקופית אחת בכל פעם.</p>
+  <div class="taogrid">{Array.from({length: TOTAL}, (_, i) => i + 1).map(n => have.has(n) ? <a href={`/he/tao/${n}/`}>{n}</a> : <span class="off">{n}</span>)}</div>
+</div></section>
+</Base>

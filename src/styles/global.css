@@ -131,3 +131,21 @@ html[lang=hi] h1,html[lang=hi] h2,html[lang=hi] h3{font-family:'Noto Serif Devan
 .ennote{border:1px solid var(--line,#3a342a);border-left:3px solid var(--gold,#c9a45c);padding:10px 14px;border-radius:6px;font-size:.92rem;margin:14px 0}
 footer.site .wrap>div:nth-child(n+2){display:flex;flex-wrap:wrap;gap:6px 0}
 html[lang=hi] .label,html[lang=hi] h1,html[lang=hi] h2,html[lang=hi] h3,html[lang=hi] .btn{letter-spacing:0}
+.taoview{min-height:calc(100vh - 140px);display:flex;flex-direction:column;justify-content:center;padding:24px 16px 40px;max-width:900px;margin:0 auto}
+.taobar{display:flex;justify-content:space-between;margin-bottom:8vh}
+.slides{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center}
+.slide{display:none;text-align:center;animation:taoin .5s ease}
+.slide.on{display:block}
+.slide .tl{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.7rem,5vw,3rem);line-height:1.35;font-weight:500}
+html[dir=rtl] .slide .tl,.taoview[dir=rtl] .slide .tl{font-family:'Frank Ruhl Libre','Cormorant Garamond',Georgia,serif;line-height:1.5}
+.slide .tl span{display:block}
+@keyframes taoin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.taoctl{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:6vh}
+.tb{width:48px;height:48px;border-radius:50%;border:1px solid var(--line,#3a342a);background:transparent;color:inherit;font-size:1.3rem;cursor:pointer}
+.tb:hover{border-color:var(--gold,#c9a45c);color:var(--gold,#c9a45c)}
+.dots{display:flex;gap:8px}.dots i{width:7px;height:7px;border-radius:50%;background:var(--line,#3a342a)}.dots i.on{background:var(--gold,#c9a45c)}
+.taogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:10px;margin-top:30px}
+.taogrid a,.taogrid span{display:flex;align-items:center;justify-content:center;height:54px;border:1px solid var(--line,#3a342a);border-radius:8px;text-decoration:none}
+.taogrid a:hover{border-color:var(--gold,#c9a45c);color:var(--gold,#c9a45c)}.taogrid .off{opacity:.3}
+@media(prefers-reduced-motion:reduce){.slide{animation:none}}
+.taoview[dir=rtl] .slide .tl{font-size:clamp(1.45rem,4.4vw,2.5rem)}

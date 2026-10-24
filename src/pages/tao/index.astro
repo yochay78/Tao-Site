@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tao, TOTAL } from '../../data/tao';
+const have = new Set(tao.map(c => c.n));
+---
+<Base noindex title="Tao Te Ching, chapter by chapter" description="The Tao Te Ching, one chapter at a time, in a spare poetic English rendering.">
+<section><div class="wrap">
+  <div class="label">Tao Te Ching</div>
+  <h1 style="font-size:clamp(2.2rem,6vw,4rem)">Chapter by chapter.</h1>
+  <p class="lede">Eighty-one short chapters. One slide at a time.</p>
+  <div class="taogrid">{Array.from({length: TOTAL}, (_, i) => i + 1).map(n => have.has(n) ? <a href={`/tao/${n}/`}>{n}</a> : <span class="off">{n}</span>)}</div>
+</div></section>
+</Base>

@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 const site = process.env.SITE_URL || 'https://silent-power.onrender.com';
 export default defineConfig({
   site,
-  integrations: [sitemap({ i18n: { defaultLocale: 'en', locales: { en: 'en', he: 'he', es: 'es', fr: 'fr', it: 'it', hi: 'hi', fil: 'fil' } } })],
+  integrations: [sitemap({ filter: (page) => !page.includes('/tao/'), i18n: { defaultLocale: 'en', locales: { en: 'en', he: 'he', es: 'es', fr: 'fr', it: 'it', hi: 'hi', fil: 'fil' } } })],
   redirects: {
     '/books': '/shop/',
     '/books/becoming-unshakable': '/shop/becoming-unshakable/',
