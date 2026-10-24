@@ -18,8 +18,9 @@ const paid = he.find(p => p.data.priceLabel !== 'חינם')!;
       <a class="link-soft" href={`/he/shop/${free.id}/`} data-track="he_hero_free">להתחיל בחינם</a>
     </div>
   </div>
-  <div class="covers" style="padding-bottom:60px">
-    <img class="c2" src={paid.data.coverWide} alt={paid.data.title} style="width:min(560px,100%)" width="1005" height="565">
+  <div class="covers">
+    <img class="c1" src={free.data.cover} alt={free.data.title} width="1200" height="1600">
+    <img class="c2" src={paid.data.cover} alt={paid.data.title} width="1200" height="1600">
   </div>
 </div></section>
 

@@ -3,6 +3,7 @@ title: "ביצוע ללא מאמץ: המדריך הטאואיסטי לעבודה
 language: he
 category: hebrew
 kind: guide
+cover: "/covers/effortless-he-1200.jpg"
 coverWide: "/covers/wide/effortless-he.jpg"
 headline: "תפסיק לכפות. תתחיל לזרום."
 shortDescription: "מדריך חינמי קצר על שלושת הגנבים הנסתרים שגונבים לך אנרגיה כל יום."

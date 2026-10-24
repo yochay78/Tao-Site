@@ -3,6 +3,7 @@ title: "המערכת ללא חיכוך: תרגול טאואיסטי לעבודה
 language: he
 category: hebrew
 kind: book
+cover: "/covers/frictionless-he-1200.jpg"
 coverWide: "/covers/wide/frictionless-he.jpg"
 headline: "אתה כבר יודע לדחוף. זו בדיוק הבעיה."
 shortDescription: "מדריך תרגול של 51 עמודים: 16 פרקים בשמונה חלקים, עם 32 תרגולים המבוססים על הטאו טה צ'ינג."
