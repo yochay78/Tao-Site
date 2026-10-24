@@ -8,30 +8,30 @@ is not the lasting Way.
 A name that can be named
 is not the lasting name.
 
-Nameless: the root of heaven and earth.
-Named: the mother of ten thousand things.
+The Nameless, root of heaven and earth.
+The named, mother of ten thousand things.
 
-Free of wanting, you see the mystery.
+Free of wanting, you see the darkness.
 Full of wanting, you see only its edges.
 
 Both spring from one source
 and differ only in name.
-Mystery within mystery,
+Darkness within darkness,
 the gate to everything wonderful.`,
 he: `הדרך שאפשר לומר
 איננה הדרך הקבועה.
 השם שאפשר לנקוב
 איננו השם הקבוע.
 
-חסר שם: שורש שמים וארץ.
-בעל שם: אם עשרת אלפים הדברים.
+חסר השם, שורש שמים וארץ.
+בעל השם, אם עשרת אלפים הדברים.
 
-בלי חשק, אתה רואה את הסוד.
+בלי חשק, אתה רואה את החושך.
 מלא חשק, אתה רואה רק את גבולותיו.
 
 שניהם יוצאים ממקור אחד
 ושמם שונה.
-סוד בתוך סוד,
+חושך בתוך חושך,
 שער לכל פלא.` },
 { n: 2,
 en: `Beauty is known
@@ -39,41 +39,41 @@ because there is ugliness.
 Good is known
 because there is its lack.
 
-Being and nothing give birth to each other.
+Everything and Nothing give birth to each other.
 Hard and easy complete each other.
 Long and short measure each other.
 High and low lean on each other.
 Sound and silence blend.
 Before and after follow.
 
-So the wise act without striving
-and teach without words.
-Things arise; they let them come.
-Things grow; they claim nothing.
-They work and do not cling.
-The work is done, and they do not stay.
-Because they do not stay,
-it never leaves them.`,
+So the Nameless acts without striving
+and teaches without words.
+Things arise and he lets them come.
+Things grow and he claims nothing.
+He works and does not cling.
+The work is done and he does not stay.
+Because he does not stay,
+it never leaves him.`,
 he: `היופי ידוע
 כי יש כיעור.
 הטוב ידוע
 כי יש חסרונו.
 
-יש ואין מולידים זה את זה.
+הכול והאין מולידים זה את זה.
 קשה וקל משלימים זה את זה.
 ארוך וקצר מודדים זה את זה.
 גבוה ונמוך נשענים זה על זה.
 קול ושקט מתמזגים.
 לפני ואחרי הולכים בעקבות.
 
-לכן החכמים פועלים בלי מאמץ
-ומלמדים בלי מילים.
-הדברים קמים, והם נותנים להם לבוא.
-הדברים גדלים, והם לא תובעים בעלות.
-הם עושים ולא נאחזים.
-המלאכה נגמרה והם לא נשארים.
-ומפני שאינם נשארים,
-היא לא עוזבת אותם.` },
+לכן חסר השם פועל בלי מאמץ
+ומלמד בלי מילים.
+הדברים קמים והוא נותן להם לבוא.
+הדברים גדלים והוא לא תובע בעלות.
+הוא עושה ולא נאחז.
+המלאכה נגמרה והוא לא נשאר.
+ומפני שאינו נשאר,
+היא לא עוזבת אותו.` },
 { n: 3,
 en: `Do not prize the gifted,
 and people stop competing.
@@ -82,13 +82,13 @@ and people stop stealing.
 Do not show what is desired,
 and hearts stay calm.
 
-So the wise lead like this:
-empty the mind, fill the belly,
-soften the will, strengthen the bones.
+So the Nameless leads.
+He empties the mind and fills the belly,
+softens the will and strengthens the bones.
 
-Keep people from knowing too much
+He keeps people from knowing too much
 and wanting too much.
-Let the clever lose their nerve.
+He lets the clever lose their nerve.
 
 Act without acting,
 and nothing is left in disorder.`,
@@ -99,13 +99,13 @@ he: `אל תייקרו את המוכשרים,
 אל תציגו את המתאווה,
 והלבבות יישארו שקטים.
 
-כך מנהיגים החכמים:
-מרוקנים את הראש, ממלאים את הבטן,
-מרככים את הרצון, מחזקים את העצמות.
+כך מנהיג חסר השם.
+הוא מרוקן את הראש וממלא את הבטן,
+מרכך את הרצון ומחזק את העצמות.
 
-משאירים את האנשים בלי ידיעה מרובה
+הוא משאיר את האנשים בלי ידיעה מרובה
 ובלי תשוקה מרובה.
-ומרפים את אומץ הממולחים.
+והוא מרפה את אומץ הממולחים.
 
 פועלים בלי לפעול,
 ואין דבר שנשאר בלי סדר.` },
@@ -138,8 +138,8 @@ he: `הדרך היא קערה ריקה.
 en: `Heaven and earth are not sentimental.
 They treat the ten thousand things
 like straw dogs.
-The wise are not sentimental.
-They treat people
+The Nameless is not sentimental.
+He treats people
 like straw dogs.
 
 Between heaven and earth,
@@ -152,8 +152,8 @@ Better to keep to the center.`,
 he: `שמים וארץ אינם רגשניים.
 הם נוהגים בעשרת אלפים הדברים
 ככלבי קש.
-החכמים אינם רגשניים.
-הם נוהגים באנשים
+חסר השם אינו רגשני.
+הוא נוהג באנשים
 ככלבי קש.
 
 בין שמים לארץ,
@@ -189,24 +189,24 @@ en: `Heaven lasts. Earth endures.
 They last because
 they do not live for themselves.
 
-So the wise step back
-and end up ahead.
+So the Nameless steps back
+and ends up ahead.
 Let go of self,
 and the self remains.
 
-Is it not because they ask nothing for themselves
-that all they need is given?`,
+Is it not because he asks nothing for himself
+that all he needs is given?`,
 he: `השמים מחזיקים. הארץ מחזיקה מעמד.
 הם מחזיקים מפני
 שאינם חיים לעצמם.
 
-לכן החכמים נסוגים
-ומוצאים את עצמם בראש.
+לכן חסר השם נסוג
+ומוצא את עצמו בראש.
 מרפים מהעצמי,
 והעצמי נשאר.
 
-האין זה משום שאינם מבקשים דבר לעצמם
-שכל מה שהם צריכים ניתן להם?` },
+האין זה משום שאינו מבקש דבר לעצמו
+שכל מה שהוא צריך ניתן לו?` },
 { n: 8,
 en: `The highest good is like water.
 Water serves ten thousand things
@@ -241,10 +241,10 @@ he: `הטוב העליון דומה למים.
 אל תילחם,
 ואיש לא יוכל להאשים אותך.` },
 { n: 9,
-en: `Fill a cup to the brim:
-better to stop.
-Sharpen a blade to its edge:
-it will not last.
+en: `Fill a cup to the brim
+and it is better to stop.
+Sharpen a blade to its edge
+and it will not last.
 
 A hall full of gold and jade
 cannot be guarded.
@@ -252,12 +252,12 @@ Wealth and pride
 bring their own ruin.
 
 When the work is done,
-withdraw.
-This is the way of heaven.`,
-he: `למלא כוס עד שפתה:
-מוטב לעצור.
-לחדד להב עד קצהו:
-הוא לא יחזיק.
+step back.
+Such is the way of heaven.`,
+he: `למלא כוס עד שפתה
+ומוטב לעצור.
+לחדד להב עד קצהו
+והוא לא יחזיק.
 
 אולם מלא זהב ויהלום
 אי אפשר לשמור.
