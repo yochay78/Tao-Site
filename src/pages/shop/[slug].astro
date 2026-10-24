@@ -28,8 +28,11 @@ const ld = {
   inLanguage: d.language,
   offers: { '@type': 'Offer', price: priceNum, priceCurrency: cur, url: d.gumroadUrl, availability: 'https://schema.org/InStock' }
 };
+
+const qa = (pairs: [string,string][]) => ({ '@context':'https://schema.org','@type':'FAQPage', mainEntity: pairs.filter(([q,a]) => a).map(([q,a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) });
+const faq = qa([[`Who is "${d.title}" for?`, d.whoFor], [`Who is "${d.title}" not for?`, d.notFor ?? ''], [`What is included in "${d.title}"?`, d.included.join('. ')], [`What does "${d.title}" explore?`, d.explores.join('. ')]]);
 ---
-<Base title={d.title} description={d.shortDescription} type="product" jsonLd={ld} ogImage={d.cover ?? d.coverWide}>
+<Base title={d.title} description={d.shortDescription} type="product" jsonLd={[ld, faq]} ogImage={d.cover ?? d.coverWide}>
 <meta name="x-product" content={p.id} slot="head" />
 <article dir={he ? 'rtl' : undefined} lang={he ? 'he' : undefined} class={he ? 'rtl' : ''}>
 <section class="phero"><div class="wrap pgrid">

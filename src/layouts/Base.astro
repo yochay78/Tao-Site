@@ -15,7 +15,18 @@ const links = T ? [[T.navShop,`/${lang}/shop/`],[T.navAbout,`/${lang}/about/`]] 
 const homeHref = T ? `/${lang}/` : he ? '/he/' : '/';
 const ctaText = T ? T.cta : he ? 'להתחיל בחינם' : 'Start for Free';
 const ctaHref = T ? `/${lang}/free/` : he ? '/he/free/' : '/free/';
-const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const mirrored = ['/', '/shop/', '/free/', '/about/', '/shop/becoming-unshakable/', '/shop/stop-pushing/'];
+const heOf: Record<string,string> = { '/shop/becoming-unshakable/': '/he/shop/frictionless-he/', '/shop/stop-pushing/': '/he/shop/effortless-he/' };
+const heBack: Record<string,string> = { '/he/shop/frictionless-he/': '/shop/becoming-unshakable/', '/he/shop/effortless-he/': '/shop/stop-pushing/' };
+let np = path.endsWith('/') ? path : path + '/';
+let base = np;
+if (heBack[np]) base = heBack[np];
+else if (lang !== 'en') base = np.replace(new RegExp('^/' + lang + '(?=/)'), '');
+const alternates: [string,string][] | null = mirrored.includes(base)
+  ? [['en', base], ['he', heOf[base] ?? '/he' + base], ...Object.keys(i18n).map(c => [c, `/${c}${base}`] as [string,string])]
+  : null;
+const org = { '@context':'https://schema.org','@type':'Organization', name: site.name, url: 'https://silentpower.me/', logo: 'https://silentpower.me/og.png', founder: { '@type':'Person', name: site.author }, sameAs: [site.youtubeChannel, site.instagram, site.tiktok, site.facebook, site.gumroadProfile] };
+const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(path === '/' ? [org] : [])];
 ---
 <!doctype html>
 <html lang={T ? T.htmlLang : lang} dir={he ? 'rtl' : 'ltr'}>
@@ -24,7 +35,8 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 <title>{full}</title><meta name="description" content={description}>
 {noindex && <meta name="robots" content="noindex, nofollow">}
 <link rel="canonical" href={canonical}>
-{alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /></>}
+{alternates && <>{alternates.map(([c,h]) => <link rel="alternate" hreflang={c} href={new URL(h, Astro.site)} />)}<link rel="alternate" hreflang="x-default" href={new URL(alternates[0][1], Astro.site)} /></>}
+{!alternates && alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /></>}
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
 <meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image">

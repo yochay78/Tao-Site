@@ -17,8 +17,11 @@ const priceText = free ? P.free : t.price;
 const img = new URL(p.data.cover, Astro.site).href;
 const ld = { '@context':'https://schema.org','@type':'Product',name:t.title,description:t.short,image:img,brand:{'@type':'Brand',name:'Silent Power'},author:{'@type':'Person',name:'Yod Mem'},inLanguage:'en',
   offers:{'@type':'Offer',price:free?'0':'19',priceCurrency:'USD',url:p.data.gumroadUrl,availability:'https://schema.org/InStock'} };
+
+const qa = (pairs: [string,string][]) => ({ '@context':'https://schema.org','@type':'FAQPage', mainEntity: pairs.filter(([q,a]) => a).map(([q,a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) });
+const faq = qa([[`${t.title}: ${P.who}`, t.whoFor], [`${t.title}: ${P.notfor}`, t.notFor], [`${t.title}: ${P.inc}`, t.included.join('. ')], [`${t.title}: ${P.explores}`, t.explores.join('. ')]]);
 ---
-<Base lang={lang} alt={`/shop/${slug}/`} title={t.title} description={t.short} type="product" jsonLd={ld} ogImage={p.data.cover}>
+<Base lang={lang} alt={`/shop/${slug}/`} title={t.title} description={t.short} type="product" jsonLd={[ld, faq]} ogImage={p.data.cover}>
 <meta name="x-product" content={`${slug}-${lang}`} slot="head" />
 <article lang={L.htmlLang}>
 <section class="phero"><div class="wrap pgrid">
