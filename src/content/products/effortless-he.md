@@ -1,5 +1,5 @@
 ---
-title: "ביצוע ללא מאמץ"
+title: "דרך הטאו: תפסיק לדחוף כל כך חזק"
 language: he
 category: hebrew
 kind: guide

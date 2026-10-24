@@ -5,7 +5,7 @@ import Optin from '../../components/Optin.astro';
 import { getCollection } from 'astro:content';
 const items = (await getCollection('products')).filter(p => p.data.published && p.data.language === 'he' && p.data.priceLabel === 'חינם');
 ---
-<Base lang="he" alt="/free/" title="להתחיל בחינם" description="מדריך חינמי בעברית על הטאו: ביצוע ללא מאמץ. מקום עדין להתחיל בו.">
+<Base lang="he" alt="/free/" title="להתחיל בחינם" description="מדריך חינמי בעברית על הטאו: תפסיק לדחוף כל כך חזק. מקום עדין להתחיל בו.">
 <section><div class="wrap">
   <div class="label">חינם</div>
   <h1 style="font-size:clamp(2.2rem,6vw,4rem)">מתחילים כאן.</h1>
