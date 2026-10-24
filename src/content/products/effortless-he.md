@@ -1,5 +1,5 @@
 ---
-title: "ביצוע ללא מאמץ: המדריך הטאואיסטי לעבודה בלי כוח"
+title: "ביצוע ללא מאמץ"
 language: he
 category: hebrew
 kind: guide

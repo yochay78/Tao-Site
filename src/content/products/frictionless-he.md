@@ -1,5 +1,5 @@
 ---
-title: "המערכת ללא חיכוך: תרגול טאואיסטי לעבודה ולחיים ללא מאמץ"
+title: "המערכת ללא חיכוך"
 language: he
 category: hebrew
 kind: book
