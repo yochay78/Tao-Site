@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+const faqs = [
+  { q: 'What is the Tao Te Ching?', a: 'The Tao Te Ching is an ancient Chinese text of 81 short chapters, traditionally attributed to Lao Tzu (Laozi), on the Tao (the Way) and te (its power in action). It is the founding text of Taoism, and one of the most translated books in the world.', more: 'It does not argue, it points. It speaks in images of water, valleys and empty bowls, and it often says the opposite of what we expect: the soft overcomes the hard, and doing less gets more done.' },
+  { q: 'What is wu wei?', a: 'Wu wei means effortless action: acting in accordance with the natural flow of things instead of forcing them. It does not mean doing nothing.', more: 'Think of the river that wears down stone without trying. Wu wei is the opposite of passivity and the opposite of struggle. You still act, but you stop pushing against reality.' },
+  { q: 'Who was Lao Tzu?', a: 'Lao Tzu (Laozi, "the Old Master") is the traditional author of the Tao Te Ching, said to have lived in China around the 6th century BCE. Whether he was one man, or a name given to a body of wisdom, is debated by scholars.', more: 'The text matters more than the biography. Even the legend says he wrote it only because a gatekeeper asked him to, as he left the world behind.' },
+  { q: 'What does "Tao" mean?', a: 'Tao (Dao) means "the Way": the underlying process by which everything arises and moves. The first line of the book says the Tao that can be told is not the eternal Tao, so it points at something words cannot hold.', more: 'It is not a god to be pleased. It is closer to the way a seed becomes a tree: nobody forces it.' },
+  { q: 'How do you pronounce Tao Te Ching?', a: 'Roughly "dow deh jing". Tao sounds like "dow" (as in "down"), Te like "deh", and Ching like "jing".', more: '' },
+  { q: 'Is Taoism a religion or a philosophy?', a: 'Both. Philosophical Taoism follows the Tao Te Ching and the Zhuangzi as a way of seeing and living. Religious Taoism developed later, with temples, rituals and practices.', more: 'Silent Power focuses on the philosophy: what the text actually says, and how to live it without turning it into comfort.' },
+  { q: 'Where should a beginner start with the Tao Te Ching?', a: 'Start by reading a few chapters slowly, one a day, rather than the whole book in one go. Chapters 1, 8, 11, 16 and 76 are a strong first week.', more: 'Read it like a poem you return to, not a manual. If you want a guided start, the free book on this site is a 10-minute read.' },
+  { q: 'What is Silent Power?', a: 'Silent Power is an independent project by Yod Mem that explains the Tao Te Ching chapter by chapter, without the comfort: videos, books, free guides and music in plain language.', more: 'Its tone is deliberate. The Tao is not always easy to hear, and this project does not soften it.' },
+  { q: 'Where can I listen to the full Tao Te Ching?', a: 'The full 81-chapter Tao Te Ching audiobook, read for sleep and meditation, is on the Silent Power YouTube channel.', more: '' },
+];
+const ld = [
+  { '@context':'https://schema.org','@type':'FAQPage', mainEntity: faqs.map(f => ({ '@type':'Question', name: f.q, acceptedAnswer: { '@type':'Answer', text: f.a + (f.more ? ' ' + f.more : '') } })) },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement: [{ '@type':'ListItem', position:1, name:'Home', item:'https://silentpower.me/' },{ '@type':'ListItem', position:2, name:'Tao Te Ching FAQ', item:'https://silentpower.me/faq/' }] },
+];
+---
+<Base title="Tao Te Ching FAQ: Wu Wei, Lao Tzu and the Tao Explained" description="Straight answers on the Tao Te Ching, wu wei, Lao Tzu and the meaning of Tao, from Silent Power." jsonLd={ld}>
+<section><div class="wrap narrow prose"><div class="label">FAQ</div><h1>The Tao Te Ching, answered plainly</h1>
+<p>Short, direct answers first. A little more underneath.</p>
+{faqs.map(f => <>
+<h2 style="font-size:1.5rem;margin-top:2rem">{f.q}</h2>
+<p><strong>{f.a}</strong></p>
+{f.more && <p>{f.more}</p>}
+</>)}
+<p style="margin-top:2rem"><a class="btn" href="/free/" data-track="faq_cta">Get the free book →</a> <a class="btn ghost" href={site.youtubeChannel} rel="noopener">Watch on YouTube</a></p>
+</div></section></Base>

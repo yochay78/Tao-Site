@@ -9,6 +9,7 @@ The books themselves are written in English. The site has translated pages (desc
 - [Books & audio](https://silentpower.me/shop/): all titles
 - [Free books](https://silentpower.me/free/): free short guides
 - [About](https://silentpower.me/about/): who is behind the project
+- [FAQ](https://silentpower.me/faq/): direct answers on the Tao Te Ching, wu wei, Lao Tzu and the meaning of Tao
 - [Journal](https://silentpower.me/journal/): short essays on the Tao Te Ching
 
 ## Books
@@ -24,7 +25,7 @@ The books themselves are written in English. The site has translated pages (desc
 - [Filipino](https://silentpower.me/fil/)
 
 ## Channels
-- [YouTube](https://www.youtube.com/@Taoism-r1d)
+- [YouTube](https://www.youtube.com/@Taoism-r1d): chapter-by-chapter Tao Te Ching videos, wu wei explained, and the full 81-chapter audiobook
 - [Instagram](https://www.instagram.com/dao.deching)
 - [TikTok](https://www.tiktok.com/@yod.mem)
 - [Facebook](https://www.facebook.com/profile.php?id=61575425264786)
