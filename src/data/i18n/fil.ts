@@ -36,7 +36,7 @@ export const fil: Lang = {
       title: 'Ang Lihim ng Taoismo para Maging Hindi Matitinag',
       headline: 'Hindi ka nagiging hindi matitinag sa pamamagitan ng mas matinding pakikipaglaban.',
       short: 'Tungkol sa matigas na punong nababali, sa damong yumuyuko, at sa labing-anim na lugar kung saan madalas tayong ibinabagsak ng buhay.',
-      price: '$19', format: 'PDF na madaling basahin sa telepono · 84 pahina · nasa Ingles',
+      price: '$4', format: 'PDF na madaling basahin sa telepono · 84 pahina · nasa Ingles',
       explores: [
         'Bakit kahit tumigas ka (mas maraming kontrol, mas maraming pagsisikap, mas makakapal na pader) ay madali ka pa ring natutumba',
         'Ang pangunahing paraan: Tingnan. Pangalanan. Hayaan.',

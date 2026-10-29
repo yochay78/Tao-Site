@@ -36,7 +36,7 @@ export const it: Lang = {
       title: 'Il segreto taoista per diventare incrollabili',
       headline: 'Non diventi incrollabile combattendo più duramente.',
       short: 'Sull’albero rigido che si spezza, sull’erba che si piega, e su sedici luoghi in cui la vita di solito ci butta a terra.',
-      price: '$19', format: 'PDF da leggere sul telefono · 84 pagine · in inglese',
+      price: '$4', format: 'PDF da leggere sul telefono · 84 pagine · in inglese',
       explores: [
         'Perché irrigidirsi (più controllo, più sforzo, mura più spesse) ti lascia comunque facile da abbattere',
         'Il metodo chiave: Vederlo. Nominarlo. Lasciarlo essere.',

@@ -36,7 +36,7 @@ export const es: Lang = {
       title: 'El secreto taoísta para ser inquebrantable',
       headline: 'No te vuelves inquebrantable luchando con más fuerza.',
       short: 'Sobre el árbol rígido que se rompe, la hierba que se dobla, y dieciséis lugares donde la vida suele derribarnos.',
-      price: '$19', format: 'PDF para leer en el móvil · 84 páginas · en inglés',
+      price: '$4', format: 'PDF para leer en el móvil · 84 páginas · en inglés',
       explores: [
         'Por qué endurecerte (más control, más esfuerzo, muros más gruesos) te sigue dejando fácil de derribar',
         'El método clave: Verlo. Nombrarlo. Dejarlo ser.',
