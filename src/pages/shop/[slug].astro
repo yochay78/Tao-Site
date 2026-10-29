@@ -14,10 +14,10 @@ const free = d.priceLabel === 'Free' || d.priceLabel === 'חינם';
 const related = d.related.map((id: string) => all.find((x: any) => x.id === id)).filter(Boolean);
 const t = he ? {
   buy: free ? 'להורדה חינם' : 'לרכישה', via: 'התשלום וההורדה מתבצעים בבטחה דרך Gumroad.',
-  explores: 'מה בפנים', who: 'למי זה מתאים', notfor: 'למי זה פחות מתאים', exp: 'איך זה מרגיש', inc: 'מה מקבלים', rel: 'אולי גם', back: 'כל הספרים'
+  explores: 'מה בפנים', who: 'למי זה מתאים', notfor: 'למי זה פחות מתאים', exp: 'איך זה מרגיש', inc: 'מה מקבלים', rel: 'אולי גם', back: 'כל הספרים', print: 'מעדיפים ספר מודפס?', printBtn: 'ספר נייר באמזון', printNote: ''
 } : {
   buy: free ? 'Get it free' : `Get it for ${d.priceLabel}`, via: 'Checkout and download are handled securely by Gumroad.',
-  explores: 'What it explores', who: 'Who it is for', notfor: 'Who it is not for', exp: 'What it feels like', inc: 'What is included', rel: 'You may also want', back: 'All books & audio'
+  explores: 'What it explores', who: 'Who it is for', notfor: 'Who it is not for', exp: 'What it feels like', inc: 'What is included', rel: 'You may also want', back: 'All books & audio', print: 'Prefer a physical book?', printBtn: 'Paperback on Amazon', printNote: 'Printed paperback, shipped by Amazon. The digital edition above is the PDF.'
 };
 const priceNum = d.priceValue ?? (free ? '0' : d.priceLabel.replace(/[^0-9.]/g, ''));
 const cur = d.priceCurrency ?? 'USD';
@@ -26,7 +26,9 @@ const ld = {
   '@context': 'https://schema.org', '@type': 'Product', name: d.title, description: d.shortDescription,
   image: img, brand: { '@type': 'Brand', name: 'Silent Power' }, author: { '@type': 'Person', name: 'Yod Mem' },
   inLanguage: d.language,
-  offers: { '@type': 'Offer', price: priceNum, priceCurrency: cur, url: d.gumroadUrl, availability: 'https://schema.org/InStock' }
+  offers: d.amazonPaperbackUrl
+    ? [{ '@type': 'Offer', price: priceNum, priceCurrency: cur, url: d.gumroadUrl, availability: 'https://schema.org/InStock' }, { '@type': 'Offer', priceCurrency: 'USD', url: d.amazonPaperbackUrl, itemOffered: { '@type': 'Book', bookFormat: 'https://schema.org/Paperback' }, availability: 'https://schema.org/InStock' }]
+    : { '@type': 'Offer', price: priceNum, priceCurrency: cur, url: d.gumroadUrl, availability: 'https://schema.org/InStock' }
 };
 
 const qa = (pairs: [string,string][]) => ({ '@context':'https://schema.org','@type':'FAQPage', mainEntity: pairs.filter(([q,a]) => a).map(([q,a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) });
@@ -49,6 +51,8 @@ const faq = qa([[`Who is "${d.title}" for?`, d.whoFor], [`Who is "${d.title}" no
     </div>
     <p class="note">{t.via}</p>
     <p class="note">{d.format}</p>
+    {d.amazonPaperbackUrl && <div class="printrow"><span class="note">{t.print}</span> <a class="btn ghost" href={d.amazonPaperbackUrl} rel="noopener" target="_blank" data-track="amazon_click" data-item={p.id}>{t.printBtn}</a></div>}
+    {d.amazonPaperbackUrl && <p class="note">{t.printNote}</p>}
   </div>
 </div></section>
 

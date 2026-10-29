@@ -9,6 +9,7 @@ headline: "Somewhere in you there is a place the storm doesn't reach."
 shortDescription: "A three-breath practice for coming back to the root, with nine guided audios for the places where we lose ourselves most."
 priceLabel: "$27"
 gumroadUrl: "https://yochay4.gumroad.com/l/return"
+amazonPaperbackUrl: "https://www.amazon.com/dp/B0HP81TSFR"
 format: "PDF, made to read on your phone, plus 9 MP3 tracks · 80 pages"
 published: true
 featured: true

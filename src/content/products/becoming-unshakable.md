@@ -9,6 +9,7 @@ headline: "You don't become unshakable by fighting harder."
 shortDescription: "On the stiff tree that breaks and the grass that bends, and sixteen places where life usually knocks us over."
 priceLabel: "$19"
 gumroadUrl: "https://yochay4.gumroad.com/l/frictionless-tao"
+amazonPaperbackUrl: "https://www.amazon.com/dp/B0HP7R2NXW"
 format: "PDF, made to read on your phone · 84 pages"
 published: true
 featured: true

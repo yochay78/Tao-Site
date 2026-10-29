@@ -13,5 +13,6 @@ const free = d.priceLabel === 'Free' || d.priceLabel === 'חינם';
   <h3><a href={`${he ? "/he" : ""}/shop/${p.id}/`} style="text-decoration:none">{d.title}</a></h3>
   <p>{d.shortDescription}</p>
   <div class="price">{d.priceLabel}<span class="fmt"> · {d.format.split('·')[0].trim()}</span></div>
+  {d.amazonPaperbackUrl && <div class="note" style="margin-top:2px">Also as a paperback on Amazon</div>}
   <a class={`btn${free ? ' ghost' : ''}`} href={`${he ? "/he" : ""}/shop/${p.id}/`} data-track="product_card_click" data-item={p.id}>{he ? 'לפרטים' : free ? 'See what’s inside' : 'Read more'}</a>
 </article>

@@ -15,6 +15,7 @@ const products = defineCollection({
     priceValue: z.string().optional(),
     priceCurrency: z.string().optional(),
     gumroadUrl: z.string().url(),
+    amazonPaperbackUrl: z.string().url().optional(),
     format: z.string(),
     published: z.boolean().default(true),
     featured: z.boolean().default(false),

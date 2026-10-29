@@ -149,3 +149,5 @@ html[dir=rtl] .slide .tl,.taoview[dir=rtl] .slide .tl{font-family:'Frank Ruhl Li
 .taogrid a:hover{border-color:var(--gold,#c9a45c);color:var(--gold,#c9a45c)}.taogrid .off{opacity:.3}
 @media(prefers-reduced-motion:reduce){.slide{animation:none}}
 .taoview[dir=rtl] .slide .tl{font-size:clamp(1.45rem,4.4vw,2.5rem)}
+
+.printrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:10px 0 4px}
