@@ -1,12 +1,47 @@
 ---
 import Base from '../../layouts/Base.astro';
+import VideoCard from '../../components/VideoCard.astro';
 import TaoSlides from '../../components/TaoSlides.astro';
 import { tao } from '../../data/tao';
+import { notes } from '../../data/tao-notes';
 export function getStaticPaths() { return tao.map(c => ({ params: { n: String(c.n) } })); }
 const n = Number(Astro.params.n);
 const c = tao.find(x => x.n === n)!;
+const note = notes[n];
 const first = c.en.split('\n')[0];
+const stanzas = c.en.split(/\n\s*\n/);
+const url = `https://silentpower.me/tao/${n}/`;
+const h1 = note ? `Tao Te Ching Chapter ${n}: ${note.title}` : '';
+const ld = note ? [
+  { '@context':'https://schema.org','@type':'Article', headline: h1, description: note.description, inLanguage:'en', url, mainEntityOfPage: url, datePublished:'2026-11-04', author:{ '@id':'https://silentpower.me/#person' }, publisher:{ '@id':'https://silentpower.me/#org' } },
+  { '@context':'https://schema.org','@type':'FAQPage', mainEntity: note.faq.map(([q,a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
+    { '@type':'ListItem', position:1, name:'Silent Power', item:'https://silentpower.me/' },
+    { '@type':'ListItem', position:2, name:'Tao Te Ching', item:'https://silentpower.me/tao/' },
+    { '@type':'ListItem', position:3, name:`Chapter ${n}`, item:url } ] },
+  ...(note.video ? [{ '@context':'https://schema.org','@type':'VideoObject', name: note.video.title, description: `${note.video.title}. A short video on Tao Te Ching chapter ${n} from the Silent Power channel.`, thumbnailUrl:`https://i.ytimg.com/vi/${note.video.id}/hqdefault.jpg`, uploadDate: note.video.uploaded, duration: note.video.duration, embedUrl:`https://www.youtube-nocookie.com/embed/${note.video.id}`, contentUrl:`https://www.youtube.com/watch?v=${note.video.id}` }] : []),
+] : undefined;
 ---
-<Base  noindex title={`${c.n}. Tao Te Ching, chapter ${c.n}`} description={first + ' ...'}>
+{note ? (
+<Base title={h1} description={note.description} type="article" jsonLd={ld}>
+<TaoSlides n={n} lang="en" />
+<article><section><div class="wrap narrow prose">
+<div class="label">Tao Te Ching · Chapter {n} of 81</div>
+<h1 style="font-size:clamp(2rem,5vw,3.2rem)">{h1}</h1>
+<p class="lede">{note.intro}</p>
+<h2>The full chapter</h2>
+{stanzas.map(s => <p>{s.split('\n').map((l, i) => <>{i > 0 && <br />}{l}</>)}</p>)}
+<h2>What it means</h2>
+{note.body.map(p => <p>{p}</p>)}
+{note.video && <><h2>Watch</h2><VideoCard id={note.video.id} title={note.video.title} /></>}
+<h2>Questions</h2>
+{note.faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+<hr class="rule" style="margin:40px 0">
+<p class="sans"><a href="/tao/">All chapters</a> · <a href="/free/">Start with a free book</a> · <a href="/journal/">Read the journal</a></p>
+</div></section></article>
+</Base>
+) : (
+<Base noindex title={`${c.n}. Tao Te Ching, chapter ${c.n}`} description={first + ' ...'}>
 <TaoSlides n={n} lang="en" />
 </Base>
+)}
