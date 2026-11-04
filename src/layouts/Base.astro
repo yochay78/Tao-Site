@@ -80,7 +80,7 @@ const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(
 </div></footer>
 ) : (<footer class="site"><div class="wrap">
 <div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>The Way of Lao Tzu · by {site.author}</div>
-<div><a href="/shop/">Shop</a><a href="/free/">Free</a><a href="/faq/">FAQ</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
+<div><a href="/shop/">Shop</a><a href="/free/">Free</a><a href="/tao/">Tao Te Ching</a><a href="/faq/">FAQ</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href={`mailto:${site.email}`}>Contact</a></div>
 <div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
 <div class="langrow">{langMenu.map(([n,h,c]) => <a href={h} hreflang={c} lang={c}>{n}</a>)}</div>
 </div></footer>)}
