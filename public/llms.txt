@@ -1,6 +1,6 @@
 # Silent Power | Tao Te Ching
 
-> Silent Power is an independent project by Yod Mem that makes the Tao Te Ching accessible without making it shallow: short illustrated books, free guides, music and videos in plain language. Books are sold and delivered as PDFs through Gumroad.
+> Silent Power is an independent project by Yod Mem that makes the Tao Te Ching accessible without making it shallow: short illustrated books, free guides, music and videos in plain language. Books are sold and delivered as PDFs through Gumroad. It is not related to audio or computer-hardware brands with a similar name.
 
 The books themselves are written in English. The site has translated pages (descriptions only) in Hebrew, Spanish, French, Italian, Hindi and Filipino. Hebrew has its own Hebrew-language books.
 
@@ -14,7 +14,18 @@ The books themselves are written in English. The site has translated pages (desc
 
 ## Books
 - [The Taoist Secret to Becoming Unshakable](https://silentpower.me/shop/becoming-unshakable/): 84-page illustrated book, 16 chapters in 7 parts, $4. Method: See it. Name it. Let it be.
+- [The Taoist Secret of the Root](https://silentpower.me/shop/the-root/): 80-page book with nine guided MP3 audios, $4.
 - [The Way of the Tao: Stop Pushing So Hard](https://silentpower.me/shop/stop-pushing/): free 21-page guide, about a 10-minute read.
+- [The Way of the Tao: When Your Mind Won't Slow Down](https://silentpower.me/shop/mind-wont-slow-down/): free guide plus a 5-minute guided audio.
+- [The Sound of the Tao](https://silentpower.me/shop/sound-of-the-tao/): music album, 12 tracks, about 56 minutes, $9.
+
+## Journal essays
+- [How to Stop Overthinking, According to Lao Tzu](https://silentpower.me/journal/how-to-stop-overthinking/)
+- [Letting Go of Control: What the Tao Te Ching Says About Uncertainty](https://silentpower.me/journal/letting-go-of-control-tao/)
+- [Silence and Stillness: Why the Tao Te Ching Praises the Empty](https://silentpower.me/journal/silence-and-stillness-tao/)
+- [What Wu Wei Really Means (and What It Does Not)](https://silentpower.me/journal/stop-trying-to-be-so-effortful/)
+- [The Tao Te Ching for Beginners: Where to Start](https://silentpower.me/journal/tao-te-ching-for-beginners/)
+- [Why the Soft Overcomes the Hard](https://silentpower.me/journal/why-the-weakest-wins/)
 
 ## Translated sections
 - [עברית](https://silentpower.me/he/)
