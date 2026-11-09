@@ -7,12 +7,12 @@ import sitemap from '@astrojs/sitemap';
 const shortLinks = {
   push: '/shop/stop-pushing/',
   mind: '/shop/mind-wont-slow-down/',
-  unshakable: '/shop/becoming-unshakable/',
+  rock: '/shop/becoming-unshakable/',
   root: '/shop/the-root/',
-  sound: '/shop/sound-of-the-tao/',
-  audio: '/shop/root-audio/',
-  'push-he': '/he/shop/effortless-he/',
-  'unshakable-he': '/he/shop/frictionless-he/',
+  tone: '/shop/sound-of-the-tao/',
+  nine: '/shop/root-audio/',
+  hush: '/he/shop/effortless-he/',
+  hrok: '/he/shop/frictionless-he/',
 };
 const sources = { yt: 'youtube', ig: 'instagram', fb: 'facebook', tt: 'tiktok', x: 'twitter', pin: 'pinterest', em: 'email' };
 const shortRedirects = {};
