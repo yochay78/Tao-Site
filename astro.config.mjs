@@ -14,7 +14,7 @@ const shortLinks = {
   hush: '/he/shop/effortless-he/',
   hrok: '/he/shop/frictionless-he/',
 };
-const sources = { yt: 'youtube', ig: 'instagram', fb: 'facebook', tt: 'tiktok', x: 'twitter', pin: 'pinterest', em: 'email', ttdm: 'tiktok_dm' };
+const sources = { yt: 'youtube', ig: 'instagram', fb: 'facebook', tt: 'tiktok', x: 'twitter', pin: 'pinterest', em: 'email', ttdm: 'tiktok_dm', bot: 'reply_bot' };
 const shortRedirects = {};
 for (const [code, dest] of Object.entries(shortLinks)) {
   shortRedirects['/' + code] = dest;
