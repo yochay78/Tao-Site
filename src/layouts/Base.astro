@@ -11,7 +11,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const full = title === site.name ? `${site.name} | Tao Te Ching` : `${title} | ${site.name}`;
 const path = Astro.url.pathname;
 const noindex = import.meta.env.PUBLIC_NOINDEX === 'true';
-const links = T ? [[T.navShop,`/${lang}/shop/`],[T.navAbout,`/${lang}/about/`]] : he ? [['ספרים','/he/shop/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Journal','/journal/'],['About','/about/']];
+const links = T ? [[T.navShop,`/${lang}/shop/`],[T.navAbout,`/${lang}/about/`]] : he ? [['ספרים','/he/shop/'],['טאו טה צ\'ינג','/he/tao/'],['אודות','/he/about/']] : [['Books & Audio','/shop/'],['Watch','/watch/'],['Tao Te Ching','/tao/'],['Journal','/journal/'],['About','/about/']];
 const homeHref = T ? `/${lang}/` : he ? '/he/' : '/';
 const ctaText = T ? T.cta : he ? 'להתחיל בחינם' : 'Start for Free';
 const ctaHref = T ? `/${lang}/free/` : he ? '/he/free/' : '/free/';
@@ -42,7 +42,7 @@ const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(
 {!alternates && alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /></>}
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
-<meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content={full}><meta name="twitter:description" content={description}><meta property="og:locale" content={he ? 'he_IL' : 'en_US'}>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {lang === 'hi' && <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">}
@@ -74,7 +74,7 @@ const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(
 ) : he ? (
 <footer class="site" dir="rtl" lang="he"><div class="wrap">
 <div><strong class="brand" style="font-size:1.1rem">SILENT POWER</strong><br>דרכו של לאו־דזה · מאת {site.author}</div>
-<div><a href="/he/shop/">ספרים</a><a href="/he/free/">חינם</a><a href="/he/about/">אודות</a><a href="/privacy/">פרטיות</a><a href="/terms/">תנאים</a><a href={`mailto:${site.email}`}>יצירת קשר</a></div>
+<div><a href="/he/shop/">ספרים</a><a href="/he/tao/">טאו טה צ'ינג</a><a href="/he/free/">חינם</a><a href="/he/about/">אודות</a><a href="/privacy/">פרטיות</a><a href="/terms/">תנאים</a><a href={`mailto:${site.email}`}>יצירת קשר</a></div>
 <div><a href={site.youtubeChannel} rel="noopener">YouTube</a><a href={site.instagram} rel="noopener">Instagram</a><a href={site.tiktok} rel="noopener">TikTok</a><a href={site.facebook} rel="noopener">Facebook</a></div>
 <div class="langrow">{langMenu.map(([n,h,c]) => <a href={h} hreflang={c} lang={c}>{n}</a>)}</div>
 </div></footer>

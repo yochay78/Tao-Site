@@ -58,6 +58,10 @@ const ld = [{ '@context':'https://schema.org','@type':'WebSite',name:'Silent Pow
   <div class="grid">{videos.slice(0,3).map(v => <VideoCard {...v} />)}</div>
   <p style="margin-top:28px"><a href="/watch/">More videos →</a></p></div></section>
 
+<section><div class="wrap"><div class="label">Tao Te Ching</div><h2>All 81 chapters, explained</h2>
+  <p class="lede">Each chapter with the full text, a plain explanation, a short video and the questions people ask most.</p>
+  <p class="sans" style="margin-top:18px"><a href="/tao/1/">Chapter 1: The Way That Cannot Be Spoken</a> · <a href="/tao/8/">Chapter 8: Be Like Water</a> · <a href="/tao/11/">Chapter 11: The Empty Space</a> · <a href="/tao/33/">Chapter 33: Knowing Yourself Is Light</a> · <a href="/tao/">Browse all chapters →</a></p></div></section>
+
 <section class="band"><div class="wrap"><div class="label">The Tao Journal</div><h2>Short essays on the Tao Te Ching</h2>
   <div class="grid">{articles.map(a => <a class="card" href={`/journal/${a.id}/`} style="text-decoration:none"><h3>{a.data.title}</h3><p>{a.data.description}</p></a>)}</div></div></section>
 
