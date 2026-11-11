@@ -1,0 +1,13 @@
+---
+// Click-to-load Instagram reel (no third-party script until the visitor presses play) plus plain links to the other copies.
+const { ig, fb, tt, title, watch = 'Watch the reel', also = 'Also on', lang = 'en' } = Astro.props as { ig?: string; fb?: string; tt?: string; title: string; watch?: string; also?: string; lang?: 'en' | 'he' };
+const links: [string, string][] = [];
+if (ig) links.push(['Instagram', `https://www.instagram.com/reel/${ig}/`]);
+if (fb) links.push(['Facebook', `https://www.facebook.com/reel/${fb}`]);
+if (tt) links.push(['TikTok', `https://www.tiktok.com/@/video/${tt}`]);
+---
+{ig && <div class="video-card social"><button type="button" data-ig={ig} data-title={title} aria-label={`${watch}: ${title}`}><span class="play">▶</span><span class="cap">{watch}</span></button><p style="font-size:1rem;margin:10px 0 0">{title}</p></div>}
+{links.length > 0 && <p class="sans note" style="margin-top:10px">{also}: {links.map(([n, h], i) => <>{i > 0 && ' · '}<a href={h} rel="noopener" target="_blank">{n}</a></>)}</p>}
+<script is:inline>
+if(!window.__igBound){window.__igBound=1;document.addEventListener('click',function(e){var b=e.target.closest('[data-ig]');if(!b)return;var f=document.createElement('iframe');f.src='https://www.instagram.com/reel/'+b.dataset.ig+'/embed/';f.title=b.dataset.title||'Instagram reel';f.setAttribute('allowfullscreen','');f.setAttribute('loading','lazy');f.style.cssText='width:100%;max-width:420px;height:640px;border:0;display:block;margin:0 auto;background:#fff';b.replaceWith(f);});}
+</script>

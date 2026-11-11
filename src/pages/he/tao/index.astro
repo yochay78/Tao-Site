@@ -1,13 +1,19 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { tao, TOTAL } from '../../../data/tao';
+import { notes } from '../../../data/tao-notes';
+import { notesHe } from '../../../data/tao-notes-he';
 const have = new Set(tao.map(c => c.n));
+const list = Object.entries(notesHe).sort((a, b) => Number(a[0]) - Number(b[0]));
+const ld = list.length ? [{ '@context':'https://schema.org','@type':'CollectionPage', name:"הטאו טה צ'ינג, פרק אחרי פרק", inLanguage:'he', url:'https://silentpower.me/he/tao/', mainEntity:{ '@type':'ItemList', numberOfItems:list.length, itemListElement: list.map(([k, v], i) => ({ '@type':'ListItem', position:i+1, url:`https://silentpower.me/he/tao/${k}/`, name:`פרק ${k}: ${v.title}` })) } }] : undefined;
 ---
-<Base lang="he" noindex title="הטאו טה צ'ינג, פרק אחרי פרק" description="הטאו טה צ'ינג, פרק אחד בכל פעם, בתרגום עברי שקט ומהודק.">
+<Base lang="he" noindex={!list.length} title="הטאו טה צ'ינג, פרק אחרי פרק" description="כל 81 פרקי הטאו טה צ'ינג בתרגום עברי שקט ומהודק, עם הסבר פשוט, סרטון קצר ותשובות לשאלות נפוצות." jsonLd={ld} alt={Object.keys(notes).length ? '/tao/' : undefined}>
 <section dir="rtl"><div class="wrap">
   <div class="label">טאו טה צ'ינג</div>
   <h1 style="font-size:clamp(2.2rem,6vw,4rem)">פרק אחרי פרק.</h1>
-  <p class="lede">שמונים ואחד פרקים קצרים. שקופית אחת בכל פעם.</p>
+  <p class="lede">שמונים ואחד פרקים קצרים. לכל פרק: הטקסט המלא, הסבר פשוט, סרטון קצר ותשובות לשאלות הנפוצות.</p>
+  {list.length > 0 && <ol class="chlist prose" style="margin-top:24px;list-style:none;padding:0">{list.map(([k, v]) => <li><a href={`/he/tao/${k}/`}>פרק {k}: {v.title}</a></li>)}</ol>}
+  <h2 style="margin-top:40px;font-size:1.3rem">קפיצה לפרק</h2>
   <div class="taogrid">{Array.from({length: TOTAL}, (_, i) => i + 1).map(n => have.has(n) ? <a href={`/he/tao/${n}/`}>{n}</a> : <span class="off">{n}</span>)}</div>
 </div></section>
 </Base>

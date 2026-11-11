@@ -1,5 +1,26 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Tao chapter pages are indexable only when a note (explanation + FAQ) exists for them.
+function noteKeys(files) {
+  const keys = new Set();
+  for (const f of files) {
+    if (!fs.existsSync(f)) continue;
+    for (const m of fs.readFileSync(f, 'utf8').matchAll(/^\s*(\d+): \{\s*$/gm)) keys.add(Number(m[1]));
+  }
+  return keys;
+}
+const dirFiles = (d) => fs.existsSync(d) ? fs.readdirSync(d).filter(x => x.endsWith('.ts')).map(x => path.join(d, x)) : [];
+const enKeys = noteKeys(['src/data/tao-notes.ts', ...dirFiles('src/data/notes-en')]);
+const heKeys = noteKeys(dirFiles('src/data/notes-he'));
+function taoFilter(page) {
+  if (/\/he\/tao\/?$/.test(page) && !heKeys.size) return false;
+  const m = page.match(/\/(he\/)?tao\/(\d+)\/?$/);
+  if (!m) return true;
+  return (m[1] ? heKeys : enKeys).has(Number(m[2]));
+}
 
 // ── Short links ─────────────────────────────────────────────────
 // silentpower.me/<code>        → the book page
@@ -26,7 +47,7 @@ for (const [code, dest] of Object.entries(shortLinks)) {
 const site = process.env.SITE_URL || 'https://silent-power.onrender.com';
 export default defineConfig({
   site,
-  integrations: [sitemap({ filter: (page) => !page.includes('/tao/') || /\/tao\/(8|11|16|17|18)?\/?$/.test(page) && !page.includes('/he/'), i18n: { defaultLocale: 'en', locales: { en: 'en', he: 'he', es: 'es', fr: 'fr', it: 'it', hi: 'hi', fil: 'fil' } } })],
+  integrations: [sitemap({ filter: taoFilter, i18n: { defaultLocale: 'en', locales: { en: 'en', he: 'he', es: 'es', fr: 'fr', it: 'it', hi: 'hi', fil: 'fil' } } })],
   redirects: {
     ...shortRedirects,
     '/books': '/shop/',

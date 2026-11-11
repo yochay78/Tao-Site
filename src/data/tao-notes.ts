@@ -1,6 +1,6 @@
 // Reading notes for chapter pages. A chapter page is indexable (and in the sitemap) only if it has an entry here.
 export interface ChapterNote { title: string; description: string; intro: string; body: string[]; faq: [string, string][]; video?: { id: string; title: string; duration: string; uploaded: string } }
-export const notes: Record<number, ChapterNote> = {
+const first: Record<number, ChapterNote> = {
 8: {
   title: 'Be Like Water',
   description: 'Tao Te Ching chapter 8 in full, with what "the highest good is like water" means and how to live it.',
@@ -81,3 +81,6 @@ export const notes: Record<number, ChapterNote> = {
   video: { id: 'l4ZgjmiqH6c', title: 'When the Great Way Is Forgotten, Goodness Appears', duration: 'PT21S', uploaded: '2026-10-19' },
 },
 };
+// Notes for the other chapters live in src/data/notes-en/*.ts (one file per group of chapters).
+const mods = import.meta.glob('./notes-en/*.ts', { eager: true }) as Record<string, { part: Record<number, ChapterNote> }>;
+export const notes: Record<number, ChapterNote> = Object.assign({}, first, ...Object.values(mods).map(m => m.part));

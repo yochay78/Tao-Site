@@ -2,7 +2,7 @@
 
 > Silent Power is an independent project by Yod Mem that makes the Tao Te Ching accessible without making it shallow: short illustrated books, free guides, music and videos in plain language. Books are sold and delivered as PDFs through Gumroad. It is not related to audio or computer-hardware brands with a similar name.
 
-The books themselves are written in English. The site has translated pages (descriptions only) in Hebrew, Spanish, French, Italian, Hindi and Filipino. Hebrew has its own Hebrew-language books.
+The books themselves are written in English. The Tao Te Ching chapter pages are available in English and Hebrew. The site also has translated pages (descriptions only) in Spanish, French, Italian, Hindi and Filipino. Hebrew has its own Hebrew-language books.
 
 ## Main pages
 - [Home](https://silentpower.me/): overview of the project

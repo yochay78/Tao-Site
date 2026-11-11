@@ -1,0 +1,32 @@
+// One video per chapter (YouTube id). Shown under the slides on /tao/N/ and /he/tao/N/.
+// Source: the Silent Power YouTube channel. Chapters with no matching video are left out on purpose.
+export interface ChapterVideo { id: string; title: string }
+export const videos: Record<number, ChapterVideo> = {
+  1: { id: 'pfVsawjpXuA', title: 'The Truth Cannot Be Told' },
+  2: { id: 'rvnJDvUJDOg', title: 'What You Call Bad In Yourself Was Never a Weed' },
+  3: { id: '-7ewssrN6wI', title: 'The Secret to Real Power' },
+  4: { id: 'Eh9IKr37UTo', title: 'Older Than God' },
+  5: { id: '5v0SPxVCtWk', title: 'The Universe Is Not Keeping Score' },
+  6: { id: 'LCUt-9EgR4o', title: 'The Oldest Lie About Rest' },
+  7: { id: 'oT92238f-9w', title: 'Stop Looking Out For Yourself First' },
+  8: { id: 'UeC1oM60tXk', title: 'Be Like Water: It Has Nothing to Prove' },
+  10: { id: '4tunbuoMShU', title: 'The Love You Are Afraid to Lose Is Not Love' },
+  11: { id: 'GRzBccGrsgY', title: 'What Matters Is What You Can\'t See' },
+  14: { id: 'qJIMtkv1Wsg', title: 'What You\'re Searching For Has No Face' },
+  15: { id: '1kfCJl_kIyo', title: 'You Can\'t Force Your Mind To Be Quiet' },
+  16: { id: 'IF0Amsz6nmY', title: 'Nobody Has Ever Died' },
+  17: { id: 'R3XZgaStOvc', title: 'Give Your Leader a Score. Lao Tzu Already Did.' },
+  18: { id: 'l4ZgjmiqH6c', title: 'When the Great Way Is Forgotten, Goodness Appears' },
+  20: { id: 'tGLQj0pQUO0', title: 'Nothing Is Wrong With You For Not Fitting In' },
+  29: { id: 'qZgzyQDlklg', title: 'Stop Trying to Fix the World' },
+  33: { id: 'EW2osVaI5Z4', title: 'You Don\'t Need To Control Anyone' },
+  37: { id: 'geK-fqXZVKI', title: 'Stop Making Your Life Happen' },
+  38: { id: 'frD9rxlwMZM', title: 'Stop Trying To Be A Good Person' },
+  40: { id: '_fHtmrpff54', title: 'You\'re Not Lost, You\'re Returning' },
+  42: { id: 'Lw4oEKds048', title: 'Silence Holds the Secret to Existence' },
+  48: { id: 'NCS3FlPnDs4', title: 'Wisdom Is Not Knowing More' },
+  51: { id: 'HLy3Tif0jtI', title: 'You Don\'t Control Your Life' },
+  56: { id: 't0u-o6805lg', title: 'Why Did Lao Tzu Write a Book?' },
+  66: { id: '0ofgjRM7ZDk', title: 'The Way Up Is Down' },
+  69: { id: 'bwKxBVVoF1U', title: 'The One Mistake That Destroys Every Army' },
+};

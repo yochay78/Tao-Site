@@ -1,12 +1,67 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import TaoSlides from '../../../components/TaoSlides.astro';
-import { tao } from '../../../data/tao';
+import VideoCard from '../../../components/VideoCard.astro';
+import SocialVideo from '../../../components/SocialVideo.astro';
+import { tao, TOTAL } from '../../../data/tao';
+import { notes } from '../../../data/tao-notes';
+import { notesHe } from '../../../data/tao-notes-he';
+import { videos } from '../../../data/tao-videos';
+import { social } from '../../../data/tao-social';
 export function getStaticPaths() { return tao.map(c => ({ params: { n: String(c.n) } })); }
 const n = Number(Astro.params.n);
 const c = tao.find(x => x.n === n)!;
+const note = notesHe[n];
 const first = c.he.split('\n')[0];
+const stanzas = c.he.split(/\n\s*\n/);
+const url = `https://silentpower.me/he/tao/${n}/`;
+const h1 = note ? `טאו טה צ'ינג פרק ${n}: ${note.title}` : '';
+const heSoc = social[n]?.he;
+const enVid = notes[n]?.video ?? videos[n];
+const enSoc = social[n]?.en;
+const prev = notesHe[n - 1] ? { n: n - 1, t: notesHe[n - 1].title } : null;
+const next = notesHe[n + 1] ? { n: n + 1, t: notesHe[n + 1].title } : null;
+const alt = notes[n] ? `/tao/${n}/` : undefined;
+const ld = note ? [
+  { '@context':'https://schema.org','@type':'Article', headline: h1, description: note.description, inLanguage:'he', url, mainEntityOfPage: url, datePublished:'2026-11-11', dateModified:'2026-11-11', author:{ '@id':'https://silentpower.me/#person' }, publisher:{ '@id':'https://silentpower.me/#org' }, about:{ '@type':'CreativeWork', name:`טאו טה צ'ינג, פרק ${n}`, isPartOf:{ '@type':'Book', name:"טאו טה צ'ינג", author:{ '@type':'Person', name:'לאו דזה' }, sameAs:'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%95_%D7%98%D7%94_%D7%A6%27%D7%99%D7%A0%D7%92' } }, speakable:{ '@type':'SpeakableSpecification', cssSelector:['h1','.lede'] }, ...(alt ? { workTranslation: { '@type':'Article', inLanguage:'en', url:`https://silentpower.me/tao/${n}/` } } : {}) },
+  { '@context':'https://schema.org','@type':'FAQPage', inLanguage:'he', mainEntity: note.faq.map(([q,a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[
+    { '@type':'ListItem', position:1, name:'Silent Power', item:'https://silentpower.me/he/' },
+    { '@type':'ListItem', position:2, name:"טאו טה צ'ינג", item:'https://silentpower.me/he/tao/' },
+    { '@type':'ListItem', position:3, name:`פרק ${n}`, item:url } ] },
+  ...(enVid && !heSoc?.ig ? [{ '@context':'https://schema.org','@type':'VideoObject', name: enVid.title, description: `${enVid.title}. סרטון קצר באנגלית על פרק ${n} בטאו טה צ'ינג מערוץ Silent Power.`, thumbnailUrl:`https://i.ytimg.com/vi/${enVid.id}/hqdefault.jpg`, uploadDate:'2026-11-04', embedUrl:`https://www.youtube-nocookie.com/embed/${enVid.id}`, contentUrl:`https://www.youtube.com/watch?v=${enVid.id}` }] : []),
+] : undefined;
 ---
+{note ? (
+<Base lang="he" title={h1} description={note.description} type="article" jsonLd={ld} alt={alt}>
+<TaoSlides n={n} lang="he" />
+<article dir="rtl" lang="he"><section><div class="wrap narrow prose">
+<div class="label">טאו טה צ'ינג · פרק {n} מתוך {TOTAL}</div>
+<h1 style="font-size:clamp(2rem,5vw,3.2rem)">{h1}</h1>
+<p class="lede">{note.intro}</p>
+<h2>הפרק המלא</h2>
+{stanzas.map(s => <p>{s.split('\n').map((l, i) => <>{i > 0 && <br />}{l}</>)}</p>)}
+<h2>מה זה אומר</h2>
+{note.body.map(p => <p>{p}</p>)}
+{(heSoc?.ig || enVid || enSoc?.ig) && <h2>צפייה בסרטון</h2>}
+{heSoc?.ig && <SocialVideo ig={heSoc.ig} fb={heSoc.fb} tt={heSoc.tt} title={`טאו טה צ'ינג פרק ${n}: ${note.title}`} watch="צפו בריל" also="גם ב" lang="he" />}
+{!heSoc?.ig && enVid && <><VideoCard id={enVid.id} title={enVid.title} /><p class="sans note">הסרטון באנגלית.</p></>}
+{!heSoc?.ig && !enVid && enSoc?.ig && <><SocialVideo ig={enSoc.ig} title={`טאו טה צ'ינג פרק ${n}`} watch="צפו בריל (באנגלית)" also="גם ב" lang="he" /></>}
+<h2>שאלות ותשובות</h2>
+{note.faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+<hr class="rule" style="margin:40px 0">
+<nav class="chnav sans" aria-label="פרקים">
+  {prev ? <a href={`/he/tao/${prev.n}/`} rel="prev">→ פרק {prev.n}: {prev.t}</a> : <span></span>}
+  {next && <a href={`/he/tao/${next.n}/`} rel="next">פרק {next.n}: {next.t} ←</a>}
+</nav>
+<p class="sans" style="margin-top:18px"><a href="/he/tao/">כל הפרקים</a>{alt && <> · <a href={alt} hreflang="en" lang="en">English</a></>} · <a href="/he/free/">להתחיל בחינם</a></p>
+</div></section></article>
+</Base>
+) : (
 <Base lang="he" noindex title={`פרק ${c.n} בטאו טה צ\x27ינג`} description={first + ' ...'}>
 <TaoSlides n={n} lang="he" />
+{(heSoc?.ig || enVid) && <section dir="rtl" lang="he"><div class="wrap narrow"><h2 style="font-size:1.3rem">צפייה בסרטון</h2>
+{heSoc?.ig ? <SocialVideo ig={heSoc.ig} fb={heSoc.fb} tt={heSoc.tt} title={`טאו טה צ'ינג פרק ${n}`} watch="צפו בריל" also="גם ב" lang="he" /> : <VideoCard id={enVid.id} title={enVid.title} />}
+</div></section>}
 </Base>
+)}

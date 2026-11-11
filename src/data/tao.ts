@@ -1,7 +1,13 @@
 // Original English rendering of the Tao Te Ching (poetic, minimal), with a matching Hebrew rendering.
 // Stanzas are separated by a blank line; each stanza is one slide.
 export interface Chapter { n: number; en: string; he: string }
-export const tao: Chapter[] = [
+import { part as p2 } from './tao-19-30';
+import { part as p3 } from './tao-31-40';
+import { part as p4 } from './tao-41-50';
+import { part as p5 } from './tao-51-60';
+import { part as p6 } from './tao-61-70';
+import { part as p7 } from './tao-71-81';
+const base: Chapter[] = [
 { n: 1,
 en: `A way that can be spoken
 is not the lasting Way.
@@ -593,4 +599,5 @@ he: `כשהדרך הגדולה אובדת
 כשהמדינה נופלת לחושך
 יש שרים נאמנים.` },
 ];
+export const tao: Chapter[] = [...base, ...p2, ...p3, ...p4, ...p5, ...p6, ...p7];
 export const TOTAL = 81;
