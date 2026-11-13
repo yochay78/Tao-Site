@@ -44,7 +44,7 @@ Of these two, one helps, one harms.
 What heaven dislikes, who knows why?
 Even the Nameless finds it hard.
 
-The Way of heaven does not strive, yet wins.
+The way of heaven does not strive, yet wins.
 Does not speak, yet answers.
 Is not called, yet comes.
 Is slow, yet plans well.
@@ -58,9 +58,9 @@ he: `אמיץ במעז, אתה מת.
 אפילו חסר השם מתקשה בכך.
 
 דרך השמים אינה נאבקת, ובכל זאת מנצחת.
-אינה מדברת, ובכל זאת עונה.
-אינה נקראת, ובכל זאת באה.
-איטית, ובכל זאת מתכננת היטב.
+אינו מדבר, ובכל זאת עונה.
+אינו נקרא, ובכל זאת בא.
+איטי, ובכל זאת מתכנן היטב.
 
 רשת השמים רחבה.
 עיניה גדולות, ובכל זאת דבר אינו חומק.` },
@@ -142,20 +142,20 @@ he: `אדם רך וחלש בלידתו,
 החזק והגדול נשארים למטה.
 הרך והחלש נשארים למעלה.` },
 { n: 77,
-en: `The Way of heaven is like drawing a bow.
+en: `The way of heaven is like drawing a bow.
 The high is pressed down.
 The low is raised.
 The excess is taken away.
 The lack is made up.
 
-The Way of heaven takes from the excess
+The way of heaven takes from the excess
 and gives to the lack.
 The way of people is not so.
 It takes from those who lack
 and gives to those who have too much.
 
 Who can have too much and give it to the world?
-Only one who has the Way.
+Only one who has the Tao.
 
 So the Nameless acts and does not depend.
 Succeeds and does not stay.
@@ -173,7 +173,7 @@ he: `דרך השמים היא כמו מתיחת קשת.
 ונותנת למי שיש לו יותר מדי.
 
 מי יכול לקבל יותר מדי ולתת זאת לעולם?
-רק מי שיש לו את הדרך.
+רק מי שיש לו את הטאו.
 
 לכן חסר השם פועל ואינו נסמך.
 מצליח ואינו נשאר.
@@ -219,7 +219,7 @@ and does not demand payment from others.
 One with virtue tends to the tally.
 One without virtue tends to the collecting.
 
-The Way of heaven has no favorites.
+The way of heaven has no favorites.
 It stays always with the good.`,
 he: `אחרי מריבה גדולה,
 תמיד נשארת מרירות.
@@ -231,7 +231,7 @@ he: `אחרי מריבה גדולה,
 חסר מעלה דואג לגבייה.
 
 לדרך השמים אין מועדפים.
-היא תמיד נשארת עם הטובים.` },
+הוא תמיד נשאר עם הטובים.` },
 { n: 80,
 en: `Let the country be small and the people few.
 Let there be tools that save ten times, a hundred times the labor,
@@ -287,8 +287,8 @@ The Nameless does not hoard.
 The more he does for others, the more he has.
 The more he gives to others, the more he has.
 
-The Way of heaven benefits and does not harm.
-The Way of the Nameless acts and does not compete.`,
+The way of heaven benefits and does not harm.
+The Tao of the Nameless acts and does not compete.`,
 he: `מילים אמיתיות אינן יפות.
 מילים יפות אינן אמיתיות.
 הטובים אינם מתווכחים.

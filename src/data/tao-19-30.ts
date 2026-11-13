@@ -72,8 +72,8 @@ he: `זנח את הלימוד ותהיה חופשי מדאגה.
 רק אני שונה מהם,
 ואני מעריך את היניקה מן האם.` },
 { n: 21,
-en: `The greatest virtue follows the Way alone.
-The Way is shadowy, elusive.
+en: `The greatest virtue follows the Tao alone.
+The Tao is shadowy, elusive.
 Elusive and shadowy, yet within it are images.
 Shadowy and elusive, yet within it are things.
 Deep and dark, yet within it is an essence.
@@ -83,8 +83,8 @@ From the beginning until now its name has not gone.
 Through it we see the source of all things.
 How do I know the source is so?
 By this.`,
-he: `המעלה הגדולה ביותר הולכת אחרי הדרך בלבד.
-הדרך היא צל, חמקמקה.
+he: `המעלה הגדולה ביותר הולכת אחרי הטאו בלבד.
+הטאו הוא צל, חמקמקה.
 חמקמקה וצל, ובתוכה צורות.
 צל וחמקמקה, ובתוכה דברים.
 עמוקה וחשוכה, ובתוכה תמצית.
@@ -141,10 +141,10 @@ Who makes these? Heaven and earth.
 If even heaven and earth cannot make things last,
 how much less can people?
 
-So those who follow the Way become one with the Way.
+So those who follow the Tao become one with the Tao.
 Those who follow virtue become one with virtue.
 Those who follow loss become one with loss.
-Become one with the Way, and the Way welcomes you.
+Become one with the Tao, and the Tao welcomes you.
 Become one with virtue, and virtue welcomes you.
 Become one with loss, and loss welcomes you.
 
@@ -157,10 +157,10 @@ he: `מעט מילים הוא טבעי.
 אם אפילו שמים וארץ אינם יכולים להאריך דברים,
 על אחת כמה וכמה בני אדם.
 
-לכן ההולכים בדרך נעשים אחד עם הדרך.
+לכן ההולכים בטאו נעשים אחד עם הטאו.
 ההולכים במעלה נעשים אחד עם המעלה.
 ההולכים באובדן נעשים אחד עם האובדן.
-היה אחד עם הדרך והדרך תקבל אותך.
+היה אחד עם הטאו והטאו תקבל אותך.
 היה אחד עם המעלה והמעלה תקבל אותך.
 היה אחד עם האובדן והאובדן יקבל אותך.
 
@@ -174,9 +174,9 @@ He who asserts himself is not credited.
 He who boasts has no merit.
 He who claims has no lasting.
 
-On the Way, these are leftover food and useless growths.
+On the Tao, these are leftover food and useless growths.
 Things dislike them.
-So one who has the Way does not dwell in them.`,
+So one who has the Tao does not dwell in them.`,
 he: `מי שעומד על קצות האצבעות אינו עומד איתן.
 מי שפוסע בצעדי ענק אינו מגיע רחוק.
 מי שמראה את עצמו אינו ברור.
@@ -184,9 +184,9 @@ he: `מי שעומד על קצות האצבעות אינו עומד איתן.
 מי שמתפאר אין לו זכות.
 מי שתובע לא יחזיק מעמד.
 
-בדרך אלה שאריות אוכל וגידולים מיותרים.
+בטאו אלה שאריות אוכל וגידולים מיותרים.
 הדברים סולדים מהם.
-לכן מי שיש לו את הדרך אינו שוכן בהם.` },
+לכן מי שיש לו את הטאו אינו שוכן בהם.` },
 { n: 25,
 en: `Something formless and complete
 was born before heaven and earth.
@@ -196,13 +196,13 @@ moving everywhere without tiring.
 It may be the mother of all under heaven.
 
 I do not know its name.
-I call it the Way.
+I call it the Tao.
 Forced to name it, I call it great.
 Great means going on.
 Going on means far.
 Far means returning.
 
-So the Way is great.
+So the Tao is great.
 Heaven is great.
 Earth is great.
 The king is also great.
@@ -211,8 +211,8 @@ and the king is one of them.
 
 People follow earth.
 Earth follows heaven.
-Heaven follows the Way.
-The Way follows what is so of itself.`,
+Heaven follows the Tao.
+The Tao follows what is so of itself.`,
 he: `משהו חסר צורה ושלם
 נולד לפני שמים וארץ.
 שקט, ריק,
@@ -221,13 +221,13 @@ he: `משהו חסר צורה ושלם
 אולי הוא אם כל מה שמתחת לשמים.
 
 איני יודע את שמו.
-אני קורא לו הדרך.
+אני קורא לו הטאו.
 אם אני נאלץ לתת לו שם, אני קורא לו גדול.
 גדול פירושו נמשך.
 נמשך פירושו רחוק.
 רחוק פירושו שב.
 
-לכן הדרך גדולה.
+לכן הטאו גדול.
 השמים גדולים.
 הארץ גדולה.
 גם המלך גדול.
@@ -236,8 +236,8 @@ he: `משהו חסר צורה ושלם
 
 בני האדם הולכים אחרי הארץ.
 הארץ הולכת אחרי השמים.
-השמים הולכים אחרי הדרך.
-הדרך הולכת אחרי מה שהוא כך מעצמו.` },
+השמים הולכים אחרי הטאו.
+הטאו הולך אחרי מה שהוא כך מעצמו.` },
 { n: 26,
 en: `The heavy is the root of the light.
 The still is the master of the restless.
@@ -375,7 +375,7 @@ he: `מי שרוצה לקחת את העולם ולעצב אותו
 נמנע מעודף,
 נמנע מהיותר מדי.` },
 { n: 30,
-en: `One who helps a ruler by the Way
+en: `One who helps a ruler by the Tao
 does not use arms to conquer the world.
 Such things tend to return.
 Where armies camp, thorns grow.
@@ -390,9 +390,9 @@ Achieves because he must.
 Achieves, and does not force.
 
 Things grow strong, then grow old.
-This is not the Way.
-What is not the Way ends early.`,
-he: `מי שמסייע לשליט בדרך
+This is not the Tao.
+What is not the Tao ends early.`,
+he: `מי שמסייע לשליט בטאו
 אינו משתמש בנשק כדי לכבוש את העולם.
 דברים כאלה נוטים לשוב.
 איפה שהצבאות חונים, צומחים קוצים.
@@ -407,6 +407,6 @@ he: `מי שמסייע לשליט בדרך
 משיג ואינו כופה.
 
 דברים מתחזקים ואז מזדקנים.
-זו אינה הדרך.
-מה שאינו הדרך נגמר מוקדם.` },
+זו אינו הטאו.
+מה שאינו הטאו נגמר מוקדם.` },
 ];

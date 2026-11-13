@@ -1,16 +1,16 @@
 import type { ChapterNote } from '../tao-notes';
 export const part: Record<number, ChapterNote> = {
 1: {
-  title: `The Way That Cannot Be Spoken`,
-  description: `Tao Te Ching chapter 1 in full, and what "the Way that can be spoken is not the lasting Way" means in plain language.`,
-  intro: `Chapter 1 of the Tao Te Ching says the real Way cannot be captured in words. Words point at it, the way a finger points at the moon, but they are not it.`,
+  title: `The Tao That Cannot Be Spoken`,
+  description: `Tao Te Ching chapter 1 in full, and what "the Tao that can be spoken is not the lasting Tao" means in plain language.`,
+  intro: `Chapter 1 of the Tao Te Ching says the real Tao cannot be captured in words. Words point at it, the way a finger points at the moon, but they are not it.`,
   body: [
-    `The first line is a warning at the door. If you can say what the Way is, you have said something smaller than the Way. Names are useful, but they cut a whole into pieces, and the whole does not live in the pieces.`,
+    `The first line is a warning at the door. If you can say what the Tao is, you have said something smaller than the Tao. Names are useful, but they cut a whole into pieces, and the whole does not live in the pieces.`,
     `Then the chapter gives two ways of looking. Free of wanting, you see the hidden depth of things. Full of wanting, you see only the edges, the parts you can grab. Neither is wrong. They are one source seen from two sides.`,
     `The ending is the invitation. Darkness within darkness is not gloom. It is depth, the gate to everything wonderful. The Tao Te Ching begins by telling you it will not explain everything, and that the rest is for you to walk.`,
   ],
   faq: [
-    [`What does "the Way that can be spoken is not the lasting Way" mean?`, `It means the Tao is larger than any description of it. Words and names are tools for pointing, not containers, so the Way has to be lived and noticed, not only understood.`],
+    [`What does "the Tao that can be spoken is not the lasting Tao" mean?`, `It means the Tao is larger than any description of it. Words and names are tools for pointing, not containers, so the Tao has to be lived and noticed, not only understood.`],
     [`Who is "the Nameless" in chapter 1?`, `The Nameless is the root of heaven and earth, the source before anything is named. Once things are named, the named becomes the mother of the myriad things.`],
     [`Why does chapter 1 talk about wanting?`, `Because wanting changes what you see. With no wanting you notice the deep, quiet side of things. With wanting you see only the surface you hope to use.`],
   ],
@@ -47,15 +47,15 @@ export const part: Record<number, ChapterNote> = {
 },
 4: {
   title: `The Empty Bowl`,
-  description: `Tao Te Ching chapter 4 in full: the Way as an empty bowl that is never full, and what it means to blunt the sharp and soften the glare.`,
-  intro: `Chapter 4 of the Tao Te Ching describes the Way as an empty bowl that is never filled up. Because it is empty, it can be used forever, and it is the deep source behind all things.`,
+  description: `Tao Te Ching chapter 4 in full: the Tao as an empty bowl that is never full, and what it means to blunt the sharp and soften the glare.`,
+  intro: `Chapter 4 of the Tao Te Ching describes the Tao as an empty bowl that is never filled up. Because it is empty, it can be used forever, and it is the deep source behind all things.`,
   body: [
-    `A bowl is useful because of its hollow. The Way is like that: open, receiving, never exhausted. It does not push into the world. It makes room, and things appear in it.`,
+    `A bowl is useful because of its hollow. The Tao is like that: open, receiving, never exhausted. It does not push into the world. It makes room, and things appear in it.`,
     `Four short lines describe how it moves. It blunts the sharp, unties the knot, softens the glare, and joins the dust. It does not win by being brighter. It settles things by meeting them as they are.`,
     `The end is humble. Hidden, yet always here. Lao Tzu does not know whose child it is, and says it was before any god. The chapter points you toward a source that is quiet, near, and older than every name.`,
   ],
   faq: [
-    [`What does "the Way is an empty bowl" mean?`, `It means the Tao is open and unfilled, so it can give without running out. Emptiness here is capacity, not lack.`],
+    [`What does "the Tao is an empty bowl" mean?`, `It means the Tao is open and unfilled, so it can give without running out. Emptiness here is capacity, not lack.`],
     [`What does "blunt the sharp, untie the knot" mean?`, `It describes a gentle way of dealing with conflict: take the edge off, loosen what is tangled, and join the common dust instead of standing above it.`],
     [`What does "before any god" mean in chapter 4?`, `It says the Tao comes before every image of the divine. It is not a deity but the source that deities, like everything else, come from.`],
   ],
@@ -71,7 +71,7 @@ export const part: Record<number, ChapterNote> = {
   ],
   faq: [
     [`What are "straw dogs" in the Tao Te Ching?`, `They were ritual offerings made of straw, valued during the ceremony and discarded after. The image shows an impartial universe that treats everything evenly, without sentiment.`],
-    [`Does chapter 5 mean the universe does not care?`, `It means the Way has no favorites. Its care is equal and not personal, which can be freeing: nothing is singled out for punishment or reward.`],
+    [`Does chapter 5 mean the universe does not care?`, `It means the Tao has no favorites. Its care is equal and not personal, which can be freeing: nothing is singled out for punishment or reward.`],
     [`What does "keep to the center" mean?`, `It means returning to your own quiet middle instead of arguing and explaining. Less talk keeps your energy from being spent.`],
   ],
 },
@@ -167,23 +167,23 @@ export const part: Record<number, ChapterNote> = {
 },
 14: {
   title: `The Unseen, the Unheard, the Untouched`,
-  description: `Tao Te Ching chapter 14 in full: the Way as the shape of no shape, and how holding to the ancient Way lets you master the present.`,
-  intro: `Chapter 14 of the Tao Te Ching describes the Way as the Unseen, the Unheard, and the Untouched. It cannot be grasped by the senses, yet holding to it lets you meet the present.`,
+  description: `Tao Te Ching chapter 14 in full: the Tao as the shape of no shape, and how holding to the ancient Tao lets you master the present.`,
+  intro: `Chapter 14 of the Tao Te Ching describes the Tao as the Unseen, the Unheard, and the Untouched. It cannot be grasped by the senses, yet holding to it lets you meet the present.`,
   body: [
     `Look and you cannot see it. Listen and you cannot hear it. Reach and you cannot hold it. Three senses fail, and the three fail together, because the Tao is not a thing among things. It is what things come from.`,
     `Above it is not bright, below it is not dark. It has no front and no back. Lao Tzu calls it the shape of no shape, the image of no image. He knows these words are not enough, and says so.`,
-    `Still, there is a practical turn. Hold to the ancient Way and you can master the present. The deep source is not far away or locked in the past. It is the thread that runs through now.`,
+    `Still, there is a practical turn. Hold to the ancient Tao and you can master the present. The deep source is not far away or locked in the past. It is the thread that runs through now.`,
   ],
   faq: [
     [`What does "the shape of no shape" mean?`, `It means the Tao has no fixed form. It is behind every form, so any description is partial.`],
     [`What are the Unseen, Unheard, and Untouched?`, `They are names for aspects of the Tao that the senses cannot reach. The point is that the deepest reality is not something you can see, hear, or hold.`],
-    [`How does the ancient Way help with the present?`, `Staying in touch with the source gives you steadiness, so you can meet what arises now without being swept away.`],
+    [`How does the ancient Tao help with the present?`, `Staying in touch with the source gives you steadiness, so you can meet what arises now without being swept away.`],
   ],
 },
 15: {
-  title: `The Ones of Old Who Walked the Way`,
+  title: `The Ones of Old Who Walked the Tao`,
   description: `Tao Te Ching chapter 15 in full: a portrait of the wise as careful, yielding, plain and open, and the question of waiting for the mud to clear.`,
-  intro: `Chapter 15 of the Tao Te Ching paints a portrait of the ones who walked the Way: careful, yielding, plain, and patient. They can wait in the mud until the water clears.`,
+  intro: `Chapter 15 of the Tao Te Ching paints a portrait of the ones who walked the Tao: careful, yielding, plain, and patient. They can wait in the mud until the water clears.`,
   body: [
     `Lao Tzu admits these people are too deep to know, so he can only describe how they looked. Careful like someone crossing a winter stream. Watchful like someone among enemies. Courteous like a guest. Yielding like ice about to melt.`,
     `They are plain like uncarved wood, open like a valley, murky like muddy water. None of these images is flashy. The wise do not look impressive. They look settled and unpolished, which is part of their depth.`,

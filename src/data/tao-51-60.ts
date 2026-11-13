@@ -2,34 +2,34 @@
 import type { Chapter } from './tao';
 export const part: Chapter[] = [
 { n: 51,
-en: `The Way gives birth to them.
+en: `The Tao gives birth to them.
 Virtue nurtures them.
 Things shape them.
 Circumstance completes them.
-So all things honor the Way and prize virtue.
+So all things honor the Tao and prize virtue.
 
-The honor of the Way and the prize of virtue
+The honor of the Tao and the prize of virtue
 are not ordered by anyone.
 They come of themselves.
 
-So the Way gives birth, virtue nurtures,
+So the Tao gives birth, virtue nurtures,
 raises, shelters, ripens, and protects.
 Gives birth and does not possess.
 Acts and does not depend.
 Leads and does not rule.
 This is called deep virtue.`,
-he: `הדרך מולידה אותם.
+he: `הטאו מוליד אותם.
 המעלה מטפחת אותם.
 הדברים מעצבים אותם.
 הנסיבות משלימות אותם.
-לכן כל הדברים מכבדים את הדרך ומוקירים את המעלה.
+לכן כל הדברים מכבדים את הטאו ומוקירים את המעלה.
 
-כבוד הדרך והערכת המעלה
+כבוד הטאו והערכת המעלה
 אינם מוטלים על ידי איש.
 הם באים מעצמם.
 
-לכן הדרך מולידה, המעלה מטפחת,
-מגדלת, מגנה, מבשילה ושומרת.
+לכן הטאו מוליד, המעלה מטפחת,
+מגדל, מגן, מבשיל ושומר.
 מולידה ואינה מחזיקה בבעלות.
 פועלת ואינה נסמכת.
 מובילה ואינה שולטת.
@@ -71,9 +71,9 @@ he: `לעולם הייתה תחילה.
 זה נקרא ללכת אחרי הקבוע.` },
 { n: 53,
 en: `If I had even a little knowledge,
-I would walk the great Way
+I would walk the great Tao
 and fear only to stray.
-The great Way is smooth,
+The great Tao is smooth,
 yet people love the side paths.
 
 The court is spotless,
@@ -84,11 +84,11 @@ carry sharp swords,
 are glutted with food and drink,
 and own more than they can count.
 This is called thievery and boasting.
-It is not the Way.`,
+It is not the Tao.`,
 he: `אילו היה לי ולו מעט ידע,
-הייתי הולך בדרך הגדולה
+הייתי הולך בטאו הגדול
 ופוחד רק לסטות.
-הדרך הגדולה חלקה,
+הטאו הגדול חלק,
 ובכל זאת בני אדם אוהבים את שבילי הצד.
 
 החצר נקייה מכתם,
@@ -99,7 +99,7 @@ he: `אילו היה לי ולו מעט ידע,
 שבעים אוכל ושתייה,
 ומחזיקים יותר ממה שאפשר לספור.
 זה נקרא גניבה והתרברבות.
-זו אינה הדרך.` },
+זו אינו הטאו.` },
 { n: 54,
 en: `What is well planted is not uprooted.
 What is well held is not taken away.
@@ -157,8 +157,8 @@ To know the constant is to be clear.
 To force life is ill-omened.
 To drive the breath by will is to be violent.
 Things grow strong, then grow old.
-This is not the Way.
-What is not the Way ends early.`,
+This is not the Tao.
+What is not the Tao ends early.`,
 he: `מי שמחזיק במעלה עמוקה
 הוא כמו תינוק שזה עתה נולד.
 צרעות, עקרבים ונחשים אינם עוקצים אותו.
@@ -178,8 +178,8 @@ he: `מי שמחזיק במעלה עמוקה
 לכפות על החיים זה מבשר רע.
 להוביל את הנשימה בכוח הרצון זה אלימות.
 דברים מתחזקים ואז מזדקנים.
-זו אינה הדרך.
-מה שאינו הדרך נגמר מוקדם.` },
+זו אינו הטאו.
+מה שאינו הטאו נגמר מוקדם.` },
 { n: 56,
 en: `Those who know do not speak.
 Those who speak do not know.
@@ -296,7 +296,7 @@ you can hold a country.
 
 Hold the mother of a country, and you can last long.
 This is called deep roots and firm stem,
-the Way of long life and lasting sight.`,
+the way of long life and lasting sight.`,
 he: `בשליטה באנשים ובשירות השמים,
 אין דבר טוב מריסון.
 ריסון מתחיל בשיבה מוקדמת.
@@ -314,7 +314,7 @@ he: `בשליטה באנשים ובשירות השמים,
 en: `Govern a large country
 as you cook a small fish.
 
-When the Way is brought to the world,
+When the Tao is brought to the world,
 spirits lose their power.
 It is not that the spirits have no power,
 but that their power does not harm people.
@@ -325,7 +325,7 @@ virtue returns to both.`,
 he: `שלוט במדינה גדולה
 כמו שמבשלים דג קטן.
 
-כשהדרך מובאת לעולם,
+כשהטאו מובא לעולם,
 הרוחות מאבדות את כוחן.
 לא שאין לרוחות כוח,
 אלא שכוחן אינו מזיק לבני אדם.

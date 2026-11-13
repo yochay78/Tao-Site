@@ -13,7 +13,7 @@ const first: Record<number, ChapterNote> = {
   ],
   faq: [
     ['What does "the highest good is like water" mean?', 'It means the best way to live is to give without competing, and to be at ease in low and humble places. Water nourishes everything and asks for nothing.'],
-    ['Why is water close to the Way?', 'Because it yields, finds its level, and still carves canyons. It shows that gentleness and power are not opposites.'],
+    ['Why is water close to the Tao?', 'Because it yields, finds its level, and still carves canyons. It shows that gentleness and power are not opposites.'],
   ],
   video: { id: 'UeC1oM60tXk', title: 'Be Like Water: It Has Nothing to Prove', duration: 'PT23S', uploaded: '2026-10-19' },
 },
@@ -39,13 +39,13 @@ const first: Record<number, ChapterNote> = {
   intro: 'Chapter 16 of the Tao Te Ching is about stillness and returning to the root. Above is the full chapter. Below is what it means.',
   body: [
     'The chapter begins with an instruction: reach the utmost emptiness, hold fast to stillness. Then Lao Tzu describes what he sees from there. Everything rises and falls. Everything flourishes, and everything goes back to its root.',
-    'Returning to the root is stillness. From there the chapter moves in a chain, one step opening the next: constancy, clarity, openness, fairness, and finally the Way itself. Not seeing this, it says, is to stumble into disaster.',
+    'Returning to the root is stillness. From there the chapter moves in a chain, one step opening the next: constancy, clarity, openness, fairness, and finally the Tao itself. Not seeing this, it says, is to stumble into disaster.',
     'The ending is the part people remember. The body dies and there is no danger. Readers take it in different ways. One common reading is that when you stop clinging to what rises and falls, even loss and ending lose their grip on you.',
     'The practical side is simple. Before you act, return. Let things settle. What you see from stillness is not what you see from panic.',
   ],
   faq: [
     ['What does "return to the root" mean in the Tao Te Ching?', 'It means coming back to the quiet source that everything rises from and goes back to. In this chapter, that return is stillness.'],
-    ['Why does chapter 16 say there is no danger when the body dies?', 'It is often read as a sign that someone who is at one with the Way no longer fears ending. The chapter does not explain it further, so readers interpret it differently.'],
+    ['Why does chapter 16 say there is no danger when the body dies?', 'It is often read as a sign that someone who is at one with the Tao no longer fears ending. The chapter does not explain it further, so readers interpret it differently.'],
   ],
 },
 17: {
@@ -65,20 +65,20 @@ const first: Record<number, ChapterNote> = {
   video: { id: 'R3XZgaStOvc', title: 'Give Your Leader a Score. Lao Tzu Already Did.', duration: 'PT1M44S', uploaded: '2026-11-03' },
 },
 18: {
-  title: 'When the Way Is Lost',
-  description: 'Tao Te Ching chapter 18 in full, and what it means that kindness and duty appear when the great Way is lost.',
+  title: 'When the Tao Is Lost',
+  description: 'Tao Te Ching chapter 18 in full, and what it means that kindness and duty appear when the great Tao is lost.',
   intro: 'Chapter 18 of the Tao Te Ching says something unexpected about kindness and duty. Above is the full chapter. Below is what it means.',
   body: [
-    'The chapter says that when the great Way is lost, kindness and duty appear. When cleverness appears, there is great deceit. When families lose their peace, there is devotion and care. When the country falls into darkness, there are loyal ministers.',
+    'The chapter says that when the great Tao is lost, kindness and duty appear. When cleverness appears, there is great deceit. When families lose their peace, there is devotion and care. When the country falls into darkness, there are loyal ministers.',
     'It sounds like a criticism of virtue. It is more like an observation. We name a quality when it is missing. A family at peace does not talk about duty. A country in order does not praise its loyal ministers, because it does not need them.',
     'So Lao Tzu is not against kindness. He is pointing at what is behind it. When we need to preach kindness, something deeper has already gone out of balance.',
     'A good question to take from this chapter is simple. Where in your life are you working very hard at a virtue, when what is missing is something quieter underneath?',
   ],
   faq: [
-    ['Is Lao Tzu against kindness and duty?', 'No. He is saying that kindness and duty become things people talk about when the natural harmony of the Way has been lost. They are signs of a deeper problem.'],
-    ['What does "when the great Way is lost" mean?', 'It means when people are no longer in natural harmony with life. In that case, rules and virtues appear to replace what used to happen on its own.'],
+    ['Is Lao Tzu against kindness and duty?', 'No. He is saying that kindness and duty become things people talk about when the natural harmony of the Tao has been lost. They are signs of a deeper problem.'],
+    ['What does "when the great Tao is lost" mean?', 'It means when people are no longer in natural harmony with life. In that case, rules and virtues appear to replace what used to happen on its own.'],
   ],
-  video: { id: 'l4ZgjmiqH6c', title: 'When the Great Way Is Forgotten, Goodness Appears', duration: 'PT21S', uploaded: '2026-10-19' },
+  video: { id: 'l4ZgjmiqH6c', title: 'When the Great Tao Is Forgotten, Goodness Appears', duration: 'PT21S', uploaded: '2026-10-19' },
 },
 };
 // Notes for the other chapters live in src/data/notes-en/*.ts (one file per group of chapters).

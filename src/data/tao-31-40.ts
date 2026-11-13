@@ -4,7 +4,7 @@ export const part: Chapter[] = [
 { n: 31,
 en: `Fine weapons are tools of ill omen.
 Things dislike them,
-so one who has the Way does not rest among them.
+so one who has the Tao does not rest among them.
 
 At home the gentleman honors the left.
 At war he honors the right.
@@ -27,7 +27,7 @@ When many are killed, mourn them with grief.
 Even a victory should be held as a funeral.`,
 he: `כלי נשק משובחים הם כלים של מזל רע.
 הדברים סולדים מהם,
-לכן מי שיש לו את הדרך אינו נח ביניהם.
+לכן מי שיש לו את הטאו אינו נח ביניהם.
 
 בבית האציל מכבד את השמאל.
 במלחמה הוא מכבד את הימין.
@@ -49,7 +49,7 @@ he: `כלי נשק משובחים הם כלים של מזל רע.
 כשהרבה נהרגים, מקוננים עליהם בצער.
 גם ניצחון יש לקיים כמו הלוויה.` },
 { n: 32,
-en: `The Way is always nameless.
+en: `The Tao is always nameless.
 Uncarved, simple, small,
 yet nothing in the world can rule it.
 If kings and lords could hold to it,
@@ -65,10 +65,10 @@ know when to stop.
 Knowing when to stop,
 you avoid danger.
 
-The Way in the world
+The Tao in the world
 is like valley streams
 flowing toward river and sea.`,
-he: `הדרך תמיד חסרת שם.
+he: `הטאו תמיד חסר שם.
 גוש שלא נפסל, פשוט, קטן,
 ובכל זאת שום דבר בעולם אינו יכול למשול בו.
 אילו מלכים ושליטים יכלו להחזיק בו,
@@ -84,7 +84,7 @@ he: `הדרך תמיד חסרת שם.
 בידיעת מתי לעצור,
 תימנע מסכנה.
 
-הדרך בעולם
+הטאו בעולם
 היא כמו נחלי עמק
 הזורמים אל הנהר והים.` },
 { n: 33,
@@ -109,7 +109,7 @@ he: `מי שמכיר אחרים חכם.
 למות ולא ללכת לאיבוד
 זה לחיות הרבה.` },
 { n: 34,
-en: `The great Way flows everywhere,
+en: `The great Tao flows everywhere,
 left and right.
 All things depend on it for life,
 and it turns none away.
@@ -123,7 +123,7 @@ It can be called great.
 
 So the Nameless never tries to be great,
 and so he can achieve greatness.`,
-he: `הדרך הגדולה זורמת בכל מקום,
+he: `הטאו הגדול זורם בכל מקום,
 שמאלה וימינה.
 כל הדברים תלויים בה לחיים,
 והיא אינה מסרבת לאף אחד.
@@ -143,7 +143,7 @@ It comes and is not harmed,
 and there is rest, peace, and calm.
 
 Music and food make a passing guest stop.
-The Way, spoken, is plain and without taste.
+The Tao, spoken, is plain and without taste.
 Look, and you cannot see it.
 Listen, and you cannot hear it.
 Use it, and it cannot be used up.`,
@@ -152,7 +152,7 @@ he: `אחוז בדמות הגדולה והעולם יבוא.
 ויש מנוחה, שלום ורוגע.
 
 מוזיקה ואוכל עוצרים אורח עובר.
-הדרך, כשהיא נאמרת, פשוטה וחסרת טעם.
+הטאו, כשהיא נאמרת, פשוט וחסרת טעם.
 הבט ולא תוכל לראות אותה.
 האזן ולא תוכל לשמוע אותה.
 השתמש בה ואי אפשר לכלות אותה.` },
@@ -186,7 +186,7 @@ he: `מה שמיועד להצטמק
 הכלים החדים ביותר של מדינה
 אל להם להיות מוצגים לעם.` },
 { n: 37,
-en: `The Way does nothing,
+en: `The Tao does nothing,
 and yet nothing is left undone.
 If kings and lords could hold to it,
 all things would change of themselves.
@@ -197,7 +197,7 @@ The nameless uncarved block
 is free of desire.
 Free of desire, there is stillness,
 and the world settles by itself.`,
-he: `הדרך אינה עושה דבר,
+he: `הטאו אינו עושה דבר,
 ובכל זאת שום דבר לא נשאר בלי להיעשות.
 אילו מלכים ושליטים יכלו להחזיק בה,
 כל הדברים היו משתנים מעצמם.
@@ -221,14 +221,14 @@ High duty acts and has a reason to.
 High ritual acts, and when no one answers,
 rolls up its sleeves and forces it.
 
-So when the Way is lost, there is virtue.
+So when the Tao is lost, there is virtue.
 When virtue is lost, there is kindness.
 When kindness is lost, there is duty.
 When duty is lost, there is ritual.
 Ritual is the thin edge of loyalty and trust,
 and the start of disorder.
 
-Foreknowledge is the flower of the Way
+Foreknowledge is the flower of the Tao
 and the start of folly.
 So the Nameless stays with the thick, not the thin,
 with the fruit, not the flower.
@@ -245,14 +245,14 @@ he: `המעלה הגבוהה אינה מנסה להיות מוסרית,
 הטקס הגבוה פועל, וכשאיש אינו עונה,
 מפשיל שרוולים וכופה.
 
-לכן כשהדרך אובדת, יש מעלה.
+לכן כשהטאו אובד, יש מעלה.
 כשהמעלה אובדת, יש חסד.
 כשהחסד אובד, יש חובה.
 כשהחובה אובדת, יש טקס.
 הטקס הוא הקצה הדק של נאמנות ואמון,
 ותחילתה של אי סדר.
 
-ידיעה מראש היא פרח הדרך
+ידיעה מראש היא פרח הטאו
 ותחילתה של שטות.
 לכן חסר השם נשאר עם העבה, לא עם הדק,
 עם הפרי, לא עם הפרח.
@@ -307,12 +307,12 @@ he: `בימים עברו אלה השיגו את האחד:
 אל תרצה לצלצל כמו ירקן
 או להרעיש כמו אבן.` },
 { n: 40,
-en: `Returning is the movement of the Way.
-Weakness is the use of the Way.
+en: `Returning is the movement of the Tao.
+Weakness is the use of the Tao.
 All things under heaven are born from being.
 Being is born from non-being.`,
-he: `השיבה היא תנועת הדרך.
-החולשה היא השימוש בדרך.
+he: `השיבה היא תנועת הטאו.
+החולשה היא השימוש בטאו.
 כל הדברים שמתחת לשמים נולדים מן הקיום.
 הקיום נולד מן האין.` },
 ];

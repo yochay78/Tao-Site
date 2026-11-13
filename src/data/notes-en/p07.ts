@@ -33,10 +33,10 @@ export const part: Record<number, ChapterNote> = {
 73: {
   title: `Heaven's Net Is Vast`,
   description: `Tao Te Ching chapter 73 in full: brave in daring and brave in not daring, and the vast net of heaven that lets nothing slip through.`,
-  intro: `Chapter 73 of the Tao Te Ching says that bravery in daring leads to death, while bravery in not daring leads to life. The Way of heaven does not strive, yet wins, and its net lets nothing slip through.`,
+  intro: `Chapter 73 of the Tao Te Ching says that bravery in daring leads to death, while bravery in not daring leads to life. The way of heaven does not strive, yet wins, and its net lets nothing slip through.`,
   body: [
     `Brave in daring, you die. Brave in not daring, you live. There is a courage that rushes in and a courage that holds back, and the second often saves you.`,
-    `The Way of heaven does not strive, yet wins. It does not speak, yet answers. It is not called, yet comes. It is slow, yet plans well. Nature works without hurry or noise.`,
+    `The way of heaven does not strive, yet wins. It does not speak, yet answers. It is not called, yet comes. It is slow, yet plans well. Nature works without hurry or noise.`,
     `Heaven's net is vast. Wide-meshed, yet nothing slips through. The universe has its own balance, and in the end things find their due.`,
   ],
   faq: [
@@ -57,7 +57,7 @@ export const part: Record<number, ChapterNote> = {
   faq: [
     [`What does "carve in the master carpenter's place" mean?`, `It means taking on a role that belongs to nature, which usually injures the one who does it.`],
     [`Is chapter 74 against the death penalty?`, `It questions the effectiveness and wisdom of ruling by threat of death.`],
-    [`Who is the "master executioner"?`, `It is a name for the natural order, the Way, which governs life and death.`],
+    [`Who is the "master executioner"?`, `It is a name for the natural order, the Tao, which governs life and death.`],
   ],
 },
 75: {
@@ -92,17 +92,17 @@ export const part: Record<number, ChapterNote> = {
 },
 77: {
   title: `Like Drawing a Bow`,
-  description: `Tao Te Ching chapter 77 in full: how the Way of heaven is like drawing a bow, taking from excess and giving to lack.`,
-  intro: `Chapter 77 of the Tao Te Ching says the Way of heaven is like drawing a bow: the high is pressed down and the low is raised. Heaven takes from excess and gives to lack, unlike human ways.`,
+  description: `Tao Te Ching chapter 77 in full: how the way of heaven is like drawing a bow, taking from excess and giving to lack.`,
+  intro: `Chapter 77 of the Tao Te Ching says the way of heaven is like drawing a bow: the high is pressed down and the low is raised. Heaven takes from excess and gives to lack, unlike human ways.`,
   body: [
     `Drawing a bow evens things out. High is pressed down, low is raised, excess removed, lack made up. Nature tends toward balance.`,
     `The way of people is not so. It takes from those who lack and gives to those who have too much. Lao Tzu notes the unfairness of human systems.`,
-    `Who can have too much and give it to the world? Only one who has the Way. The Nameless acts and does not depend, succeeds and does not stay, and does not wish to show his worth.`,
+    `Who can have too much and give it to the world? Only one who has the Tao. The Nameless acts and does not depend, succeeds and does not stay, and does not wish to show his worth.`,
   ],
   faq: [
     [`What does "like drawing a bow" mean?`, `It means that heaven's way adjusts and balances, lowering the high and raising the low.`],
     [`Why is the way of people the opposite?`, `Because people tend to give more to those who already have much.`],
-    [`Who can give their excess to the world?`, `Only someone who follows the Way and does not cling to wealth or credit.`],
+    [`Who can give their excess to the world?`, `Only someone who follows the Tao and does not cling to wealth or credit.`],
   ],
 },
 78: {
@@ -127,12 +127,12 @@ export const part: Record<number, ChapterNote> = {
   body: [
     `Even a settled dispute leaves resentment. Lao Tzu asks how that can be called good. Winning arguments does not heal.`,
     `A tally was a split record of a debt, one half with each party. The Nameless keeps his half, holding the claim, but does not press for payment. One with virtue tends to the tally, and one without tends to the collecting.`,
-    `The Way of heaven has no favorites, yet it stays always with the good. Generosity and letting go align with how things really work.`,
+    `The way of heaven has no favorites, yet it stays always with the good. Generosity and letting go align with how things really work.`,
   ],
   faq: [
     [`What does "keep the left half of the tally" mean?`, `It means holding a claim without insisting on repayment.`],
     [`Why does bitterness remain after a quarrel?`, `Because resolving a dispute by force or judgment leaves hurt on one side.`],
-    [`What does "heaven has no favorites" mean?`, `It means the Way is impartial but supports those who are good.`],
+    [`What does "heaven has no favorites" mean?`, `It means the Tao is impartial but supports those who are good.`],
   ],
 },
 80: {
@@ -157,7 +157,7 @@ export const part: Record<number, ChapterNote> = {
   body: [
     `True words are not beautiful, beautiful words are not true. The good do not argue, and those who argue are not good. The wise are not learned, the learned are not wise. A last set of gentle paradoxes.`,
     `The Nameless does not hoard. The more he does for others, the more he has. The more he gives to others, the more he has. This is the closing lesson on generosity.`,
-    `The Way of heaven benefits and does not harm. The Way of the Nameless acts and does not compete. The book ends with an image of action without rivalry.`,
+    `The way of heaven benefits and does not harm. The Tao of the Nameless acts and does not compete. The book ends with an image of action without rivalry.`,
   ],
   faq: [
     [`What does "true words are not beautiful" mean?`, `It means the truth is often plain and unadorned, while polished speech may hide something.`],

@@ -37,7 +37,7 @@ he: `מדינה גדולה היא כמו קרקע נמוכה,
 כל אחת מקבלת את מבוקשה.
 הגדולה צריכה להשפיל את עצמה.` },
 { n: 62,
-en: `The Way is the hidden source of all things.
+en: `The Tao is the hidden source of all things.
 It is the treasure of the good,
 and the refuge of the not good.
 
@@ -48,13 +48,13 @@ Why abandon those who are not good?
 So when a ruler is enthroned
 and three ministers are appointed,
 better than offering a jade disc and a team of horses
-is to sit and offer this Way.
+is to sit and offer this Tao.
 
 Why did the ancients prize it?
 Did they not say, by it
 the seeker finds and the guilty are forgiven?
 So it is the world's treasure.`,
-he: `הדרך היא המקור הנסתר של כל הדברים.
+he: `הטאו הוא המקור הנסתר של כל הדברים.
 היא האוצר של הטובים,
 והמפלט של מי שאינם טובים.
 
@@ -65,7 +65,7 @@ he: `הדרך היא המקור הנסתר של כל הדברים.
 לכן כשמכתירים שליט
 וממנים שלושה שרים,
 טוב יותר מלהציע דיסקית ירקן וצמד סוסים
-לשבת ולהציע את הדרך הזו.
+לשבת ולהציע את הטאו הזה.
 
 למה הקדמונים העריכו אותה?
 האם לא אמרו, בעזרתה
@@ -160,7 +160,7 @@ he: `מה שנח קל להחזיק.
 הוא עוזר לכל הדברים למצוא את טבעם
 ואינו מעז לפעול.` },
 { n: 65,
-en: `In ancient times, those who followed the Way
+en: `In ancient times, those who followed the Tao
 did not use it to make people clever.
 They used it to keep people simple.
 
@@ -173,7 +173,7 @@ Always knowing the pattern is called deep virtue.
 Deep virtue is far and deep.
 It turns things back,
 until they reach the great harmony.`,
-he: `בימי קדם, ההולכים בדרך
+he: `בימי קדם, ההולכים בטאו
 לא השתמשו בה כדי להפוך בני אדם לפיקחים.
 הם השתמשו בה כדי לשמור עליהם פשוטים.
 
@@ -216,7 +216,7 @@ he: `למה נהרות וימים הם מלכי מאה העמקים?
 מפני שהוא אינו מתחרה,
 אין איש בעולם שיכול להתחרות בו.` },
 { n: 67,
-en: `All the world says my Way is great,
+en: `All the world says my Tao is great,
 yet seems unlike anything.
 Because it is great, it seems unlike anything.
 If it were like something,
@@ -239,8 +239,8 @@ This is death.
 Compassion wins in battle and holds in defense.
 Heaven will save those it would not see lost,
 and protect them with compassion.`,
-he: `כל העולם אומר שהדרך שלי גדולה,
-ובכל זאת היא נראית בלתי דומה לדבר.
+he: `כל העולם אומר שהטאו שלי גדול,
+ובכל זאת הוא נראה בלתי דומה לדבר.
 מפני שהיא גדולה, היא נראית בלתי דומה לדבר.
 אילו הייתה דומה למשהו,
 מזמן הייתה נעשית קטנה.

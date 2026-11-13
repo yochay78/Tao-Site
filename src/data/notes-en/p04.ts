@@ -1,26 +1,26 @@
 import type { ChapterNote } from '../tao-notes';
 export const part: Record<number, ChapterNote> = {
 41: {
-  title: `If He Did Not Laugh, It Would Not Be the Way`,
-  description: `Tao Te Ching chapter 41 in full: why the foolish laugh at the Way, and how the great square has no corners and the great sound is hard to hear.`,
-  intro: `Chapter 41 of the Tao Te Ching says the Way looks like its opposite. The bright Way seems dark, and the poor student laughs at it. If he did not laugh, it would not be the Way.`,
+  title: `If He Did Not Laugh, It Would Not Be the Tao`,
+  description: `Tao Te Ching chapter 41 in full: why the foolish laugh at the Tao, and how the great square has no corners and the great sound is hard to hear.`,
+  intro: `Chapter 41 of the Tao Te Ching says the Tao looks like its opposite. The bright Tao seems dark, and the poor student laughs at it. If he did not laugh, it would not be the Tao.`,
   body: [
-    `Three students hear the Way. The best follows it with effort. The average half keeps it and half loses it. The poor student laughs aloud. Lao Tzu says that if he did not laugh, it would not be the Way.`,
-    `Then a string of paradoxes. The bright Way seems dark. The way forward seems to go back. Great purity seems stained. True things look wrong at first glance because they do not match our habits.`,
-    `The great square has no corners, the great sound is hard to hear, the great image has no form. The Way is hidden and has no name, yet only the Way is good at giving and completing.`,
+    `Three students hear the Tao. The best follows it with effort. The average half keeps it and half loses it. The poor student laughs aloud. Lao Tzu says that if he did not laugh, it would not be the Tao.`,
+    `Then a string of paradoxes. The bright Tao seems dark. The way forward seems to go back. Great purity seems stained. True things look wrong at first glance because they do not match our habits.`,
+    `The great square has no corners, the great sound is hard to hear, the great image has no form. The Tao is hidden and has no name, yet only the Tao is good at giving and completing.`,
   ],
   faq: [
-    [`Why does the poor student laugh at the Way?`, `Because the Tao goes against common sense and habit. Lao Tzu says that laughter is a sign that the teaching is deep.`],
+    [`Why does the poor student laugh at the Tao?`, `Because the Tao goes against common sense and habit. Lao Tzu says that laughter is a sign that the teaching is deep.`],
     [`What does "the great square has no corners" mean?`, `It means the greatest things exceed our usual measures. They do not fit into neat edges.`],
-    [`What does "the bright Way seems dark" mean?`, `It means true clarity looks unclear to those used to surface answers.`],
+    [`What does "the bright Tao seems dark" mean?`, `It means true clarity looks unclear to those used to surface answers.`],
   ],
 },
 42: {
-  title: `The Way Gives Birth to One`,
-  description: `Tao Te Ching chapter 42 in full: the Way giving birth to one, two, three and the myriad things, and how things increase by decreasing.`,
-  intro: `Chapter 42 of the Tao Te Ching says the Way gives birth to one, one to two, two to three, and three to the myriad things. All things carry yin and embrace yang, and find harmony between them.`,
+  title: `The Tao Gives Birth to One`,
+  description: `Tao Te Ching chapter 42 in full: the Tao giving birth to one, two, three and the myriad things, and how things increase by decreasing.`,
+  intro: `Chapter 42 of the Tao Te Ching says the Tao gives birth to one, one to two, two to three, and three to the myriad things. All things carry yin and embrace yang, and find harmony between them.`,
   body: [
-    `This is the Tao Te Ching's short story of creation. From the Way comes one, then two, then three, then all things. It is less a timeline than a picture of how unity becomes variety.`,
+    `This is the Tao Te Ching's short story of creation. From the Tao comes one, then two, then three, then all things. It is less a timeline than a picture of how unity becomes variety.`,
     `The myriad things carry yin and embrace yang and blend their breath into harmony. Every being holds both sides, and balance comes from their meeting.`,
     `Things are increased by being decreased, and decreased by being increased. Kings call themselves lonely and unworthy, and gain by it. The last line warns that the violent do not die a natural death.`,
   ],
@@ -80,7 +80,7 @@ export const part: Record<number, ChapterNote> = {
   description: `Tao Te Ching chapter 46 in full: why desire and wanting more are the greatest faults, and why knowing enough is always enough.`,
   intro: `Chapter 46 of the Tao Te Ching says no crime is greater than having desires and no fault greater than wanting more. To know that enough is enough is always enough.`,
   body: [
-    `When the Way is in the world, fast horses carry manure. When it is not, war horses are bred on the borders. Peace puts resources to ordinary use. Greed turns them to conflict.`,
+    `When the Tao is in the world, fast horses carry manure. When it is not, war horses are bred on the borders. Peace puts resources to ordinary use. Greed turns them to conflict.`,
     `The chapter names the root: desire, not knowing enough, and wanting more. These are the sources of crime, disaster and fault. Conflict starts in the wanting.`,
     `The solution is a simple loop. To know that enough is enough is always enough. Once you accept sufficiency, you will never lack it.`,
   ],
@@ -93,29 +93,29 @@ export const part: Record<number, ChapterNote> = {
 47: {
   title: `Without Going Out the Door`,
   description: `Tao Te Ching chapter 47 in full: how you can know the world without leaving home, and why the farther you go the less you know.`,
-  intro: `Chapter 47 of the Tao Te Ching says you can know the world without going out the door. The farther you go, the less you know, because the Way is found within.`,
+  intro: `Chapter 47 of the Tao Te Ching says you can know the world without going out the door. The farther you go, the less you know, because the Tao is found within.`,
   body: [
-    `Without going out the door, you can know the world. Without looking out the window, you can see the Way of heaven. It is a bold claim: the knowledge that matters is not far away.`,
+    `Without going out the door, you can know the world. Without looking out the window, you can see the way of heaven. It is a bold claim: the knowledge that matters is not far away.`,
     `The farther you go, the less you know. Travel and activity can pile up information, but if the mind is scattered it understands little. Understanding comes from stillness.`,
     `The Nameless knows without going, names without seeing, and completes without doing. His insight comes from being rooted in the source, not from running around collecting things.`,
   ],
   faq: [
     [`Does chapter 47 say not to travel?`, `It does not forbid travel. It says deep understanding does not depend on it, because it comes from inner stillness.`],
     [`What does "the farther you go, the less you know" mean?`, `It means that chasing outward without inner grounding scatters attention and weakens understanding.`],
-    [`How can someone know without going?`, `By being attuned to the Way, which is present everywhere, including right where you are.`],
+    [`How can someone know without going?`, `By being attuned to the Tao, which is present everywhere, including right where you are.`],
   ],
 },
 48: {
   title: `Every Day Something Is Dropped`,
-  description: `Tao Te Ching chapter 48 in full: why learning adds each day and the Way subtracts each day, until you reach doing nothing.`,
-  intro: `Chapter 48 of the Tao Te Ching says that in learning, every day something is added, but in following the Way, every day something is dropped. You keep dropping until you reach doing nothing.`,
+  description: `Tao Te Ching chapter 48 in full: why learning adds each day and the Tao subtracts each day, until you reach doing nothing.`,
+  intro: `Chapter 48 of the Tao Te Ching says that in learning, every day something is added, but in following the Tao, every day something is dropped. You keep dropping until you reach doing nothing.`,
   body: [
-    `There are two paths. Learning piles up facts, skills and ideas. The Way goes the other direction. Each day you let go of an assumption, a habit, a need to control.`,
+    `There are two paths. Learning piles up facts, skills and ideas. The Tao goes the other direction. Each day you let go of an assumption, a habit, a need to control.`,
     `Less and less until you reach doing nothing, which does not mean laziness. It means no longer forcing. When nothing is forced, nothing is left undone, because things take their natural course.`,
     `The world is won by letting go. Try to win it, and it is beyond winning. The more tightly you grasp, the less you hold.`,
   ],
   faq: [
-    [`What does "every day something is dropped" mean?`, `It means following the Way is a process of subtraction: you release habits and illusions and become simpler.`],
+    [`What does "every day something is dropped" mean?`, `It means following the Tao is a process of subtraction: you release habits and illusions and become simpler.`],
     [`What is "doing nothing" in chapter 48?`, `It is wu wei, acting without forcing. It is not inaction, it is action in harmony with the flow.`],
     [`Is the chapter against learning?`, `No. It contrasts two paths, one that adds and one that lets go. They are for different purposes.`],
   ],

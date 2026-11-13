@@ -2,15 +2,15 @@
 import type { Chapter } from './tao';
 export const part: Chapter[] = [
 { n: 41,
-en: `The best student hears the Way and follows it with effort.
+en: `The best student hears the Tao and follows it with effort.
 The average student hears it and half keeps it, half loses it.
 The poor student hears it and laughs aloud.
-If he did not laugh, it would not be the Way.
+If he did not laugh, it would not be the Tao.
 
 So it is said:
-The bright Way seems dark.
+The bright Tao seems dark.
 The way forward seems to go back.
-The smooth Way seems rough.
+The smooth Tao seems rough.
 High virtue seems like a valley.
 Great purity seems stained.
 Wide virtue seems not enough.
@@ -21,17 +21,17 @@ The great square has no corners.
 The great vessel is slow to finish.
 The great sound is hard to hear.
 The great image has no form.
-The Way is hidden and has no name.
-Yet only the Way is good at giving and completing.`,
-he: `התלמיד הטוב ביותר שומע את הדרך והולך בה במאמץ.
+The Tao is hidden and has no name.
+Yet only the Tao is good at giving and completing.`,
+he: `התלמיד הטוב ביותר שומע את הטאו והולך בו במאמץ.
 התלמיד הממוצע שומע אותה, חצי שומר וחצי מאבד.
 התלמיד החלש שומע אותה וצוחק בקול.
-אילו לא צחק, זו לא הייתה הדרך.
+אילו לא צחק, זו לא הייתה הטאו.
 
 לכן נאמר:
-הדרך הבהירה נראית חשוכה.
+הטאו הבהיר נראה חשוכה.
 הדרך קדימה נראית כחזרה אחורה.
-הדרך החלקה נראית גסה.
+הטאו החלק נראה גס.
 המעלה הגבוהה נראית כעמק.
 הטוהר הגדול נראה מוכתם.
 המעלה הרחבה נראית לא מספיקה.
@@ -42,10 +42,10 @@ he: `התלמיד הטוב ביותר שומע את הדרך והולך בה ב�
 הכלי הגדול איטי להיגמר.
 הצליל הגדול קשה לשמיעה.
 הדמות הגדולה אין לה צורה.
-הדרך נסתרת ואין לה שם.
-ובכל זאת רק הדרך טובה בנתינה ובהשלמה.` },
+הטאו נסתר ואין לו שם.
+ובכל זאת רק הטאו טוב בנתינה ובהשלמה.` },
 { n: 42,
-en: `The Way gives birth to one.
+en: `The Tao gives birth to one.
 One gives birth to two.
 Two gives birth to three.
 Three gives birth to the myriad things.
@@ -61,7 +61,7 @@ and decreased by being increased.
 What others teach, I also teach:
 The violent do not die a natural death.
 I take this as the root of my teaching.`,
-he: `הדרך מולידה אחד.
+he: `הטאו מוליד אחד.
 האחד מוליד שניים.
 השניים מולידים שלושה.
 השלושה מולידים את רבבות הדברים.
@@ -143,9 +143,9 @@ he: `שלמות גדולה נראית חסרה,
 דממה מנצחת חום.
 רוגע ושקט מיישרים את העולם.` },
 { n: 46,
-en: `When the Way is in the world,
+en: `When the Tao is in the world,
 fast horses carry manure.
-When the Way is not in the world,
+When the Tao is not in the world,
 war horses are bred on the borders.
 
 No crime is greater than having desires.
@@ -153,9 +153,9 @@ No disaster is greater than not knowing enough.
 No fault is greater than wanting more.
 So to know that enough is enough
 is always enough.`,
-he: `כשהדרך בעולם,
+he: `כשהטאו בעולם,
 סוסים מהירים נושאים זבל.
-כשהדרך אינה בעולם,
+כשהטאו אינו בעולם,
 סוסי מלחמה מגדלים בגבולות.
 
 אין פשע גדול מהיות מלא תשוקות.
@@ -167,7 +167,7 @@ he: `כשהדרך בעולם,
 en: `Without going out the door,
 you can know the world.
 Without looking out the window,
-you can see the Way of heaven.
+you can see the way of heaven.
 
 The farther you go,
 the less you know.
@@ -188,7 +188,7 @@ he: `בלי לצאת מהדלת
 ומשלים בלי לעשות.` },
 { n: 48,
 en: `In pursuit of learning, every day something is added.
-In pursuit of the Way, every day something is dropped.
+In pursuit of the Tao, every day something is dropped.
 Less and less until you reach doing nothing.
 When nothing is done, nothing is left undone.
 
@@ -196,7 +196,7 @@ The world is won by letting go.
 Try to win it,
 and it is beyond winning.`,
 he: `במרדף אחר למידה, בכל יום נוסף משהו.
-במרדף אחר הדרך, בכל יום נושר משהו.
+במרדף אחר הטאו, בכל יום נושר משהו.
 פחות ופחות עד שמגיעים לאי עשייה.
 כשלא נעשה דבר, שום דבר לא נשאר בלי להיעשות.
 

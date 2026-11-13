@@ -2,16 +2,16 @@ import type { ChapterNote } from '../tao-notes';
 export const part: Record<number, ChapterNote> = {
 51: {
   title: `Gives Birth and Does Not Possess`,
-  description: `Tao Te Ching chapter 51 in full: how the Way gives birth and virtue nurtures, and what deep virtue means: leading without ruling.`,
-  intro: `Chapter 51 of the Tao Te Ching says the Way gives birth to all things and virtue nurtures them. It gives birth without possessing, acts without depending, and leads without ruling. This is deep virtue.`,
+  description: `Tao Te Ching chapter 51 in full: how the Tao gives birth and virtue nurtures, and what deep virtue means: leading without ruling.`,
+  intro: `Chapter 51 of the Tao Te Ching says the Tao gives birth to all things and virtue nurtures them. It gives birth without possessing, acts without depending, and leads without ruling. This is deep virtue.`,
   body: [
-    `The Way gives birth, virtue nurtures, things shape, circumstance completes. All things honor the Way and prize virtue, and no one orders them to. It comes of itself.`,
-    `Then the full picture: the Way gives birth, nurtures, raises, shelters, ripens and protects. It is the tireless care of a parent who does not hold on.`,
+    `The Tao gives birth, virtue nurtures, things shape, circumstance completes. All things honor the Tao and prize virtue, and no one orders them to. It comes of itself.`,
+    `Then the full picture: the Tao gives birth, nurtures, raises, shelters, ripens and protects. It is the tireless care of a parent who does not hold on.`,
     `Gives birth and does not possess. Acts and does not depend. Leads and does not rule. Lao Tzu calls this deep virtue, the same as in chapter 10. Real giving does not claim credit.`,
   ],
   faq: [
     [`What is "deep virtue" in the Tao Te Ching?`, `It is giving, nurturing and leading without possessing, depending on credit, or ruling.`],
-    [`Why do all things honor the Way?`, `Because they come from it and are sustained by it. Their honor arises naturally.`],
+    [`Why do all things honor the Tao?`, `Because they come from it and are sustained by it. Their honor arises naturally.`],
     [`What does "acts and does not depend" mean?`, `It means doing good without needing thanks or return.`],
   ],
 },
@@ -32,15 +32,15 @@ export const part: Record<number, ChapterNote> = {
 },
 53: {
   title: `People Love the Side Paths`,
-  description: `Tao Te Ching chapter 53 in full: why the great Way is smooth but people prefer side paths, and what Lao Tzu calls thievery and boasting.`,
-  intro: `Chapter 53 of the Tao Te Ching says the great Way is smooth, yet people love the side paths. Lao Tzu criticizes a world of show and excess where the fields are weeds and the granaries are empty.`,
+  description: `Tao Te Ching chapter 53 in full: why the great Tao is smooth but people prefer side paths, and what Lao Tzu calls thievery and boasting.`,
+  intro: `Chapter 53 of the Tao Te Ching says the great Tao is smooth, yet people love the side paths. Lao Tzu criticizes a world of show and excess where the fields are weeds and the granaries are empty.`,
   body: [
-    `If I had even a little knowledge, he says, I would walk the great Way and fear only to stray. The way is plain and smooth, but we are drawn off it by shortcuts and distractions.`,
+    `If I had even a little knowledge, he says, I would walk the great Tao and fear only to stray. The way is plain and smooth, but we are drawn off it by shortcuts and distractions.`,
     `Then a picture of a corrupt court: spotless palace, weedy fields, empty granaries. Yet the elite wear fine clothes, carry sharp swords, and are glutted with food and drink.`,
-    `Lao Tzu names this thievery and boasting, and says it is not the Way. The chapter is a pointed critique of luxury at others' expense.`,
+    `Lao Tzu names this thievery and boasting, and says it is not the Tao. The chapter is a pointed critique of luxury at others' expense.`,
   ],
   faq: [
-    [`What does "people love the side paths" mean?`, `It means that people prefer complicated, showy routes over the plain, direct Way.`],
+    [`What does "people love the side paths" mean?`, `It means that people prefer complicated, showy routes over the plain, direct Tao.`],
     [`What does "thievery and boasting" refer to?`, `It refers to the wealthy living in excess while the people go without.`],
     [`Is chapter 53 political?`, `Yes. It criticizes rulers who live in luxury while the land is neglected.`],
   ],
@@ -67,7 +67,7 @@ export const part: Record<number, ChapterNote> = {
   body: [
     `A newborn is not stung or seized. Its bones are weak and its sinews soft, yet its grip is firm. It cries all day and does not grow hoarse, because its energy is whole and unspoiled.`,
     `Lao Tzu calls this harmony. To know harmony is to know the constant, and to know the constant is to be clear.`,
-    `To force life is ill-omened. To drive the breath by will is violent. Things grow strong, then old, and what is not the Way ends early. Soft and natural lasts longer than forced and hard.`,
+    `To force life is ill-omened. To drive the breath by will is violent. Things grow strong, then old, and what is not the Tao ends early. Soft and natural lasts longer than forced and hard.`,
   ],
   faq: [
     [`Why compare the sage to a newborn child?`, `A baby is soft, unstrained, and in natural harmony, which is the state the Tao Te Ching values.`],
@@ -127,7 +127,7 @@ export const part: Record<number, ChapterNote> = {
   body: [
     `Restraint begins with returning early, meaning turning back before things go too far. Returning early gathers virtue, and gathering virtue there is nothing that cannot be overcome.`,
     `When nothing cannot be overcome, no one knows your limit. A leader who does not exhaust himself, and does not show his edge, has room to hold a country.`,
-    `Hold the mother of a country and you can last long. This is called deep roots and a firm stem, the Way of long life and lasting sight. Strength is stored, not spent.`,
+    `Hold the mother of a country and you can last long. This is called deep roots and a firm stem, the way of long life and lasting sight. Strength is stored, not spent.`,
   ],
   faq: [
     [`What does "restraint" mean in chapter 59?`, `It means saving energy and not overreaching, so your strength stays in reserve.`],
@@ -141,12 +141,12 @@ export const part: Record<number, ChapterNote> = {
   intro: `Chapter 60 of the Tao Te Ching says to govern a large country as you cook a small fish. Handle it lightly, since too much stirring ruins it. When neither the spirits nor the sage cause harm, virtue returns to both.`,
   body: [
     `A small fish falls apart if you keep turning it. Lao Tzu uses it to say that leaders should not meddle constantly. Gentle, minimal handling gets the best result.`,
-    `When the Way is brought to the world, spirits lose their power to harm. It is not that they have no power, but that their power does not hurt people.`,
+    `When the Tao is brought to the world, spirits lose their power to harm. It is not that they have no power, but that their power does not hurt people.`,
     `And the Nameless does not harm them either. When neither harms the other, virtue returns to both. Harmony comes from mutual restraint.`,
   ],
   faq: [
     [`What does "govern like cooking a small fish" mean?`, `It means to govern lightly and avoid excessive intervention, since too much fussing destroys the result.`],
-    [`What does "spirits lose their power" mean?`, `It means that when the Way prevails, harmful forces cannot hurt people.`],
+    [`What does "spirits lose their power" mean?`, `It means that when the Tao prevails, harmful forces cannot hurt people.`],
     [`What does "virtue returns to both" mean?`, `It means when neither side harms the other, goodness flows back to both.`],
   ],
 },

@@ -32,16 +32,16 @@ export const part: Record<number, ChapterNote> = {
 },
 21: {
   title: `Within the Shadowy, an Essence`,
-  description: `Tao Te Ching chapter 21 in full: the Way as shadowy and elusive, yet holding images, things and a real essence.`,
-  intro: `Chapter 21 of the Tao Te Ching says the Way is shadowy and elusive, yet inside it are images, things, and a real essence. The greatest virtue simply follows it.`,
+  description: `Tao Te Ching chapter 21 in full: the Tao as shadowy and elusive, yet holding images, things and a real essence.`,
+  intro: `Chapter 21 of the Tao Te Ching says the Tao is shadowy and elusive, yet inside it are images, things, and a real essence. The greatest virtue simply follows it.`,
   body: [
-    `The Way is hard to catch. Shadowy and elusive, deep and dark. Yet the chapter says it is not empty. Within it are images, things, and an essence that is real.`,
+    `The Tao is hard to catch. Shadowy and elusive, deep and dark. Yet the chapter says it is not empty. Within it are images, things, and an essence that is real.`,
     `This is a middle path. The Tao is not a mere idea, and not a solid object either. It is a real presence that is difficult to hold but possible to trust.`,
     `Its name has not gone, from the beginning until now. How does Lao Tzu know the source is so? By this, meaning by what is in front of us. The proof is the world itself.`,
   ],
   faq: [
-    [`What does "the Way is shadowy and elusive" mean?`, `It means the Tao cannot be pinned down by the mind, yet it is not unreal. It is subtle and has to be sensed.`],
-    [`What is the "essence" in chapter 21?`, `It is the real, trustworthy core within the Way, what gives things substance.`],
+    [`What does "the Tao is shadowy and elusive" mean?`, `It means the Tao cannot be pinned down by the mind, yet it is not unreal. It is subtle and has to be sensed.`],
+    [`What is the "essence" in chapter 21?`, `It is the real, trustworthy core within the Tao, what gives things substance.`],
     [`What does "by this" mean in the last line?`, `It points to the world as we find it. The existing world is itself the evidence of the source.`],
   ],
 },
@@ -62,16 +62,16 @@ export const part: Record<number, ChapterNote> = {
 },
 23: {
   title: `A Whirlwind Does Not Last the Morning`,
-  description: `Tao Te Ching chapter 23 in full: why violent forces burn out, and what it means to become one with the Way.`,
-  intro: `Chapter 23 of the Tao Te Ching says that violent things do not last. A whirlwind ends before morning, so those who follow the Way become one with it and are welcomed.`,
+  description: `Tao Te Ching chapter 23 in full: why violent forces burn out, and what it means to become one with the Tao.`,
+  intro: `Chapter 23 of the Tao Te Ching says that violent things do not last. A whirlwind ends before morning, so those who follow the Tao become one with it and are welcomed.`,
   body: [
     `Few words are natural, says the first line, meaning that talking less is closer to nature. Then come the whirlwind and the downpour. They are powerful and brief. If even heaven and earth cannot make fierce things last, people cannot either.`,
     `The lesson is that force is short-lived. A calm and steady way outlasts a blast of energy.`,
-    `Then comes a pattern: become one with the Way, and the Way welcomes you. Become one with virtue, and virtue welcomes you. Become one with loss, and loss welcomes you. You become what you follow.`,
+    `Then comes a pattern: become one with the Tao, and the Tao welcomes you. Become one with virtue, and virtue welcomes you. Become one with loss, and loss welcomes you. You become what you follow.`,
   ],
   faq: [
     [`What does "a whirlwind does not last the morning" mean?`, `It means intense force exhausts itself quickly. Lasting things move gently and steadily.`],
-    [`What does it mean to "become one with the Way"?`, `It means living in step with how things naturally move, so the Way is not outside you but part of how you live.`],
+    [`What does it mean to "become one with the Tao"?`, `It means living in step with how things naturally move, so the Tao is not outside you but part of how you live.`],
     [`What does "without enough trust, there is no trust" mean?`, `It means trust needs to be given first. Without it, no one has any reason to trust.`],
   ],
 },
@@ -82,7 +82,7 @@ export const part: Record<number, ChapterNote> = {
   body: [
     `Standing on tiptoe makes you taller, but you cannot stay there. Striding makes you fast, but you cannot go far. The two images show how artificial effort burns out quickly.`,
     `Then a list of habits: showing yourself, asserting yourself, boasting, claiming. Each one backfires. The one who shows himself is not clear. The one who asserts is not credited.`,
-    `On the Way these are leftover food and useless growths. Things dislike them. The one who has the Way does not dwell in them, and just stays at his natural height.`,
+    `On the Tao these are leftover food and useless growths. Things dislike them. The one who has the Tao does not dwell in them, and just stays at his natural height.`,
   ],
   faq: [
     [`What does "he who stands on tiptoe cannot stand firm" mean?`, `It means forced self-display is unstable. Being what you naturally are is the only posture you can keep.`],
@@ -92,17 +92,17 @@ export const part: Record<number, ChapterNote> = {
 },
 25: {
   title: `Something Formless and Complete`,
-  description: `Tao Te Ching chapter 25 in full: the formless thing that came before heaven and earth, and the chain from people to earth to heaven to the Way.`,
-  intro: `Chapter 25 of the Tao Te Ching describes something formless and complete that was born before heaven and earth. Lao Tzu calls it the Way, and says it follows what is so of itself.`,
+  description: `Tao Te Ching chapter 25 in full: the formless thing that came before heaven and earth, and the chain from people to earth to heaven to the Tao.`,
+  intro: `Chapter 25 of the Tao Te Ching describes something formless and complete that was born before heaven and earth. Lao Tzu calls it the Tao, and says it follows what is so of itself.`,
   body: [
-    `Silent, empty, standing alone, unchanging, moving everywhere without tiring. This is the mother of all under heaven. Lao Tzu admits he does not know its name. He calls it the Way, and if forced, great.`,
-    `Great means going on, going on means far, far means returning. The Way moves out and comes back, a cycle that never ends.`,
-    `The chapter closes with a chain: people follow earth, earth follows heaven, heaven follows the Way, and the Way follows what is so of itself. At the top there is no boss. There is natural self-so-ness.`,
+    `Silent, empty, standing alone, unchanging, moving everywhere without tiring. This is the mother of all under heaven. Lao Tzu admits he does not know its name. He calls it the Tao, and if forced, great.`,
+    `Great means going on, going on means far, far means returning. The Tao moves out and comes back, a cycle that never ends.`,
+    `The chapter closes with a chain: people follow earth, earth follows heaven, heaven follows the Tao, and the Tao follows what is so of itself. At the top there is no boss. There is natural self-so-ness.`,
   ],
   faq: [
-    [`What does "the Way follows what is so of itself" mean?`, `It means the Tao answers to nothing outside itself. It is simply natural, spontaneous, self-existing.`],
-    [`Why does Lao Tzu say "I do not know its name"?`, `Because the source comes before names. "Way" and "great" are just working labels.`],
-    [`What are the "four greats"?`, `The Way, heaven, earth, and the king, or, in a looser reading, the human being.`],
+    [`What does "the Tao follows what is so of itself" mean?`, `It means the Tao answers to nothing outside itself. It is simply natural, spontaneous, self-existing.`],
+    [`Why does Lao Tzu say "I do not know its name"?`, `Because the source comes before names. "Tao" and "great" are just working labels.`],
+    [`What are the "four greats"?`, `The Tao, heaven, earth, and the king, or, in a looser reading, the human being.`],
   ],
 },
 26: {
@@ -172,12 +172,12 @@ export const part: Record<number, ChapterNote> = {
   body: [
     `Using arms to conquer tends to come back. After a great war, there are years of famine. Violence leaves damage that outlasts the victory.`,
     `A good commander achieves his aim and stops. He does not boast, brag, or take pride. He acts because he must, not because he wants to prove something, and he does not force more.`,
-    `The closing idea is about cycles: things grow strong, then grow old. This is not the Way, and what is not the Way ends early. Brute strength is only a phase.`,
+    `The closing idea is about cycles: things grow strong, then grow old. This is not the Tao, and what is not the Tao ends early. Brute strength is only a phase.`,
   ],
   faq: [
     [`What does "where armies camp, thorns grow" mean?`, `It means conflict damages the land and the future, so even a victory leaves hardship behind.`],
     [`What is a good commander in chapter 30?`, `One who achieves the goal and stops, without pride and without forcing more.`],
-    [`What does "what is not the Way ends early" mean?`, `It means things built on force and excess do not last. Only what is in harmony with nature endures.`],
+    [`What does "what is not the Tao ends early" mean?`, `It means things built on force and excess do not last. Only what is in harmony with nature endures.`],
   ],
 },
 };

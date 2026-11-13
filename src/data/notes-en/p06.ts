@@ -17,17 +17,17 @@ export const part: Record<number, ChapterNote> = {
 },
 62: {
   title: `The Treasure of the Good, the Refuge of the Not Good`,
-  description: `Tao Te Ching chapter 62 in full: how the Way is the hidden source of all things, a treasure for the good and a refuge for the not good.`,
-  intro: `Chapter 62 of the Tao Te Ching says the Way is the hidden source of all things. It is the treasure of the good and the refuge of the not good, and it is the world's real treasure.`,
+  description: `Tao Te Ching chapter 62 in full: how the Tao is the hidden source of all things, a treasure for the good and a refuge for the not good.`,
+  intro: `Chapter 62 of the Tao Te Ching says the Tao is the hidden source of all things. It is the treasure of the good and the refuge of the not good, and it is the world's real treasure.`,
   body: [
-    `The Way shelters everyone. The good prize it, and those who are not good can still find refuge in it. It does not turn anyone away.`,
+    `The Tao shelters everyone. The good prize it, and those who are not good can still find refuge in it. It does not turn anyone away.`,
     `Fine words can buy honor and good deeds can win respect, but Lao Tzu asks: why abandon those who are not good? He does not give up on people who have gone wrong.`,
-    `When a ruler is enthroned, better than offering jade and a team of horses is to sit and offer this Way. By it the seeker finds and the guilty are forgiven. So it is the world's treasure.`,
+    `When a ruler is enthroned, better than offering jade and a team of horses is to sit and offer this Tao. By it the seeker finds and the guilty are forgiven. So it is the world's treasure.`,
   ],
   faq: [
     [`What does "refuge of the not good" mean?`, `It means the Tao is open even to those who have strayed, offering a way back.`],
-    [`Why is the Way better than jade and horses?`, `Because material gifts are limited, while the Way offers real guidance and forgiveness.`],
-    [`What does "the guilty are forgiven" mean?`, `It means the Way allows return and renewal, instead of permanent condemnation.`],
+    [`Why is the Tao better than jade and horses?`, `Because material gifts are limited, while the Tao offers real guidance and forgiveness.`],
+    [`What does "the guilty are forgiven" mean?`, `It means the Tao allows return and renewal, instead of permanent condemnation.`],
   ],
 },
 63: {
@@ -62,17 +62,17 @@ export const part: Record<number, ChapterNote> = {
 },
 65: {
   title: `Keep the People Simple`,
-  description: `Tao Te Ching chapter 65 in full: why the ancients used the Way to keep people simple, and why ruling by cleverness robs a country.`,
-  intro: `Chapter 65 of the Tao Te Ching says the ancients who followed the Way kept people simple, not clever. Ruling by cleverness robs the country, ruling without it blesses it.`,
+  description: `Tao Te Ching chapter 65 in full: why the ancients used the Tao to keep people simple, and why ruling by cleverness robs a country.`,
+  intro: `Chapter 65 of the Tao Te Ching says the ancients who followed the Tao kept people simple, not clever. Ruling by cleverness robs the country, ruling without it blesses it.`,
   body: [
-    `People are hard to rule when they know too much, meaning when they are full of schemes and cunning. The ancients did not use the Way to make people clever, but to keep them simple.`,
+    `People are hard to rule when they know too much, meaning when they are full of schemes and cunning. The ancients did not use the Tao to make people clever, but to keep them simple.`,
     `Rule by cleverness and you rob the country. Rule without cleverness and you bless it. The test is whether leadership relies on tricks or on honest simplicity.`,
     `Always knowing this pattern is deep virtue. It is far and deep, turning things back until they reach the great harmony. The path of simplicity returns everything to its natural balance.`,
   ],
   faq: [
     [`Does chapter 65 promote ignorance?`, `It does not praise ignorance. It warns against cunning and manipulation, and values sincerity and simplicity.`],
     [`What does "rule by cleverness and you rob the country" mean?`, `It means a government built on tricks erodes trust and harms the people.`],
-    [`What is the "great harmony"?`, `It is the state of natural order the Way leads back to.`],
+    [`What is the "great harmony"?`, `It is the state of natural order the Tao leads back to.`],
   ],
 },
 66: {
@@ -95,7 +95,7 @@ export const part: Record<number, ChapterNote> = {
   description: `Tao Te Ching chapter 67 in full: the three treasures of compassion, thrift and not daring to be first, and why compassion wins.`,
   intro: `Chapter 67 of the Tao Te Ching names three treasures: compassion, thrift, and not daring to be first in the world. From them come courage, generosity and leadership.`,
   body: [
-    `Lao Tzu begins by saying his Way seems unlike anything. Because it is great, it seems unlike anything. If it were like something, long ago it would have become small.`,
+    `Lao Tzu begins by saying his Tao seems unlike anything. Because it is great, it seems unlike anything. If it were like something, long ago it would have become small.`,
     `Then the three treasures. Compassionate, so I can be brave. Thrifty, so I can be generous. Not daring to be first, so I can lead. Each treasure leads to its opposite strength.`,
     `Now people abandon compassion and seek courage, abandon thrift and seek abundance, abandon being behind and seek to be ahead. This is death. Compassion wins in battle and holds in defense, and heaven protects those who have it.`,
   ],

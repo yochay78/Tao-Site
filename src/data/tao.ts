@@ -9,8 +9,8 @@ import { part as p6 } from './tao-61-70';
 import { part as p7 } from './tao-71-81';
 const base: Chapter[] = [
 { n: 1,
-en: `A way that can be spoken
-is not the lasting Way.
+en: `The Tao that can be spoken
+is not the lasting Tao.
 A name that can be named
 is not the lasting name.
 
@@ -24,8 +24,8 @@ Both spring from one source
 and differ only in name.
 Darkness within darkness,
 the gate to everything wonderful.`,
-he: `הדרך שאפשר לומר
-איננה הדרך הקבועה.
+he: `הטאו שאפשר לומר
+איננה הטאו הקבוע.
 השם שאפשר לנקוב
 איננו השם הקבוע.
 
@@ -116,7 +116,7 @@ he: `אל תייקרו את המוכשרים,
 פועלים בלי לפעול,
 ואין דבר שנשאר בלי סדר.` },
 { n: 4,
-en: `The Way is an empty bowl.
+en: `The Tao is an empty bowl.
 Use it, and it is never full.
 Deep, the ancestor of all things.
 
@@ -128,7 +128,7 @@ joins the dust.
 Hidden, yet always here.
 I do not know whose child it is.
 It was before any god.`,
-he: `הדרך היא קערה ריקה.
+he: `הטאו הוא קערה ריקה.
 משתמשים בה, והיא לעולם לא מלאה.
 עמוקה, אב קדמון לכל הדברים.
 
@@ -218,7 +218,7 @@ en: `The highest good is like water.
 Water serves myriad things
 and never competes.
 It settles where others refuse to go,
-and so it is near the Way.
+and so it is near the Tao.
 
 Live close to the earth.
 Think deep.
@@ -234,7 +234,7 @@ he: `הטוב העליון דומה למים.
 המים משרתים את רבבות הדברים
 ואינם מתחרים.
 הם מתיישבים במקום שאחרים מסרבים ללכת אליו,
-ולכן הם קרובים לדרך.
+ולכן הם קרובים לטאו.
 
 לגור קרוב לאדמה.
 לחשוב עמוק.
@@ -428,10 +428,10 @@ Call it blur.
 Meet it and you see no face.
 Follow it and you see no back.
 
-Hold to the ancient Way
+Hold to the ancient Tao
 and you master the present.
 To know the ancient beginning
-is to hold the thread of the Way.`,
+is to hold the thread of the Tao.`,
 he: `מביטים ולא רואים אותו.
 קוראים לו הבלתי נראה.
 מקשיבים ולא שומעים אותו.
@@ -454,12 +454,12 @@ he: `מביטים ולא רואים אותו.
 פוגשים אותו ולא רואים פנים.
 הולכים אחריו ולא רואים גב.
 
-מי שאוחז בדרך הקדומה
+מי שאוחז בטאו הקדום
 שולט בהווה.
 לדעת את ההתחלה הקדומה
-זה לאחוז בחוט הדרך.` },
+זה לאחוז בחוט הטאו.` },
 { n: 15,
-en: `The ones of old who walked the Way
+en: `The ones of old who walked the Tao
 were subtle, dark, and deep.
 Too deep to be known.
 Because they cannot be known,
@@ -478,11 +478,11 @@ until the water clears?
 Who can stay still
 until the moment moves him?
 
-He who holds this Way
+He who holds this Tao
 does not wish to be full.
 Because he is not full,
 he can wear out and be renewed.`,
-he: `הקדמונים שהלכו בדרך
+he: `הקדמונים שהלכו בטאו
 היו עדינים, אפלים ועמוקים.
 עמוקים מכדי שיכירו אותם.
 ומפני שאי אפשר להכיר אותם,
@@ -501,7 +501,7 @@ he: `הקדמונים שהלכו בדרך
 מי יכול להישאר דומם
 עד שהרגע יניע אותו?
 
-מי שאוחז בדרך הזו
+מי שאוחז בטאו הזה
 אינו רוצה להיות מלא.
 ומפני שאינו מלא,
 הוא יכול להישחק ולהתחדש.` },
@@ -525,8 +525,8 @@ Knowing constancy, you are open.
 Open, you are just.
 Just, you are kingly.
 Kingly, you are of heaven.
-Of heaven, you are the Way.
-The Way is lasting.
+Of heaven, you are the Tao.
+The Tao is lasting.
 The body dies
 and there is no danger.`,
 he: `הגע אל הריקות העליונה.
@@ -548,8 +548,8 @@ he: `הגע אל הריקות העליונה.
 פתוח, אתה צודק.
 צודק, אתה מלכותי.
 מלכותי, אתה שייך לשמים.
-שייך לשמים, אתה הדרך.
-הדרך נמשכת לעד.
+שייך לשמים, אתה הטאו.
+הטאו נמשך לעד.
 הגוף מת
 ואין סכנה.` },
 { n: 17,
@@ -580,7 +580,7 @@ he: `המנהיג הטוב ביותר כמעט לא מוכר.
 והעם אומר
 עשינו זאת בעצמנו.` },
 { n: 18,
-en: `When the great Way is lost
+en: `When the great Tao is lost
 there is kindness and duty.
 When cleverness appears
 there is great deceit.
@@ -589,7 +589,7 @@ When families lose their peace
 there is devotion and care.
 When the country falls into darkness
 there are loyal ministers.`,
-he: `כשהדרך הגדולה אובדת
+he: `כשהטאו הגדול אובד
 יש חסד וחובה.
 כשהפיקחות מופיעה
 יש הונאה גדולה.
