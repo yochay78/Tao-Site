@@ -1,5 +1,5 @@
 export const site = {
-  name: 'Silent Power', tagline: 'The Way of Lao Tzu', author: 'Yod Mem',
+  name: 'Silent Power', tagline: 'Unlearn everything. Keep the truth.', author: 'Yod Mem',
   email: 'hebrewtao@gmail.com',
   youtubeChannel: 'https://www.youtube.com/@Taoism-r1d',
   instagram: 'https://www.instagram.com/dao.deching',
