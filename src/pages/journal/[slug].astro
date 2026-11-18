@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
+import { articleLd } from '../../data/journal-ld';
 export async function getStaticPaths(){
   return (await getCollection('journal')).map(p=>({params:{slug:p.id},props:{p}}));
 }
@@ -12,13 +13,16 @@ const map: Record<string,string> = { still:'mind-wont-slow-down', unshakable:'be
 const target = prods.find(x => x.id === (map[d.cta] ?? d.cta)) ?? prods.find(x => x.id === 'stop-pushing')!;
 const ctaTitle = target.data.title + (target.data.priceLabel === 'Free' ? ' (free)' : '');
 const ctaHref = `/shop/${target.id}/`;
-const ld = { '@context':'https://schema.org','@type':'Article',headline:d.title,description:d.description,datePublished:d.date.toISOString(),author:{'@type':'Person',name:'Yod Mem'} };
+const heIds = new Set((await getCollection('journalHe')).map(x => x.id));
+const alt = heIds.has(p.id) ? `/he/journal/${p.id}/` : undefined;
+const ld = articleLd({ title: d.title, description: d.description, date: d.date, url: `https://silentpower.me/journal/${p.id}/`, lang: 'en', section: d.chapter });
 ---
-<Base title={d.title} description={d.description} type="article" jsonLd={ld}>
+<Base title={d.title} description={d.description} type="article" jsonLd={ld} alt={alt}>
 <article><section><div class="wrap narrow prose">
 <div class="label">{d.chapter}</div><h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>
 <Content />
 <hr class="rule" style="margin:40px 0">
 <p class="sans"><a class="btn" href={ctaHref} data-track="article_cta" data-item={d.cta}>{ctaTitle} →</a></p>
+<p class="sans" style="margin-top:24px"><a href="/journal/">← More from the Journal</a> · <a href="/tao/">Read all 81 chapters</a></p>
 </div></section></article>
 </Base>

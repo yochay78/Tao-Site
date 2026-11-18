@@ -36,4 +36,13 @@ const journal = defineCollection({
     cta: z.string().default('stop-pushing'),
   }),
 });
-export const collections = { products, journal };
+// Hebrew journal: same slug as the English article it pairs with (hreflang is matched by slug).
+const journalHe = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/journal-he' }),
+  schema: z.object({
+    title: z.string(), description: z.string(), date: z.coerce.date(),
+    chapter: z.string().optional(),
+    cta: z.string().default('effortless-he'),
+  }),
+});
+export const collections = { products, journal, journalHe };

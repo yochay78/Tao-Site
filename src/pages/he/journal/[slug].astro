@@ -1,0 +1,27 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { articleLd } from '../../../data/journal-ld';
+export async function getStaticPaths(){
+  return (await getCollection('journalHe')).map(p=>({params:{slug:p.id},props:{p}}));
+}
+const { p } = Astro.props;
+const { Content } = await render(p);
+const d = p.data;
+const prods = (await getCollection('products')).filter(x=>x.data.language==='he');
+const target = prods.find(x => x.id === d.cta) ?? prods.find(x => x.id === 'effortless-he')!;
+const ctaTitle = target.data.title + (target.data.priceLabel === 'חינם' ? ' (חינם)' : '');
+const ctaHref = `/he/shop/${target.id}/`;
+const enIds = new Set((await getCollection('journal')).map(x => x.id));
+const alt = enIds.has(p.id) ? `/journal/${p.id}/` : undefined;
+const ld = articleLd({ title: d.title, description: d.description, date: d.date, url: `https://silentpower.me/he/journal/${p.id}/`, lang: 'he', section: d.chapter });
+---
+<Base lang="he" title={d.title} description={d.description} type="article" jsonLd={ld} alt={alt}>
+<article dir="rtl"><section><div class="wrap narrow prose">
+<div class="label">{d.chapter}</div><h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>
+<Content />
+<hr class="rule" style="margin:40px 0">
+<p class="sans"><a class="btn" href={ctaHref} data-track="article_cta" data-item={d.cta}>{ctaTitle} ←</a></p>
+<p class="sans" style="margin-top:24px"><a href="/he/journal/">עוד מאמרים ביומן →</a> · <a href="/he/tao/">כל 81 הפרקים</a></p>
+</div></section></article>
+</Base>
