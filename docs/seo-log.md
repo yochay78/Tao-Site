@@ -5,11 +5,14 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 ## Journal topics covered
 - EN: how-to-stop-overthinking (ch 15, 16), letting-go-of-control-tao (29, 64), silence-and-stillness-tao (11, 15, 16), stop-trying-to-be-so-effortful / wu wei (2, 37, 48), tao-te-ching-for-beginners, why-the-weakest-wins (8, 43, 78)
 - EN+HE: knowing-when-enough-is-enough / contentment (9, 33, 44, 46) — 2026-11-18
+- EN+HE: those-who-know-do-not-speak (56, 1, 2, 23, 81) — 2026-11-19
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
 - Use the SAME filename/slug as the English article → hreflang pairs and the language switch are created automatically.
 - Pages: /he/journal/ and /he/journal/[slug]/ (dir=rtl, lang=he). llms.txt + llms-full.txt list both journals automatically.
+- Optional frontmatter `faq: [{q, a}]` (EN + HE) → visible "Common questions" block + FAQPage JSON-LD + Q/A in llms-full.txt.
+- Chapter numbers in the `chapter` label are auto-linked to /tao/N/ (or /he/tao/N/) under each article.
 
 ---
 
@@ -26,3 +29,13 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/he/journal/knowing-when-enough-is-enough/
 - https://silentpower.me/he/journal/
 **Idea for tomorrow:** translate an existing EN article to Hebrew (e.g. how-to-stop-overthinking) so the HE journal grows, or a new topic like "What does 'those who know do not speak' mean?" (ch 56). Consider FAQPage block on journal articles.
+
+## 2026-11-19
+**Audit:** home, /journal/, /he/journal/, /tao/56/, /he/, robots, sitemap, llms.txt all 200; chapter pages have canonical + hreflang en/he + x-default + JSON-LD. Gaps: journal articles had no FAQ block / FAQPage schema (chapter pages do); articles cited chapters but did not link to them.
+**Changed:**
+- Journal schema: optional `faq` list (EN + HE). Renders a visible FAQ section, adds FAQPage JSON-LD, and adds Q/A to llms-full.txt (GEO: direct answers AI engines can quote).
+- Auto internal links from every journal article (EN + HE) to the chapters named in its `chapter` label (`src/data/chapter-links.ts`) — applies to all existing articles too.
+**Published:**
+- https://silentpower.me/journal/those-who-know-do-not-speak/
+- https://silentpower.me/he/journal/those-who-know-do-not-speak/
+**Idea for tomorrow:** add `faq` to older EN articles (overthinking, wu wei, letting go) and translate how-to-stop-overthinking to Hebrew; or new topic "What does wu wei mean in daily life / at work?" (check search first).

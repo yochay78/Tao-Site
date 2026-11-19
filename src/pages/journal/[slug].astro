@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection, render } from 'astro:content';
 import { articleLd } from '../../data/journal-ld';
+import { chapterNums } from '../../data/chapter-links';
 export async function getStaticPaths(){
   return (await getCollection('journal')).map(p=>({params:{slug:p.id},props:{p}}));
 }
@@ -15,12 +16,15 @@ const ctaTitle = target.data.title + (target.data.priceLabel === 'Free' ? ' (fre
 const ctaHref = `/shop/${target.id}/`;
 const heIds = new Set((await getCollection('journalHe')).map(x => x.id));
 const alt = heIds.has(p.id) ? `/he/journal/${p.id}/` : undefined;
-const ld = articleLd({ title: d.title, description: d.description, date: d.date, url: `https://silentpower.me/journal/${p.id}/`, lang: 'en', section: d.chapter });
+const ld = articleLd({ title: d.title, description: d.description, date: d.date, url: `https://silentpower.me/journal/${p.id}/`, lang: 'en', section: d.chapter, faq: d.faq });
+const chs = chapterNums(d.chapter);
 ---
 <Base title={d.title} description={d.description} type="article" jsonLd={ld} alt={alt}>
 <article><section><div class="wrap narrow prose">
 <div class="label">{d.chapter}</div><h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>
 <Content />
+{d.faq?.length && <section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Common questions</h2>{d.faq.map(f => <><h3>{f.q}</h3><p>{f.a}</p></>)}</section>}
+{chs.length > 0 && <p class="sans">Read the full chapters: {chs.map((n,i) => <>{i>0 && ' · '}<a href={`/tao/${n}/`}>Chapter {n}</a></>)}</p>}
 <hr class="rule" style="margin:40px 0">
 <p class="sans"><a class="btn" href={ctaHref} data-track="article_cta" data-item={d.cta}>{ctaTitle} →</a></p>
 <p class="sans" style="margin-top:24px"><a href="/journal/">← More from the Journal</a> · <a href="/tao/">Read all 81 chapters</a></p>

@@ -1,10 +1,10 @@
-// Structured data for journal articles (EN + HE): Article + BreadcrumbList.
+// Structured data for journal articles (EN + HE): Article + BreadcrumbList (+ FAQPage when the article has a faq).
 const SITE = 'https://silentpower.me';
-export function articleLd(o: { title: string; description: string; date: Date; url: string; lang: 'en' | 'he'; section?: string }) {
+export function articleLd(o: { title: string; description: string; date: Date; url: string; lang: 'en' | 'he'; section?: string; faq?: { q: string; a: string }[] }) {
   const he = o.lang === 'he';
   const home = he ? `${SITE}/he/` : `${SITE}/`;
   const index = he ? `${SITE}/he/journal/` : `${SITE}/journal/`;
-  return [
+  const out: any[] = [
     {
       '@context': 'https://schema.org', '@type': 'Article',
       headline: o.title, description: o.description,
@@ -25,4 +25,9 @@ export function articleLd(o: { title: string; description: string; date: Date; u
       ],
     },
   ];
+  if (o.faq?.length) out.push({
+    '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: o.lang,
+    mainEntity: o.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  });
+  return out;
 }

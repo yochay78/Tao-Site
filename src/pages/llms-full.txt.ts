@@ -24,11 +24,11 @@ export const GET = async () => {
   }
   const byDate = (x: any, y: any) => +y.data.date - +x.data.date;
   out += '\n# Journal essays\n\n';
-  for (const j of (await getCollection('journal')).sort(byDate)) out += `## ${j.data.title}\nURL: https://silentpower.me/journal/${j.id}/\n\n${(j.body ?? '').trim()}\n\n`;
+  for (const j of (await getCollection('journal')).sort(byDate)) out += `## ${j.data.title}\nURL: https://silentpower.me/journal/${j.id}/\n\n${(j.body ?? '').trim()}\n\n` + (j.data.faq ?? []).map(f => `Q: ${f.q}\nA: ${f.a}\n\n`).join('');
   const jHe = (await getCollection('journalHe')).sort(byDate);
   if (jHe.length) {
     out += '\n# יומן (עברית)\n\n';
-    for (const j of jHe) out += `## ${j.data.title}\nURL: https://silentpower.me/he/journal/${j.id}/\n\n${(j.body ?? '').trim()}\n\n`;
+    for (const j of jHe) out += `## ${j.data.title}\nURL: https://silentpower.me/he/journal/${j.id}/\n\n${(j.body ?? '').trim()}\n\n` + (j.data.faq ?? []).map(f => `ש: ${f.q}\nת: ${f.a}\n\n`).join('');
   }
   return new Response(out, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

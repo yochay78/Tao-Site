@@ -34,6 +34,7 @@ const journal = defineCollection({
     title: z.string(), description: z.string(), date: z.coerce.date(),
     chapter: z.string().optional(),
     cta: z.string().default('stop-pushing'),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
   }),
 });
 // Hebrew journal: same slug as the English article it pairs with (hreflang is matched by slug).
@@ -43,6 +44,7 @@ const journalHe = defineCollection({
     title: z.string(), description: z.string(), date: z.coerce.date(),
     chapter: z.string().optional(),
     cta: z.string().default('effortless-he'),
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
   }),
 });
 export const collections = { products, journal, journalHe };
