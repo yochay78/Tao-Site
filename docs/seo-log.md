@@ -39,3 +39,5 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/journal/those-who-know-do-not-speak/
 - https://silentpower.me/he/journal/those-who-know-do-not-speak/
 **Idea for tomorrow:** add `faq` to older EN articles (overthinking, wu wei, letting go) and translate how-to-stop-overthinking to Hebrew; or new topic "What does wu wei mean in daily life / at work?" (check search first).
+
+**Fix (same day):** footer language row had no spacing between names (a general footer rule overrode `.langrow` gap). Added `footer.site .wrap>div.langrow{gap:8px 18px}`.
