@@ -4,10 +4,19 @@ description: "Wu wei is not laziness and not passivity. It is action that does n
 date: 2026-10-24
 chapter: "Tao Te Ching, chapters 2, 37, 48"
 cta: stop-pushing
+faq:
+  - q: "What does wu wei mean?"
+    a: "Wu wei is often translated as non-doing, but in the Tao Te Ching it means action without forcing: doing what the moment asks and stopping there. Chapter 37 says the Tao does nothing, and yet nothing is left undone."
+  - q: "Is wu wei the same as laziness?"
+    a: "No. The sage in the Tao Te Ching works, leads and builds. What he does not do is strain to make the outcome match his idea of it. Giving up is another kind of force, pointed at yourself."
+  - q: "How can I practice wu wei in daily life?"
+    a: "Next time you feel yourself pushing, ask what would happen if you pushed half as hard. Not zero, half. Notice which effort is moving something and which is only noise."
+  - q: "Which Tao Te Ching chapters talk about wu wei?"
+    a: "Chapter 2 (the sage acts without striving), chapter 37 (the Tao does nothing, yet nothing is left undone) and chapter 48 (less and less until you reach doing nothing)."
 ---
 Wu wei is usually translated as "non-doing," and the translation has done it harm. People hear "do nothing" and either dismiss it or turn it into an excuse.
 
-The Tao Te Ching means something else. It describes a person who acts without forcing, who does what the moment asks and stops there. The old image is a cook carving an ox who never dulls the knife, because he moves through the spaces in the joints instead of cutting against the bone.
+The Tao Te Ching means something else. It describes a person who acts without forcing, who does what the moment asks and stops there. The old image, from the Zhuangzi, a later Taoist classic, is a cook carving an ox who never dulls the knife, because he moves through the spaces in the joints instead of cutting against the bone.
 
 **What it is not**
 

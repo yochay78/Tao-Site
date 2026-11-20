@@ -4,6 +4,15 @@ description: "A short, plain guide to the Tao Te Ching: what it is, why it feels
 date: 2026-10-24
 chapter: "Tao Te Ching, a first reading"
 cta: stop-pushing
+faq:
+  - q: "What is the Tao Te Ching?"
+    a: "A short Chinese classic traditionally attributed to Laozi (Lao Tzu). It has 81 brief chapters about the Tao, acting without forcing (wu wei), and the strength of softness."
+  - q: "How long does it take to read the Tao Te Ching?"
+    a: "You can read the whole book in an afternoon, but it works best slowly: one chapter, then pause, then read the same chapter again the next day."
+  - q: "Where should a beginner start with the Tao Te Ching?"
+    a: "Read one chapter slowly rather than pushing through from chapter 1. A plain-language translation helps. All 81 chapters are free to read on this site at silentpower.me/tao/."
+  - q: "Why is the Tao Te Ching hard to understand?"
+    a: "Because it points instead of arguing. It speaks in images like water, a valley and an empty bowl, and often says the opposite of what we expect. Read it like a poem you return to, not like a manual."
 ---
 The Tao Te Ching is a short book. Traditionally it is attributed to Laozi, and it has 81 brief chapters, many of them only a few lines long. You can read the whole thing in an afternoon. People spend a lifetime with it anyway.
 

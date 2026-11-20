@@ -8,6 +8,8 @@ import { notes } from '../../../data/tao-notes';
 import { notesHe } from '../../../data/tao-notes-he';
 import { videos } from '../../../data/tao-videos';
 import { social } from '../../../data/tao-social';
+import { getCollection } from 'astro:content';
+import { chapterNums } from '../../../data/chapter-links';
 export function getStaticPaths() { return tao.map(c => ({ params: { n: String(c.n) } })); }
 const n = Number(Astro.params.n);
 const c = tao.find(x => x.n === n)!;
@@ -22,6 +24,7 @@ const enSoc = social[n]?.en;
 const prev = notesHe[n - 1] ? { n: n - 1, t: notesHe[n - 1].title } : null;
 const next = notesHe[n + 1] ? { n: n + 1, t: notesHe[n + 1].title } : null;
 const alt = notes[n] ? `/tao/${n}/` : undefined;
+const related = (await getCollection('journalHe')).filter(e => chapterNums(e.data.chapter).includes(n)).sort((a, b) => +b.data.date - +a.data.date);
 const ld = note ? [
   { '@context':'https://schema.org','@type':'Article', headline: h1, description: note.description, inLanguage:'he', url, mainEntityOfPage: url, datePublished:'2026-11-11', dateModified:'2026-11-11', author:{ '@id':'https://silentpower.me/#person' }, publisher:{ '@id':'https://silentpower.me/#org' }, about:{ '@type':'CreativeWork', name:`טאו טה צ'ינג, פרק ${n}`, isPartOf:{ '@type':'Book', name:"טאו טה צ'ינג", author:{ '@type':'Person', name:'לאו דזה' }, sameAs:'https://he.wikipedia.org/wiki/%D7%98%D7%90%D7%95_%D7%98%D7%94_%D7%A6%27%D7%99%D7%A0%D7%92' } }, speakable:{ '@type':'SpeakableSpecification', cssSelector:['h1','.lede'] }, ...(alt ? { workTranslation: { '@type':'Article', inLanguage:'en', url:`https://silentpower.me/tao/${n}/` } } : {}) },
   { '@context':'https://schema.org','@type':'FAQPage', inLanguage:'he', mainEntity: note.faq.map(([q,a]) => ({ '@type':'Question', name:q, acceptedAnswer:{ '@type':'Answer', text:a } })) },
@@ -49,12 +52,13 @@ const ld = note ? [
 {!heSoc?.ig && !enVid && enSoc?.ig && <><SocialVideo ig={enSoc.ig} title={`טאו טה צ'ינג פרק ${n}`} watch="צפו בריל (באנגלית)" also="גם ב" lang="he" /></>}
 <h2>שאלות ותשובות</h2>
 {note.faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+{related.length > 0 && <><h2>מהיומן</h2><ul class="sans">{related.map(e => <li><a href={`/he/journal/${e.id}/`}>{e.data.title}</a></li>)}</ul></>}
 <hr class="rule" style="margin:40px 0">
 <nav class="chnav sans" aria-label="פרקים">
   {prev ? <a href={`/he/tao/${prev.n}/`} rel="prev">→ פרק {prev.n}: {prev.t}</a> : <span></span>}
   {next && <a href={`/he/tao/${next.n}/`} rel="next">פרק {next.n}: {next.t} ←</a>}
 </nav>
-<p class="sans" style="margin-top:18px"><a href="/he/tao/">כל הפרקים</a>{alt && <> · <a href={alt} hreflang="en" lang="en">English</a></>} · <a href="/he/free/">להתחיל בחינם</a></p>
+<p class="sans" style="margin-top:18px"><a href="/he/tao/">כל הפרקים</a>{alt && <> · <a href={alt} hreflang="en" lang="en">English</a></>} · <a href="/he/free/">להתחיל בחינם</a> · <a href="/he/journal/">ליומן</a></p>
 </div></section></article>
 </Base>
 ) : (

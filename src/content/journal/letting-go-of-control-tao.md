@@ -4,6 +4,15 @@ description: "We try to control outcomes because uncertainty is uncomfortable. T
 date: 2026-10-24
 chapter: "Tao Te Ching, chapters 29 and 64"
 cta: unshakable
+faq:
+  - q: "What does the Tao Te Ching say about control?"
+    a: "Chapter 29 says the world is a sacred vessel: shape it and you ruin it, grasp it and you lose it. Things have their own timing, and forcing a result often damages it."
+  - q: "Does letting go mean not caring?"
+    a: "No. It means seeing the difference between your part (preparing, showing up, saying the honest thing) and what you are only trying to control, then putting your effort into your part."
+  - q: "How do I stop trying to control everything?"
+    a: "When you catch yourself replaying a conversation or rehearsing a disaster, name it: \"I am trying to control the outcome.\" Then return to what is actually yours to do."
+  - q: "How does the Tao Te Ching help with uncertainty?"
+    a: "It treats open space as useful, not threatening. You will still feel uncertain; the change is that you stop treating the feeling as an emergency."
 ---
 Most of our stress comes from one quiet belief: if I plan well enough, hold tightly enough, and worry carefully enough, things will go the way they should.
 
