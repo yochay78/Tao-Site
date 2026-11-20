@@ -47,4 +47,20 @@ const journalHe = defineCollection({
     faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
   }),
 });
-export const collections = { products, journal, journalHe };
+// Glossary of Taoist terms. EN in src/content/glossary, HE in src/content/glossary-he (same slug = hreflang pair).
+const glossarySchema = z.object({
+  term: z.string(),                       // display name, e.g. "Wu wei"
+  aka: z.string().optional(),             // other spellings / Chinese, e.g. "無為 · wuwei · non-doing"
+  title: z.string(),                      // <title> / H1
+  description: z.string(),                // meta description
+  short: z.string(),                      // 1-2 sentence direct definition (GEO answer)
+  order: z.number().default(50),
+  chapters: z.array(z.number().int().min(1).max(81)).default([]),
+  related: z.array(z.string()).default([]),   // other glossary slugs
+  journal: z.array(z.string()).default([]),   // journal slugs
+  faq: z.array(z.object({ q: z.string(), a: z.string() })).optional(),
+  updated: z.coerce.date(),
+});
+const glossary = defineCollection({ loader: glob({ pattern: '*.md', base: './src/content/glossary' }), schema: glossarySchema });
+const glossaryHe = defineCollection({ loader: glob({ pattern: '*.md', base: './src/content/glossary-he' }), schema: glossarySchema });
+export const collections = { products, journal, journalHe, glossary, glossaryHe };

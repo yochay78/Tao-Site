@@ -32,6 +32,7 @@ const ld = note ? [
     { '@type':'ListItem', position:3, name:`Chapter ${n}`, item:url } ] },
   ...(vid ? [{ '@context':'https://schema.org','@type':'VideoObject', name: vid.title, description: `${vid.title}. A short video on Tao Te Ching chapter ${n} from the Silent Power channel.`, thumbnailUrl:`https://i.ytimg.com/vi/${vid.id}/hqdefault.jpg`, uploadDate: (note.video?.uploaded ?? '2026-11-04'), ...(note.video ? { duration: note.video.duration } : {}), embedUrl:`https://www.youtube-nocookie.com/embed/${vid.id}`, contentUrl:`https://www.youtube.com/watch?v=${vid.id}` }] : []),
 ] : undefined;
+const terms = (await getCollection('glossary')).filter(t => t.data.chapters.includes(n)).sort((a, b) => a.data.order - b.data.order);
 const related = (await getCollection('journal')).filter(e => chapterNums(e.data.chapter).includes(n)).sort((a, b) => +b.data.date - +a.data.date);
 const watchTitle = vid?.title ?? (note ? note.title : '');
 ---
@@ -52,6 +53,7 @@ const watchTitle = vid?.title ?? (note ? note.title : '');
 {vid && (soc?.ig || soc?.fb || soc?.tt) && <SocialVideo fb={soc.fb} tt={soc.tt} ig={undefined} title={vid.title} />}
 <h2>Questions</h2>
 {note.faq.map(([q, a]) => <><h3>{q}</h3><p>{a}</p></>)}
+{terms.length > 0 && <p class="sans">Key terms in this chapter: {terms.map((t, i) => <>{i > 0 && ' · '}<a href={`/glossary/${t.id}/`}>{t.data.term}</a></>)}</p>}
 {related.length > 0 && <><h2>From the journal</h2><ul class="sans">{related.map(e => <li><a href={`/journal/${e.id}/`}>{e.data.title}</a></li>)}</ul></>}
 <hr class="rule" style="margin:40px 0">
 <nav class="chnav sans" aria-label="Chapters">

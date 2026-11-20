@@ -14,6 +14,16 @@ export const GET = async () => {
     out += '\n## יומן (עברית)\n';
     for (const j of jHe) out += `- [${j.data.title}](https://silentpower.me/he/journal/${j.id}/): ${j.data.description}\n`;
   }
+  const gEn = (await getCollection('glossary')).sort((a, b) => a.data.order - b.data.order);
+  const gHe = (await getCollection('glossaryHe')).sort((a, b) => a.data.order - b.data.order);
+  if (gEn.length) {
+    out += '\n## Taoism glossary\n- [All terms](https://silentpower.me/glossary/)\n';
+    for (const g of gEn) out += `- [${g.data.term}](https://silentpower.me/glossary/${g.id}/): ${g.data.short}\n`;
+  }
+  if (gHe.length) {
+    out += '\n## מילון הטאו (עברית)\n- [כל המושגים](https://silentpower.me/he/glossary/)\n';
+    for (const g of gHe) out += `- [${g.data.term}](https://silentpower.me/he/glossary/${g.id}/): ${g.data.short}\n`;
+  }
   out += '\n## Tao Te Ching, chapter by chapter\n';
   out += '- [All chapters](https://silentpower.me/tao/): index of the 81 chapters\n';
   out += '- [Full text of every chapter with explanations and FAQ, one file](https://silentpower.me/llms-full.txt)\n';

@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { glossarySetLd } from '../../data/glossary-ld';
+const byOrder = (a: any, b: any) => a.data.order - b.data.order || a.data.term.localeCompare(b.data.term);
+const g = (await getCollection('glossary')).sort(byOrder);
+const hasHe = (await getCollection('glossaryHe')).length > 0;
+const ld = glossarySetLd('en', g.map(x => ({ id: x.id, term: x.data.term, short: x.data.short })));
+---
+<Base title="Taoism Glossary: Key Terms of the Tao Te Ching Explained" description="Plain definitions of the key ideas in Taoism and the Tao Te Ching: Tao, Te, wu wei, the uncarved block, yin and yang, Lao Tzu and more, each linked to the chapters where it appears." jsonLd={ld} alt={hasHe ? '/he/glossary/' : undefined}>
+<section><div class="wrap"><div class="label">Glossary</div><h1>Taoism Glossary</h1>
+<p class="lede" style="max-width:44rem">The key words of the Tao Te Ching, explained simply. Each entry gives a short answer first, then shows where the idea appears in the 81 chapters.</p>
+<div class="grid">{g.map(x => <a class="card" href={`/glossary/${x.id}/`} style="text-decoration:none">{x.data.aka && <div class="label">{x.data.aka}</div>}<h3>{x.data.term}</h3><p>{x.data.short}</p></a>)}</div>
+<p class="sans" style="margin-top:28px"><a href="/tao/">Read all 81 chapters</a> · <a href="/journal/">The Tao Journal</a></p>
+</div></section>
+</Base>

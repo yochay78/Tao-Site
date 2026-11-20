@@ -1,0 +1,15 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { glossarySetLd } from '../../../data/glossary-ld';
+const byOrder = (a: any, b: any) => a.data.order - b.data.order || a.data.term.localeCompare(b.data.term, 'he');
+const g = (await getCollection('glossaryHe')).sort(byOrder);
+const ld = glossarySetLd('he', g.map(x => ({ id: x.id, term: x.data.term, short: x.data.short })));
+---
+<Base lang="he" title="מילון הטאו: מושגי היסוד של הטאואיזם והטאו טה צ'ינג" description="הסברים פשוטים למושגים המרכזיים בטאואיזם ובטאו טה צ'ינג: טאו, טה, וו־ויי, הגוש שלא נפסל, יין ויאנג, לאו־דזה ועוד, עם קישור לפרקים שבהם הם מופיעים." jsonLd={ld} alt="/glossary/">
+<section dir="rtl"><div class="wrap"><div class="label">מילון</div><h1>מילון הטאו</h1>
+<p class="lede" style="max-width:44rem">המילים החשובות של הטאו טה צ'ינג, בהסבר פשוט. כל ערך נותן קודם תשובה קצרה, ואחר כך מראה איפה הרעיון מופיע ב־81 הפרקים.</p>
+<div class="grid">{g.map(x => <a class="card" href={`/he/glossary/${x.id}/`} style="text-decoration:none">{x.data.aka && <div class="label">{x.data.aka}</div>}<h3>{x.data.term}</h3><p>{x.data.short}</p></a>)}</div>
+<p class="sans" style="margin-top:28px"><a href="/he/tao/">לכל 81 הפרקים</a> · <a href="/he/journal/">יומן הטאו</a></p>
+</div></section>
+</Base>

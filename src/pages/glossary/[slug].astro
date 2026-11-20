@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+import { glossaryTermLd } from '../../data/glossary-ld';
+import { notes } from '../../data/tao-notes';
+export async function getStaticPaths() {
+  return (await getCollection('glossary')).map(p => ({ params: { slug: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const { Content } = await render(p);
+const d = p.data;
+const all = await getCollection('glossary');
+const heIds = new Set((await getCollection('glossaryHe')).map(x => x.id));
+const alt = heIds.has(p.id) ? `/he/glossary/${p.id}/` : undefined;
+const related = d.related.map(id => all.find(x => x.id === id)).filter(Boolean) as typeof all;
+const journal = (await getCollection('journal')).filter(j => d.journal.includes(j.id));
+const ld = glossaryTermLd({ lang: 'en', id: p.id, term: d.term, aka: d.aka, title: d.title, description: d.description, short: d.short, updated: d.updated, faq: d.faq });
+---
+<Base title={d.title} description={d.description} type="article" jsonLd={ld} alt={alt}>
+<article><section><div class="wrap narrow prose">
+<div class="label"><a href="/glossary/">Taoism Glossary</a>{d.aka && <> · {d.aka}</>}</div>
+<h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>
+<p class="lede">{d.short}</p>
+<Content />
+{d.chapters.length > 0 && <><h2>Where it appears in the Tao Te Ching</h2><ul class="sans">{d.chapters.map(n => <li><a href={`/tao/${n}/`}>Chapter {n}{notes[n] ? `: ${notes[n].title}` : ''}</a></li>)}</ul></>}
+{d.faq?.length && <section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Common questions</h2>{d.faq.map(f => <><h3>{f.q}</h3><p>{f.a}</p></>)}</section>}
+{(related.length > 0 || journal.length > 0) && <h2>Keep reading</h2>}
+{related.length > 0 && <p class="sans">Related terms: {related.map((r, i) => <>{i > 0 && ' · '}<a href={`/glossary/${r.id}/`}>{r.data.term}</a></>)}</p>}
+{journal.length > 0 && <ul class="sans">{journal.map(j => <li><a href={`/journal/${j.id}/`}>{j.data.title}</a></li>)}</ul>}
+<hr class="rule" style="margin:40px 0">
+<p class="sans"><a href="/glossary/">← All glossary terms</a> · <a href="/tao/">Read all 81 chapters</a> · <a href="/free/">Start with a free book</a></p>
+</div></section></article>
+</Base>

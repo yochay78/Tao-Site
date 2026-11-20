@@ -30,5 +30,16 @@ export const GET = async () => {
     out += '\n# יומן (עברית)\n\n';
     for (const j of jHe) out += `## ${j.data.title}\nURL: https://silentpower.me/he/journal/${j.id}/\n\n${(j.body ?? '').trim()}\n\n` + (j.data.faq ?? []).map(f => `ש: ${f.q}\nת: ${f.a}\n\n`).join('');
   }
+  const byOrder = (x: any, y: any) => x.data.order - y.data.order;
+  const gEn = (await getCollection('glossary')).sort(byOrder);
+  if (gEn.length) {
+    out += '\n# Taoism glossary\n\n';
+    for (const g of gEn) out += `## ${g.data.term}${g.data.aka ? ` (${g.data.aka})` : ''}\nURL: https://silentpower.me/glossary/${g.id}/\n\n${g.data.short}\n\n${(g.body ?? '').trim()}\n\n` + (g.data.faq ?? []).map(f => `Q: ${f.q}\nA: ${f.a}\n\n`).join('');
+  }
+  const gHe = (await getCollection('glossaryHe')).sort(byOrder);
+  if (gHe.length) {
+    out += '\n# מילון הטאו (עברית)\n\n';
+    for (const g of gHe) out += `## ${g.data.term}${g.data.aka ? ` (${g.data.aka})` : ''}\nURL: https://silentpower.me/he/glossary/${g.id}/\n\n${g.data.short}\n\n${(g.body ?? '').trim()}\n\n` + (g.data.faq ?? []).map(f => `ש: ${f.q}\nת: ${f.a}\n\n`).join('');
+  }
   return new Response(out, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };
