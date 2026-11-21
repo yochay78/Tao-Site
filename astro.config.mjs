@@ -27,6 +27,7 @@ function taoFilter(page) {
 // silentpower.me/<code>/<src>  → the book page + source tag for GA4 (yt, ig, fb, tt, ...)
 const shortLinks = {
   push: '/shop/stop-pushing/',
+  eternity: '/shop/practicing-eternity/',
   mind: '/shop/mind-wont-slow-down/',
   rock: '/shop/becoming-unshakable/',
   root: '/shop/the-root/',
