@@ -7,7 +7,7 @@ short: "וו־ויי פירושו ״אי עשייה״ או ״פעולה בלי �
 order: 3
 chapters: [2, 37, 48, 63, 64]
 related: ["tao", "ziran", "te"]
-journal: ["tao-te-ching-on-leadership"]
+journal: ["tao-te-ching-on-leadership", "journey-of-a-thousand-miles"]
 faq:
   - q: "מה הפירוש המילולי של וו־ויי?"
     a: "וו פירושו ״בלי״ או ״אין״, וויי פירושו ״עשייה״ או ״פעולה״. אז המשמעות המילולית היא אי עשייה, אבל בטאו טה צ'ינג זה מתאר פעולה בלי מאמץ, לא חוסר מעש."

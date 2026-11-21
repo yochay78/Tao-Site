@@ -39,7 +39,7 @@ const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(
 {(noindex || pageNoindex) && <meta name="robots" content="noindex, nofollow">}
 <link rel="canonical" href={canonical}>
 {alternates && <>{alternates.map(([c,h]) => <link rel="alternate" hreflang={c} href={new URL(h, Astro.site)} />)}<link rel="alternate" hreflang="x-default" href={new URL(alternates[0][1], Astro.site)} /></>}
-{!alternates && alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /></>}
+{!alternates && alt && <><link rel="alternate" hreflang={lang} href={canonical} /><link rel="alternate" hreflang={other} href={new URL(alt, Astro.site)} /><link rel="alternate" hreflang="x-default" href={lang === 'en' ? canonical : new URL(alt, Astro.site)} /></>}
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
 <meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content={full}><meta name="twitter:description" content={description}><meta property="og:locale" content={he ? 'he_IL' : 'en_US'}>

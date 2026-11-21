@@ -4,6 +4,15 @@ description: "Water wears down stone. The Tao Te Ching builds a whole philosophy
 date: 2026-10-24
 chapter: "Tao Te Ching, chapters 8, 43, 78"
 cta: unshakable
+faq:
+  - q: "What does the Tao Te Ching say about water?"
+    a: "Chapter 8 says the highest good is like water: it serves everything and never competes. Chapter 78 says nothing is softer or weaker than water, yet nothing beats it at attacking the hard and strong."
+  - q: "What does \"the soft overcomes the hard\" mean?"
+    a: "It is a line from chapter 78. Hardness resists and breaks, while softness gives way, keeps moving and wears the hard thing down over time. Chapter 43 says the softest thing in the world rides over the hardest."
+  - q: "Is yielding the same as weakness?"
+    a: "No. Yielding means not spending strength on resistance that achieves nothing. Chapter 76 says the hard and stiff are followers of death, and the soft and weak are followers of life."
+  - q: "Why does chapter 78 say no one can practice it?"
+    a: "The text says everyone in the world knows that the soft overcomes the hard, yet no one can practice it. Knowing the idea is easy; letting go of force in a real moment is the hard part."
 ---
 Chapter 78 of the Tao Te Ching says that nothing in the world is softer or weaker than water, and nothing is better at wearing down the hard and strong. Everyone knows this, the text adds, and no one puts it into practice.
 

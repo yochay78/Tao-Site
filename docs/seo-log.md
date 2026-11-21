@@ -7,6 +7,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: knowing-when-enough-is-enough / contentment (9, 33, 44, 46) — 2026-11-18
 - EN+HE: those-who-know-do-not-speak (56, 1, 2, 23, 81) — 2026-11-19
 - EN+HE: tao-te-ching-on-leadership (17, 57, 60, 66) — 2026-11-20
+- EN+HE: journey-of-a-thousand-miles (63, 64; procrastination / starting small) — 2026-11-21
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -21,8 +22,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi.
-- Next terms (ideas): the sage / "the Nameless" (how this site translates 聖人), water (8, 78), the valley / feminine (6, 28, 61), emptiness / wu (11, 16), the three treasures (67), returning / fu (16, 40), qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water.
+- Next terms (ideas): the valley / feminine (6, 28, 61), emptiness / wu (11, 16), the three treasures (67), returning / fu (16, 40), qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
 
 ---
 
@@ -64,3 +65,16 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 **Idea for tomorrow:** translate how-to-stop-overthinking (or wu wei) to Hebrew and expand it; or new topic "The journey of a thousand miles begins with a single step" — check letting-go article first (it cites ch 64) and angle it on procrastination / starting small. Remaining EN articles without faq: silence-and-stillness-tao, why-the-weakest-wins.
 
 **Glossary launch (same day, on Yochay's request):** built the Taoism glossary / knowledge hub (EN /glossary/ + HE /he/glossary/, 8 terms each: Tao, Te, wu wei, uncarved block, ziran, yin and yang, Lao Tzu, Zhuangzi). Chapter pages link to terms; footer + home link to the glossary; llms.txt/llms-full.txt list it. Fixed EN home link "The Way That Cannot Be Spoken" → "The Tao That Cannot Be Spoken" (matches the chapter title). From now on: add 1–2 terms per day.
+
+## 2026-11-21
+**Audit:** home, /journal/, /glossary/, /glossary/wu-wei/, /tao/64/, /he/, /he/glossary/, sitemap, robots, llms.txt all 200. Gap: pages with one EN/HE pair (chapters, journal, glossary) had hreflang en+he but no x-default (only multi-language pages had it). Two older EN articles still had no FAQ. Search: "journey of a thousand miles begins with a single step" (ch 64) is one of the most searched Tao quotes; common questions = origin, meaning, whether "single step" is literal.
+**Changed:**
+- Base layout: x-default hreflang (→ English URL) now on every EN/HE paired page (chapters, journal, glossary, etc.).
+- Added `faq` (4 Q/A each → FAQ block + FAQPage JSON-LD + llms-full.txt) to silence-and-stillness-tao and why-the-weakest-wins. All EN articles now have FAQ.
+- Glossary: new terms the-nameless (the sage, 聖人) and water (EN + HE). wu-wei glossary entry now links to today's article.
+**Published:**
+- https://silentpower.me/journal/journey-of-a-thousand-miles/
+- https://silentpower.me/he/journal/journey-of-a-thousand-miles/
+- https://silentpower.me/glossary/the-nameless/ + /he/glossary/the-nameless/
+- https://silentpower.me/glossary/water/ + /he/glossary/water/
+**Idea for tomorrow:** translate how-to-stop-overthinking to Hebrew (HE journal still has only 4 articles) or new topic around ch 33 "knowing others is wisdom, knowing yourself is enlightenment" (check search). Terms: the valley / the feminine (6, 28, 61) and the three treasures (67). Consider og:locale:alternate on paired pages.
