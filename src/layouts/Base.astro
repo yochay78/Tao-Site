@@ -2,8 +2,8 @@
 import '../styles/global.css';
 import { site } from '../data/site';
 import { i18n, langMenu } from '../data/i18n';
-interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: string; alt?: string; noindex?: boolean }
-const { title, description, type = 'website', jsonLd, ogImage = '/og.png', lang = 'en', alt, noindex: pageNoindex = false } = Astro.props;
+interface Props { title: string; description: string; type?: string; jsonLd?: object | object[]; ogImage?: string; lang?: string; alt?: string; noindex?: boolean; published?: Date; modified?: Date }
+const { title, description, type = 'website', jsonLd, ogImage = '/og.png', lang = 'en', alt, noindex: pageNoindex = false, published, modified } = Astro.props;
 const he = lang === 'he';
 const T = i18n[lang];
 const other = lang === 'en' ? 'he' : 'en';
@@ -43,6 +43,8 @@ const ld = [...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []), ...(
 <meta property="og:title" content={full}><meta property="og:description" content={description}>
 <meta property="og:type" content={type}><meta property="og:url" content={canonical}>
 <meta property="og:image" content={new URL(ogImage, Astro.site)}><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content={full}><meta name="twitter:description" content={description}><meta property="og:locale" content={he ? 'he_IL' : 'en_US'}>
+{!alternates && alt && <meta property="og:locale:alternate" content={he ? 'en_US' : 'he_IL'}>}
+{published && <meta property="article:published_time" content={published.toISOString()}>}{(modified ?? published) && <meta property="article:modified_time" content={(modified ?? published)!.toISOString()}>}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {lang === 'hi' && <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Serif+Devanagari:wght@500;600&display=swap" rel="stylesheet">}

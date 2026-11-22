@@ -7,7 +7,7 @@ short: "החכם (聖人, שנג־רן) הוא התמונה של הטאו טה �
 order: 9
 chapters: [2, 7, 22, 49, 63, 64, 78]
 related: ["tao", "wu-wei", "lao-tzu", "te"]
-journal: ["tao-te-ching-on-leadership", "journey-of-a-thousand-miles", "those-who-know-do-not-speak"]
+journal: ["tao-te-ching-on-leadership", "journey-of-a-thousand-miles", "those-who-know-do-not-speak", "knowing-yourself-tao"]
 faq:
   - q: "מה פירוש המילה שנג־רן?"
     a: "שנג־רן (聖人) מתורגם בדרך כלל ״החכם״ או ״האדם הנבון״. בטאו טה צ'ינג זה שמו של האדם האידיאלי שחי בהרמוניה עם הטאו, והוא מופיע בפרקים רבים."

@@ -6,7 +6,7 @@ description: "למה המים כל כך חשובים בטאו טה צ'ינג? מ
 short: "מים הם הדימוי האהוב על הטאו טה צ'ינג לטאו בפעולה. פרק 8 אומר שהטוב העליון דומה למים: הם משרתים הכול, לא מתחרים, ומתיישבים במקומות נמוכים. פרק 78 מוסיף שאין דבר רך ממים, ובכל זאת אין דבר שמנצח אותם מול הקשה והחזק."
 order: 10
 chapters: [8, 32, 43, 66, 78]
-related: ["wu-wei", "tao", "the-nameless", "yin-and-yang"]
+related: ["wu-wei", "tao", "the-nameless", "yin-and-yang", "the-valley"]
 journal: ["tao-te-ching-on-leadership"]
 faq:
   - q: "מה פירוש ״הטוב העליון דומה למים״?"

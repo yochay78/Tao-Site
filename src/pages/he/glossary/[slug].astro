@@ -16,7 +16,7 @@ const related = d.related.map(id => all.find(x => x.id === id)).filter(Boolean) 
 const journal = (await getCollection('journalHe')).filter(j => d.journal.includes(j.id));
 const ld = glossaryTermLd({ lang: 'he', id: p.id, term: d.term, aka: d.aka, title: d.title, description: d.description, short: d.short, updated: d.updated, faq: d.faq });
 ---
-<Base lang="he" title={d.title} description={d.description} type="article" jsonLd={ld} alt={alt}>
+<Base lang="he" title={d.title} description={d.description} type="article" jsonLd={ld} alt={alt} modified={d.updated}>
 <article dir="rtl"><section><div class="wrap narrow prose">
 <div class="label"><a href="/he/glossary/">מילון הטאו</a>{d.aka && <> · {d.aka}</>}</div>
 <h1 style="font-size:clamp(2rem,5vw,3.2rem)">{d.title}</h1>

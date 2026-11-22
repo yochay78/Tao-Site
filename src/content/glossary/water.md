@@ -6,7 +6,7 @@ description: "Why is water so important in the Tao Te Ching? What \"the highest 
 short: "Water is the Tao Te Ching's favorite image of the Tao in action. Chapter 8 says the highest good is like water: it serves everything, never competes, and settles in low places. Chapter 78 adds that nothing is softer than water, yet nothing beats it against the hard and strong."
 order: 10
 chapters: [8, 32, 43, 66, 78]
-related: ["wu-wei", "tao", "the-nameless", "yin-and-yang"]
+related: ["wu-wei", "tao", "the-nameless", "yin-and-yang", "the-valley"]
 journal: ["why-the-weakest-wins", "tao-te-ching-on-leadership"]
 faq:
   - q: "What does \"the highest good is like water\" mean?"

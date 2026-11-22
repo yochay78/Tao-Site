@@ -8,6 +8,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: those-who-know-do-not-speak (56, 1, 2, 23, 81) — 2026-11-19
 - EN+HE: tao-te-ching-on-leadership (17, 57, 60, 66) — 2026-11-20
 - EN+HE: journey-of-a-thousand-miles (63, 64; procrastination / starting small) — 2026-11-21
+- EN+HE: knowing-yourself-tao (33, 71, 72; self-knowledge, "knowing others is wisdom") — 2026-11-22
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -15,6 +16,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Pages: /he/journal/ and /he/journal/[slug]/ (dir=rtl, lang=he). llms.txt + llms-full.txt list both journals automatically.
 - Optional frontmatter `faq: [{q, a}]` (EN + HE) → visible "Common questions" block + FAQPage JSON-LD + Q/A in llms-full.txt.
 - Chapter numbers in the `chapter` label are auto-linked to /tao/N/ (or /he/tao/N/) under each article.
+- Journal articles show a visible date (<time>) and "Key terms in this article" / "מושגים במאמר הזה" — auto-built from glossary entries whose `journal` list includes the article slug (so add today's slug to the relevant terms' `journal`).
 - Reverse links: every /tao/N/ and /he/tao/N/ page shows a "From the journal" / "מהיומן" list of articles whose `chapter` label names N (automatic).
 
 ## How the Taoism glossary works (added 2026-11-20)
@@ -22,8 +24,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water.
-- Next terms (ideas): the valley / feminine (6, 28, 61), emptiness / wu (11, 16), the three treasures (67), returning / fu (16, 40), qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine).
+- Next terms (ideas): emptiness / wu (11, 16), returning / fu (16, 40), qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
 
 ---
 
@@ -78,3 +80,16 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/glossary/the-nameless/ + /he/glossary/the-nameless/
 - https://silentpower.me/glossary/water/ + /he/glossary/water/
 **Idea for tomorrow:** translate how-to-stop-overthinking to Hebrew (HE journal still has only 4 articles) or new topic around ch 33 "knowing others is wisdom, knowing yourself is enlightenment" (check search). Terms: the valley / the feminine (6, 28, 61) and the three treasures (67). Consider og:locale:alternate on paired pages.
+
+## 2026-11-22
+**Audit:** home, /journal/, /glossary/, /glossary/water/, /tao/33/, /tao/67/, /he/, yesterday's HE article, sitemap, robots, llms.txt all 200; canonical/hreflang/x-default OK. Gaps: journal articles never linked to glossary terms (only glossary → journal); no visible publish date on articles; no og:locale:alternate or article:published_time / modified_time meta. Search: "knowing others is wisdom, knowing yourself is enlightenment" (ch 33) is a very widely quoted line; "three treasures" (ch 67) has strong search interest.
+**Changed:**
+- Journal articles (EN + HE): visible date (<time datetime>) + "Key terms in this article" links to glossary terms that list the article (two-way linking article ↔ glossary).
+- Base layout: og:locale:alternate on EN/HE paired pages; article:published_time (journal) and article:modified_time (journal + glossary, from `updated`).
+- Glossary: new terms three-treasures and the-valley (EN + HE). the-nameless now lists today's article; water now relates to the-valley.
+**Published:**
+- https://silentpower.me/journal/knowing-yourself-tao/
+- https://silentpower.me/he/journal/knowing-yourself-tao/
+- https://silentpower.me/glossary/three-treasures/ + /he/glossary/three-treasures/
+- https://silentpower.me/glossary/the-valley/ + /he/glossary/the-valley/
+**Idea for tomorrow:** translate how-to-stop-overthinking to Hebrew (HE journal: 6 articles vs EN 11). Terms: emptiness / wu (11, 16) and returning / fu (16, 40). Consider adding `journal` links on older glossary terms (tao, te, ziran) so more articles show "Key terms". Free book practicing-eternity is not yet in llms.txt Books list — check if llms-base.txt should mention it (do not change product data).

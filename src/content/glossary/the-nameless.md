@@ -7,7 +7,7 @@ short: "The sage (聖人, shengren) is the Tao Te Ching's picture of a person wh
 order: 9
 chapters: [2, 7, 22, 49, 63, 64, 78]
 related: ["tao", "wu-wei", "lao-tzu", "te"]
-journal: ["tao-te-ching-on-leadership", "journey-of-a-thousand-miles", "those-who-know-do-not-speak"]
+journal: ["tao-te-ching-on-leadership", "journey-of-a-thousand-miles", "those-who-know-do-not-speak", "knowing-yourself-tao"]
 faq:
   - q: "What does shengren mean?"
     a: "Shengren (聖人) is usually translated \"the sage\" or \"the wise person.\" In the Tao Te Ching it names the ideal person who lives in harmony with the Tao, and it appears in many chapters."
