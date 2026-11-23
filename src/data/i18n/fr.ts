@@ -36,7 +36,7 @@ export const fr: Lang = {
       title: 'Le secret taoïste pour devenir inébranlable',
       headline: 'On ne devient pas inébranlable en se battant plus fort.',
       short: 'Sur l’arbre raide qui casse, l’herbe qui plie, et seize endroits où la vie nous fait souvent tomber.',
-      price: '19 $', format: 'PDF à lire sur téléphone · 84 pages · en anglais',
+      price: '12 $', format: 'PDF à lire sur téléphone · 84 pages · en anglais',
       explores: [
         'Pourquoi se durcir (plus de contrôle, plus d’effort, des murs plus épais) nous laisse quand même facile à renverser',
         'La méthode clé : Le voir. Le nommer. Le laisser être.',
