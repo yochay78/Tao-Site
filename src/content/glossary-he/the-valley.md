@@ -6,7 +6,7 @@ description: "מה פירוש העמק בטאו טה צ'ינג? ״רוח העמ�
 short: "העמק הוא הדימוי של הטאו טה צ'ינג לפתיחות ולכוח המקבל. הוא נמוך וריק, ולכן הכול זורם אליו. פרק 6 אומר ״רוח העמק אינה מתה״, ופרק 28 אומר: הכר את הגבר, שמור על האישה, והיה עמק העולם."
 order: 12
 chapters: [6, 15, 28, 39, 41, 61, 66]
-related: ["water", "yin-and-yang", "tao", "pu"]
+related: ["water", "yin-and-yang", "tao", "pu", "emptiness"]
 journal: ["why-the-weakest-wins", "tao-te-ching-on-leadership"]
 faq:
   - q: "מה פירוש ״רוח העמק אינה מתה״?"

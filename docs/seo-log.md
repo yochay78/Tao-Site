@@ -24,8 +24,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine).
-- Next terms (ideas): emptiness / wu (11, 16), returning / fu (16, 40), qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan).
+- Next terms (ideas): qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
 
 ---
 
@@ -93,3 +93,17 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/glossary/three-treasures/ + /he/glossary/three-treasures/
 - https://silentpower.me/glossary/the-valley/ + /he/glossary/the-valley/
 **Idea for tomorrow:** translate how-to-stop-overthinking to Hebrew (HE journal: 6 articles vs EN 11). Terms: emptiness / wu (11, 16) and returning / fu (16, 40). Consider adding `journal` links on older glossary terms (tao, te, ziran) so more articles show "Key terms". Free book practicing-eternity is not yet in llms.txt Books list — check if llms-base.txt should mention it (do not change product data).
+
+## 2026-11-23
+**Audit:** home, /journal/, /glossary/, /glossary/three-treasures/, /tao/11/, /tao/16/, /he/, /he/glossary/the-valley/, yesterday's article, sitemap, robots, llms.txt all 200; canonical/hreflang/x-default + JSON-LD OK. Gaps: sitemap had no <lastmod> at all (Google/Bing use it to recrawl fresh content); llms.txt Books list was missing the free book Practicing Eternity; two articles (how-to-stop-overthinking, silence-and-stillness-tao) had no "Key terms" (no glossary term listed them). Search: "returning is the movement of the Tao" (ch 40) and "starting over" angles show up in Tao Te Ching chapter 40 writing; ch 11 emptiness is widely searched.
+**Changed:**
+- Sitemap: `serialize` in astro.config.mjs adds <lastmod> to every journal + glossary URL (EN + HE) from frontmatter `updated` (else `date`); /journal/, /he/journal/, /glossary/, /he/glossary/ get the newest item date. Remember: bump `updated` when a glossary entry changes.
+- llms-base.txt: added Practicing Eternity to the Books list (text from its product file; product itself untouched).
+- Glossary: new terms emptiness and returning (EN + HE). They list how-to-stop-overthinking + silence-and-stillness-tao (EN) so those articles now show Key terms. the-valley ↔ emptiness and pu ↔ returning now related.
+**Published:**
+- https://silentpower.me/journal/starting-over-tao/
+- https://silentpower.me/he/journal/starting-over-tao/
+- https://silentpower.me/glossary/emptiness/ + /he/glossary/emptiness/
+- https://silentpower.me/glossary/returning/ + /he/glossary/returning/
+**Idea for tomorrow:** HE journal still lags (7 vs EN 12) — translate how-to-stop-overthinking or why-the-weakest-wins to Hebrew (then add the HE slug to glossary-he `journal` lists: emptiness/returning/water/the-valley). Terms: qi, or the Mother (1, 20, 52). Consider ItemList/CollectionPage JSON-LD on /journal/ and /he/journal/ (index pages have none).
+

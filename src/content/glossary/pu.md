@@ -6,7 +6,7 @@ description: "What is the uncarved block (Pu) in the Tao Te Ching? A plain expla
 short: "The uncarved block (Pu) is the Tao Te Ching's image of simplicity: wood before it is cut into shapes. It stands for our original, unforced nature, before labels, roles and cleverness are added."
 order: 4
 chapters: [15, 19, 28, 32, 37]
-related: ["tao", "wu-wei", "te"]
+related: ["tao", "wu-wei", "te", "returning"]
 journal: ["knowing-when-enough-is-enough"]
 faq:
   - q: "What does Pu mean in Taoism?"

@@ -6,7 +6,7 @@ description: "What does the valley mean in the Tao Te Ching? \"The valley spirit
 short: "The valley is the Tao Te Ching's image of openness and receptive power. It is low and empty, so everything flows into it. Chapter 6 says \"the valley spirit never dies,\" and chapter 28 says to know the male, keep to the female, and be the valley of the world."
 order: 12
 chapters: [6, 15, 28, 39, 41, 61, 66]
-related: ["water", "yin-and-yang", "tao", "pu"]
+related: ["water", "yin-and-yang", "tao", "pu", "emptiness"]
 journal: ["why-the-weakest-wins", "tao-te-ching-on-leadership"]
 faq:
   - q: "What does \"the valley spirit never dies\" mean?"

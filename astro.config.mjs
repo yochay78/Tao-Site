@@ -44,11 +44,38 @@ for (const [code, dest] of Object.entries(shortLinks)) {
     shortRedirects[`/${code}/${short}`] = `${dest}?utm_source=${source}&utm_medium=social&utm_campaign=${code}`;
   }
 }
+
+// ── Sitemap lastmod ─────────────────────────────────────────────
+// Journal + glossary URLs get <lastmod> from frontmatter (updated, else date); index pages get the newest.
+function fmDate(file) {
+  const fm = (fs.readFileSync(file, 'utf8').match(/^---\n([\s\S]*?)\n---/) || [])[1] || '';
+  const v = (fm.match(/^updated:\s*"?([0-9-]{10})/m) || fm.match(/^date:\s*"?([0-9-]{10})/m) || [])[1];
+  return v ? new Date(v + 'T00:00:00Z') : null;
+}
+const lastmods = {};
+for (const [dir, base] of [['journal', '/journal/'], ['journal-he', '/he/journal/'], ['glossary', '/glossary/'], ['glossary-he', '/he/glossary/']]) {
+  const d = path.join('src/content', dir);
+  if (!fs.existsSync(d)) continue;
+  let newest = null;
+  for (const f of fs.readdirSync(d).filter(x => x.endsWith('.md'))) {
+    const dt = fmDate(path.join(d, f));
+    if (!dt) continue;
+    lastmods[base + f.replace(/\.md$/, '') + '/'] = dt;
+    if (!newest || dt > newest) newest = dt;
+  }
+  if (newest) lastmods[base] = newest;
+}
+function addLastmod(item) {
+  const dt = lastmods[new URL(item.url).pathname];
+  if (dt) item.lastmod = dt.toISOString();
+  return item;
+}
+
 // Canonical domain is configurable: set SITE_URL in Render when a custom domain is connected.
 const site = process.env.SITE_URL || 'https://silent-power.onrender.com';
 export default defineConfig({
   site,
-  integrations: [sitemap({ filter: taoFilter, i18n: { defaultLocale: 'en', locales: { en: 'en', he: 'he', es: 'es', fr: 'fr', it: 'it', hi: 'hi', fil: 'fil' } } })],
+  integrations: [sitemap({ filter: taoFilter, serialize: addLastmod, i18n: { defaultLocale: 'en', locales: { en: 'en', he: 'he', es: 'es', fr: 'fr', it: 'it', hi: 'hi', fil: 'fil' } } })],
   redirects: {
     ...shortRedirects,
     '/books': '/shop/',
