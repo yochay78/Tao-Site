@@ -3,8 +3,13 @@ import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 const a = (await getCollection('journal')).sort((x,y)=>+y.data.date-+x.data.date);
 const hasHe = (await getCollection('journalHe')).length > 0;
+const ld = [
+  { '@context':'https://schema.org','@type':'CollectionPage', name:'The Tao Journal', description:'Short, practical essays on the Tao Te Ching, each grounded in specific chapters.', inLanguage:'en', url:'https://silentpower.me/journal/', isPartOf:{ '@id':'https://silentpower.me/#website' }, about:{ '@type':'Book', name:'Tao Te Ching', author:{ '@type':'Person', name:'Laozi' } }, mainEntity:{ '@type':'ItemList', numberOfItems:a.length, itemListElement:a.map((x,i)=>({ '@type':'ListItem', position:i+1, url:`https://silentpower.me/journal/${x.id}/`, name:x.data.title })) } },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[ { '@type':'ListItem', position:1, name:'Home', item:'https://silentpower.me/' }, { '@type':'ListItem', position:2, name:'Journal', item:'https://silentpower.me/journal/' } ] },
+];
 ---
-<Base title="The Tao Journal" description="Short essays on the Tao Te Ching, organized by chapter and theme." alt={hasHe ? '/he/journal/' : undefined}>
+<Base title="The Tao Journal: Tao Te Ching Essays for Daily Life" description="Short, practical essays on the Tao Te Ching: overthinking, letting go, simplicity, leadership, starting over and more, each grounded in specific chapters of Lao Tzu's text." jsonLd={ld} alt={hasHe ? '/he/journal/' : undefined}>
 <section><div class="wrap"><div class="label">Journal</div><h1>The Tao Journal</h1>
-<div class="grid">{a.map(x=><a class="card" href={`/journal/${x.id}/`} style="text-decoration:none"><div class="label">{x.data.chapter}</div><h3>{x.data.title}</h3><p>{x.data.description}</p></a>)}</div></div></section>
+<p class="lede">Short essays on the Tao Te Ching for everyday life. Each one answers a real question and is grounded in specific chapters, which you can read in full in <a href="/tao/">all 81 chapters</a>. Key ideas are explained in the <a href="/glossary/">Taoism glossary</a>.</p>
+<div class="grid" style="margin-top:28px">{a.map(x=><a class="card" href={`/journal/${x.id}/`} style="text-decoration:none"><div class="label">{x.data.chapter}</div><h3>{x.data.title}</h3><p>{x.data.description}</p></a>)}</div></div></section>
 </Base>

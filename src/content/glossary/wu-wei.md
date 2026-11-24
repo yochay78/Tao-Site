@@ -7,7 +7,7 @@ short: "Wu wei means \"non-doing\" or \"effortless action\": acting without forc
 order: 3
 chapters: [2, 37, 48, 63, 64]
 related: ["tao", "ziran", "te"]
-journal: ["stop-trying-to-be-so-effortful", "letting-go-of-control-tao", "tao-te-ching-on-leadership", "journey-of-a-thousand-miles"]
+journal: ["stop-trying-to-be-so-effortful", "letting-go-of-control-tao", "tao-te-ching-on-leadership", "journey-of-a-thousand-miles", "simple-living-tao"]
 faq:
   - q: "What does wu wei literally mean?"
     a: "Wu means \"without\" or \"no,\" and wei means \"doing\" or \"acting.\" So the literal meaning is non-doing, but in the Tao Te Ching it describes action without strain, not inaction."
@@ -17,7 +17,7 @@ faq:
     a: "Chapter 63 gives one: do the great while it is small, and plan the difficult while it is easy. Dealing with a problem early, gently, before it needs force, is wu wei."
   - q: "How do I practice wu wei?"
     a: "When you notice yourself pushing, ask what would happen if you pushed half as hard. Notice which effort is actually moving things, and let go of the rest."
-updated: 2026-11-20
+updated: 2026-11-24
 ---
 **Not doing, or not forcing?**
 

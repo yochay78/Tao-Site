@@ -7,7 +7,7 @@ short: "The three treasures are the qualities Lao Tzu says he holds and guards i
 order: 11
 chapters: [67, 7, 59, 66]
 related: ["the-nameless", "te", "water", "wu-wei"]
-journal: ["knowing-yourself-tao", "tao-te-ching-on-leadership", "knowing-when-enough-is-enough"]
+journal: ["knowing-yourself-tao", "tao-te-ching-on-leadership", "knowing-when-enough-is-enough", "simple-living-tao"]
 faq:
   - q: "What are the three treasures in the Tao Te Ching?"
     a: "Chapter 67 says: \"I have three treasures that I hold and guard. The first is compassion. The second is thrift. The third is not daring to be first in the world.\" The third is often translated as humility."
@@ -17,7 +17,7 @@ faq:
     a: "It means not wasting: your money, your energy, your words. Chapter 67 says \"Thrifty, so I can be generous.\" When you do not spend yourself on everything, you have something left to give."
   - q: "How can not daring to be first help you lead?"
     a: "Chapter 67 says \"Not daring to be first, so I can lead.\" People follow someone who does not push ahead of them. Chapter 66 says the same: whoever wants to lead the people must walk as if behind them."
-updated: 2026-11-22
+updated: 2026-11-24
 ---
 **Three things worth guarding**
 

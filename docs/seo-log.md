@@ -9,6 +9,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: tao-te-ching-on-leadership (17, 57, 60, 66) — 2026-11-20
 - EN+HE: journey-of-a-thousand-miles (63, 64; procrastination / starting small) — 2026-11-21
 - EN+HE: knowing-yourself-tao (33, 71, 72; self-knowledge, "knowing others is wisdom") — 2026-11-22
+- EN+HE: starting-over-tao (40, 16, 22, 52; returning / starting over) — 2026-11-23
+- EN+HE: simple-living-tao (19, 12, 48, 80; simplicity / wanting less / minimalism) — 2026-11-24
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -24,8 +26,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan).
-- Next terms (ideas): qi, Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), the Mother (1, 20, 52), knowing when to stop (32, 44), softness (76, 78).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath).
+- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), softness (76, 78).
 
 ---
 
@@ -107,3 +109,16 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/glossary/returning/ + /he/glossary/returning/
 **Idea for tomorrow:** HE journal still lags (7 vs EN 12) — translate how-to-stop-overthinking or why-the-weakest-wins to Hebrew (then add the HE slug to glossary-he `journal` lists: emptiness/returning/water/the-valley). Terms: qi, or the Mother (1, 20, 52). Consider ItemList/CollectionPage JSON-LD on /journal/ and /he/journal/ (index pages have none).
 
+
+## 2026-11-24
+**Audit:** home, /journal/, /glossary/, /tao/12/, /tao/19/, /he/, yesterday's EN+HE article, /glossary/returning/, sitemap, robots, llms.txt all 200; canonical/hreflang/x-default OK. Gap: English /journal/ index had no JSON-LD at all (HE index already had CollectionPage) and no intro text; its title/description were generic. Search: "Tao Te Ching simplicity / simple living" — chapter 19 ("manifest plainness, embrace simplicity") is a widely quoted line; minimalism angle is common.
+**Changed:**
+- /journal/ (EN): CollectionPage + ItemList + BreadcrumbList JSON-LD, intro lede linking to /tao/ and /glossary/, stronger title ("The Tao Journal: Tao Te Ching Essays for Daily Life") and description.
+- Glossary: new terms the-mother and qi (EN + HE). pu, wu-wei, three-treasures (EN + HE) now list today's article (Key terms) and have updated: 2026-11-24.
+**Published:**
+- https://silentpower.me/journal/simple-living-tao/
+- https://silentpower.me/he/journal/simple-living-tao/
+- https://silentpower.me/glossary/the-mother/ + /he/glossary/the-mother/
+- https://silentpower.me/glossary/qi/ + /he/glossary/qi/
+**Facebook:** see report (HE 10:00-or-next-hour on "דרך הטאו", EN 17:00 on "The Dao", link in first comment).
+**Idea for tomorrow:** new topic on softness / "the hard and stiff are companions of death" (ch 76) or anger / conflict (ch 68, 73) — check search first. HE journal still lags (9 vs EN 13): consider translating how-to-stop-overthinking to Hebrew (then add it to glossary-he qi/emptiness `journal`). Terms: softness (76, 78), knowing when to stop (32, 44). Consider BreadcrumbList on /he/journal/ too.

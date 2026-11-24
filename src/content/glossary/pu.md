@@ -7,7 +7,7 @@ short: "The uncarved block (Pu) is the Tao Te Ching's image of simplicity: wood 
 order: 4
 chapters: [15, 19, 28, 32, 37]
 related: ["tao", "wu-wei", "te", "returning"]
-journal: ["knowing-when-enough-is-enough"]
+journal: ["knowing-when-enough-is-enough", "simple-living-tao"]
 faq:
   - q: "What does Pu mean in Taoism?"
     a: "Pu (樸) means raw, uncarved wood. In the Tao Te Ching it is a symbol of simplicity and of the natural state of things before they are shaped and named."
@@ -15,7 +15,7 @@ faq:
     a: "Because it shows the book's direction: not adding more, but returning. Chapter 28 speaks of returning to the uncarved block, and chapter 19 says: show the plain, embrace the uncarved."
   - q: "Does the uncarved block mean never changing?"
     a: "No. Chapter 28 says the uncarved block is cut into tools and used. The point is to remember what you are made of, and not to lose yourself in the shapes and roles."
-updated: 2026-11-20
+updated: 2026-11-24
 ---
 **Wood before it becomes a thing**
 
