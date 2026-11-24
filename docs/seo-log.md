@@ -120,5 +120,5 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/he/journal/simple-living-tao/
 - https://silentpower.me/glossary/the-mother/ + /he/glossary/the-mother/
 - https://silentpower.me/glossary/qi/ + /he/glossary/qi/
-**Facebook:** see report (HE 10:00-or-next-hour on "דרך הטאו", EN 17:00 on "The Dao", link in first comment).
+**Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-24 10:00 Asia/Jerusalem (post 439807207); EN on "The Dao" 17:00 (post 439807221). Also fixed HE article spelling וו ווי → וו־ויי (matches glossary).
 **Idea for tomorrow:** new topic on softness / "the hard and stiff are companions of death" (ch 76) or anger / conflict (ch 68, 73) — check search first. HE journal still lags (9 vs EN 13): consider translating how-to-stop-overthinking to Hebrew (then add it to glossary-he qi/emptiness `journal`). Terms: softness (76, 78), knowing when to stop (32, 44). Consider BreadcrumbList on /he/journal/ too.
