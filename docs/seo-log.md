@@ -134,4 +134,5 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/he/journal/tao-te-ching-on-anger/
 - https://silentpower.me/glossary/softness/ + /he/glossary/softness/
 - https://silentpower.me/glossary/not-contending/ + /he/glossary/not-contending/
+**Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-25 10:00 Asia/Jerusalem (post 441261348); EN on "The Dao" 17:00 (post 441261356).
 **Idea for tomorrow:** HE journal still lags (8 vs EN 14) — translate why-the-weakest-wins to Hebrew (then add it to glossary-he water/te/softness/the-valley `journal`). Or new topic: fear / courage (ch 67 "compassionate, so I can be brave", 73 "brave in not daring"). Terms: the One, heaven (tian). Check: /he/glossary/ index JSON-LD vs EN.
