@@ -11,6 +11,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: knowing-yourself-tao (33, 71, 72; self-knowledge, "knowing others is wisdom") — 2026-11-22
 - EN+HE: starting-over-tao (40, 16, 22, 52; returning / starting over) — 2026-11-23
 - EN+HE: simple-living-tao (19, 12, 48, 80; simplicity / wanting less / minimalism) — 2026-11-24
+- EN+HE: tao-te-ching-on-anger (68, 79, 8, 76, 63; anger, conflict, resentment) — 2026-11-25
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -26,8 +27,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath).
-- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), softness (76, 78).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng).
+- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), the One (10, 22, 39, 42), heaven and earth / tian (5, 7, 25), knowing the masculine, keeping the feminine (28).
 
 ---
 
@@ -122,3 +123,15 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/glossary/qi/ + /he/glossary/qi/
 **Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-24 10:00 Asia/Jerusalem (post 439807207); EN on "The Dao" 17:00 (post 439807221). Also fixed HE article spelling וו ווי → וו־ויי (matches glossary).
 **Idea for tomorrow:** new topic on softness / "the hard and stiff are companions of death" (ch 76) or anger / conflict (ch 68, 73) — check search first. HE journal still lags (9 vs EN 13): consider translating how-to-stop-overthinking to Hebrew (then add it to glossary-he qi/emptiness `journal`). Terms: softness (76, 78), knowing when to stop (32, 44). Consider BreadcrumbList on /he/journal/ too.
+
+## 2026-11-25
+**Audit:** home, /journal/, /glossary/, /glossary/qi/, /tao/68/, /tao/76/, /he/, /he/journal/, yesterday's EN+HE article, sitemap, robots, llms.txt all 200; live canonical = silentpower.me. Gap: /he/journal/ JSON-LD had no BreadcrumbList, description, isPartOf or about (EN index has them); generic HE title; HE lede did not link to the glossary. Search: "a good fighter is not angry" / "best fighter is never angry" (ch 68) and "Tao Te Ching anger" are widely quoted/asked.
+**Changed:**
+- /he/journal/: CollectionPage now has description + isPartOf + about (Book), added BreadcrumbList; stronger title ("יומן הטאו: מאמרים על הטאו טה צ'ינג לחיי היומיום") and description; lede links to /he/glossary/.
+- Glossary: new terms softness (rou) and not-contending (bu zheng) (EN + HE). water + te (EN + HE) now relate to them and list today's article (Key terms); updated: 2026-11-25.
+**Published:**
+- https://silentpower.me/journal/tao-te-ching-on-anger/
+- https://silentpower.me/he/journal/tao-te-ching-on-anger/
+- https://silentpower.me/glossary/softness/ + /he/glossary/softness/
+- https://silentpower.me/glossary/not-contending/ + /he/glossary/not-contending/
+**Idea for tomorrow:** HE journal still lags (8 vs EN 14) — translate why-the-weakest-wins to Hebrew (then add it to glossary-he water/te/softness/the-valley `journal`). Or new topic: fear / courage (ch 67 "compassionate, so I can be brave", 73 "brave in not daring"). Terms: the One, heaven (tian). Check: /he/glossary/ index JSON-LD vs EN.

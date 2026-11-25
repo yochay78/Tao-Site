@@ -2,10 +2,13 @@
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 const a = (await getCollection('journalHe')).sort((x,y)=>+y.data.date-+x.data.date);
-const ld = { '@context':'https://schema.org','@type':'CollectionPage', name:'יומן הטאו', inLanguage:'he', url:'https://silentpower.me/he/journal/', mainEntity:{ '@type':'ItemList', numberOfItems:a.length, itemListElement:a.map((x,i)=>({ '@type':'ListItem', position:i+1, url:`https://silentpower.me/he/journal/${x.id}/`, name:x.data.title })) } };
+const ld = [
+  { '@context':'https://schema.org','@type':'CollectionPage', name:'יומן הטאו', description:'מאמרים קצרים ומעשיים בעברית על הטאו טה צ\'ינג, כל אחד נשען על פרקים מסוימים.', inLanguage:'he', url:'https://silentpower.me/he/journal/', isPartOf:{ '@id':'https://silentpower.me/#website' }, about:{ '@type':'Book', name:'Tao Te Ching', author:{ '@type':'Person', name:'Laozi' } }, mainEntity:{ '@type':'ItemList', numberOfItems:a.length, itemListElement:a.map((x,i)=>({ '@type':'ListItem', position:i+1, url:`https://silentpower.me/he/journal/${x.id}/`, name:x.data.title })) } },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[ { '@type':'ListItem', position:1, name:'דף הבית', item:'https://silentpower.me/he/' }, { '@type':'ListItem', position:2, name:'יומן', item:'https://silentpower.me/he/journal/' } ] },
+];
 ---
-<Base lang="he" title="יומן הטאו" description="מאמרים קצרים בעברית על הטאו טה צ'ינג: פרק אחרי פרק, רעיון אחרי רעיון, בשפה פשוטה ומעשית." jsonLd={ld} alt="/journal/">
+<Base lang="he" title="יומן הטאו: מאמרים על הטאו טה צ'ינג לחיי היומיום" description="מאמרים קצרים בעברית על הטאו טה צ'ינג: כעס, פשטות, מנהיגות, ידיעה עצמית, להתחיל מחדש ועוד. כל מאמר נשען על פרקים מסוימים מספרו של לאו־דזה, בשפה פשוטה ומעשית." jsonLd={ld} alt="/journal/">
 <section dir="rtl"><div class="wrap"><div class="label">יומן</div><h1>יומן הטאו</h1>
-<p class="lede">מאמרים קצרים על הטאו טה צ'ינג. כל מאמר נשען על פרקים מסוימים, ואפשר לקרוא אותם במלואם ב<a href="/he/tao/">תרגום העברי של כל 81 הפרקים</a>.</p>
+<p class="lede">מאמרים קצרים על הטאו טה צ'ינג. כל מאמר נשען על פרקים מסוימים, ואפשר לקרוא אותם במלואם ב<a href="/he/tao/">תרגום העברי של כל 81 הפרקים</a>. המושגים המרכזיים מוסברים ב<a href="/he/glossary/">מילון הטאו</a>.</p>
 <div class="grid" style="margin-top:28px">{a.map(x=><a class="card" href={`/he/journal/${x.id}/`} style="text-decoration:none"><div class="label">{x.data.chapter}</div><h3>{x.data.title}</h3><p>{x.data.description}</p></a>)}</div></div></section>
 </Base>
