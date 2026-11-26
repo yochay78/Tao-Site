@@ -12,6 +12,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: starting-over-tao (40, 16, 22, 52; returning / starting over) — 2026-11-23
 - EN+HE: simple-living-tao (19, 12, 48, 80; simplicity / wanting less / minimalism) — 2026-11-24
 - EN+HE: tao-te-ching-on-anger (68, 79, 8, 76, 63; anger, conflict, resentment) — 2026-11-25
+- EN+HE: tao-te-ching-on-fear (67, 73, 13, 33, 16; fear, courage, anxiety) — 2026-11-26
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -27,8 +28,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng).
-- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), the One (10, 22, 39, 42), heaven and earth / tian (5, 7, 25), knowing the masculine, keeping the feminine (28).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng), heaven (tian), the-one (yi).
+- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), knowing the masculine, keeping the feminine (28), straw dogs (5), the myriad things (wanwu; 1, 40, 42), the dark virtue / xuan de (10, 51, 65).
 
 ---
 
@@ -136,3 +137,15 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/glossary/not-contending/ + /he/glossary/not-contending/
 **Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-25 10:00 Asia/Jerusalem (post 441261348); EN on "The Dao" 17:00 (post 441261356).
 **Idea for tomorrow:** HE journal still lags (8 vs EN 14) — translate why-the-weakest-wins to Hebrew (then add it to glossary-he water/te/softness/the-valley `journal`). Or new topic: fear / courage (ch 67 "compassionate, so I can be brave", 73 "brave in not daring"). Terms: the One, heaven (tian). Check: /he/glossary/ index JSON-LD vs EN.
+
+## 2026-11-26
+**Audit:** home, /journal/, /glossary/, /he/glossary/, /tao/67/, /he/, yesterday's EN+HE article, /glossary/softness/, sitemap, robots, llms.txt all 200; hreflang/x-default OK on paired pages. Gap: /glossary/ and /he/glossary/ indexes had only a bare DefinedTermSet (no description, no BreadcrumbList, no CollectionPage/isPartOf/about, no term @ids, no dateModified), while the journal indexes have all of these. Search: chapter 67 "compassionate, so I can be brave" / three treasures and chapter 73 "brave in daring" are common Tao Te Ching courage/fear queries.
+**Changed:**
+- Glossary indexes (EN + HE, `glossarySetLd` in src/data/glossary-ld.ts): DefinedTermSet now has description + about (Book) + term `@id`s (matching each entry's #term); added CollectionPage (isPartOf website, mainEntity → set, dateModified = newest `updated`) and BreadcrumbList.
+- Glossary: new terms heaven (tian) and the-one (yi) (EN + HE). three-treasures + returning (EN + HE) list today's article; ziran ↔ heaven and yin-and-yang ↔ the-one related; updated: 2026-11-26.
+**Published:**
+- https://silentpower.me/journal/tao-te-ching-on-fear/
+- https://silentpower.me/he/journal/tao-te-ching-on-fear/
+- https://silentpower.me/glossary/heaven/ + /he/glossary/heaven/
+- https://silentpower.me/glossary/the-one/ + /he/glossary/the-one/
+**Idea for tomorrow:** HE journal still lags (9 vs EN 15) — translate why-the-weakest-wins to Hebrew (then add it to glossary-he water/te/softness/the-valley/yin-and-yang `journal`; HE yin-and-yang has no journal links yet). Or new topic: patience / waiting (ch 15 "who can wait until the mud settles", 73 "slow, yet plans well"). Terms: straw dogs (5), the myriad things (wanwu).

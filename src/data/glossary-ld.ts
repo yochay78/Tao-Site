@@ -3,14 +3,35 @@ const SITE = 'https://silentpower.me';
 export const glossaryBase = (lang: 'en' | 'he') => (lang === 'he' ? `${SITE}/he/glossary/` : `${SITE}/glossary/`);
 const setName = (lang: 'en' | 'he') => (lang === 'he' ? 'מילון הטאו' : 'Taoism Glossary');
 
-export function glossarySetLd(lang: 'en' | 'he', items: { id: string; term: string; short: string }[]) {
+export function glossarySetLd(lang: 'en' | 'he', items: { id: string; term: string; short: string; updated?: Date }[]) {
+  const he = lang === 'he';
   const url = glossaryBase(lang);
-  return [{
-    '@context': 'https://schema.org', '@type': 'DefinedTermSet', '@id': `${url}#set`,
-    name: setName(lang), inLanguage: lang, url,
-    publisher: { '@id': `${SITE}/#org` },
-    hasDefinedTerm: items.map(i => ({ '@type': 'DefinedTerm', name: i.term, description: i.short, url: `${url}${i.id}/` })),
-  }];
+  const desc = he
+    ? 'הסברים פשוטים למושגי היסוד של הטאואיזם והטאו טה צ\'ינג, כל אחד עם תשובה קצרה וקישור לפרקים שבהם הוא מופיע.'
+    : 'Plain definitions of the key ideas in Taoism and the Tao Te Ching, each with a short direct answer and links to the chapters where it appears.';
+  const newest = items.map(i => i.updated).filter(Boolean).sort((a: any, b: any) => b - a)[0] as Date | undefined;
+  const book = { '@type': 'Book', name: 'Tao Te Ching', author: { '@type': 'Person', name: 'Laozi' } };
+  return [
+    {
+      '@context': 'https://schema.org', '@type': 'DefinedTermSet', '@id': `${url}#set`,
+      name: setName(lang), description: desc, inLanguage: lang, url,
+      publisher: { '@id': `${SITE}/#org` }, about: book,
+      hasDefinedTerm: items.map(i => ({ '@type': 'DefinedTerm', '@id': `${url}${i.id}/#term`, name: i.term, description: i.short, url: `${url}${i.id}/` })),
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': `${url}#page`,
+      name: setName(lang), description: desc, inLanguage: lang, url,
+      isPartOf: { '@id': `${SITE}/#website` }, about: book, mainEntity: { '@id': `${url}#set` },
+      ...(newest ? { dateModified: newest.toISOString() } : {}),
+    },
+    {
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: he ? 'בית' : 'Home', item: he ? `${SITE}/he/` : `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: setName(lang), item: url },
+      ],
+    },
+  ];
 }
 
 export function glossaryTermLd(o: { lang: 'en' | 'he'; id: string; term: string; aka?: string; title: string; description: string; short: string; updated: Date; faq?: { q: string; a: string }[] }) {

@@ -6,7 +6,7 @@ description: "What does the Tao Te Ching say about yin and yang? A plain explana
 short: "Yin and yang are the two complementary sides of everything: dark and light, soft and hard, receiving and giving. The Tao Te Ching names them once, in chapter 42: the myriad things carry yin and embrace yang."
 order: 6
 chapters: [42, 2, 28, 40]
-related: ["tao", "te"]
+related: ["tao", "te", "the-one"]
 journal: ["why-the-weakest-wins"]
 faq:
   - q: "Does the Tao Te Ching talk about yin and yang?"
@@ -15,7 +15,7 @@ faq:
     a: "No. They are not enemies or moral opposites. Chapter 2 says hard and easy complete each other, high and low lean on each other. Each side needs the other."
   - q: "Why does the Tao Te Ching favor the yin side?"
     a: "Because people usually overvalue the hard, bright and loud side. Chapter 28 says know the male, keep to the female, and be the valley of the world. The book keeps pointing to the soft, low and quiet side we tend to forget."
-updated: 2026-11-20
+updated: 2026-11-26
 ---
 **Two sides that need each other**
 

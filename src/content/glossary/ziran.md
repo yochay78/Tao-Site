@@ -6,7 +6,7 @@ description: "What does ziran mean in Taoism? A plain explanation of naturalness
 short: "Ziran means \"so of itself\": things being what they are and happening on their own, without being forced. Chapter 25 ends with the line that the Tao follows what is so of itself."
 order: 5
 chapters: [17, 23, 25, 51, 64]
-related: ["wu-wei", "tao", "pu"]
+related: ["wu-wei", "tao", "pu", "heaven"]
 journal: ["tao-te-ching-on-leadership", "letting-go-of-control-tao"]
 faq:
   - q: "What does ziran literally mean?"
@@ -15,7 +15,7 @@ faq:
     a: "Wu wei describes how to act: without forcing. Ziran describes what then happens: things unfold by themselves. Wu wei makes room for ziran."
   - q: "Where does ziran appear in the Tao Te Ching?"
     a: "Chapter 25 ends with the Tao following what is so of itself. Chapter 17 ends with the people saying \"we did it ourselves.\" Chapter 51 says the honor of the Tao comes of itself, not because anyone orders it."
-updated: 2026-11-20
+updated: 2026-11-26
 ---
 **So of itself**
 

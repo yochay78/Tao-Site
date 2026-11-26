@@ -7,7 +7,7 @@ short: "Returning is how the Tao moves: everything grows, reaches its fullness a
 order: 14
 chapters: [16, 25, 28, 40, 52, 14, 34]
 related: ["emptiness", "tao", "pu", "ziran", "the-valley"]
-journal: ["starting-over-tao", "how-to-stop-overthinking", "silence-and-stillness-tao"]
+journal: ["starting-over-tao", "how-to-stop-overthinking", "silence-and-stillness-tao", "tao-te-ching-on-fear"]
 faq:
   - q: "What does \"returning is the movement of the Tao\" mean?"
     a: "It is the first line of chapter 40. Nothing in nature moves in a straight line forever: tides go out and come back, leaves fall and buds return. The Tao moves in cycles, and going back to the source is part of that movement, not a failure of it."
@@ -17,7 +17,7 @@ faq:
     a: "They are two Chinese words for this idea. Fu (復) means to return or come back, and is used in chapter 16 for watching things return. Fan (反) can mean both \"return\" and \"reverse,\" and is the word in chapter 40. Many scholars read that line as saying the Tao moves both by going back and by turning things into their opposite."
   - q: "How can returning help me in daily life?"
     a: "When you feel lost, overwhelmed or forced to start over, returning means you don't have to push forward harder. First go back: to stillness, to the breath, to what you truly care about. Chapter 52 says: \"Know the children, and return to the mother.\""
-updated: 2026-11-23
+updated: 2026-11-26
 ---
 **The movement of the Tao**
 

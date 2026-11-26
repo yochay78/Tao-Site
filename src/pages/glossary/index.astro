@@ -5,7 +5,7 @@ import { glossarySetLd } from '../../data/glossary-ld';
 const byOrder = (a: any, b: any) => a.data.order - b.data.order || a.data.term.localeCompare(b.data.term);
 const g = (await getCollection('glossary')).sort(byOrder);
 const hasHe = (await getCollection('glossaryHe')).length > 0;
-const ld = glossarySetLd('en', g.map(x => ({ id: x.id, term: x.data.term, short: x.data.short })));
+const ld = glossarySetLd('en', g.map(x => ({ id: x.id, term: x.data.term, short: x.data.short, updated: x.data.updated })));
 ---
 <Base title="Taoism Glossary: Key Terms of the Tao Te Ching Explained" description="Plain definitions of the key ideas in Taoism and the Tao Te Ching: Tao, Te, wu wei, the uncarved block, yin and yang, Lao Tzu and more, each linked to the chapters where it appears." jsonLd={ld} alt={hasHe ? '/he/glossary/' : undefined}>
 <section><div class="wrap"><div class="label">Glossary</div><h1>Taoism Glossary</h1>
