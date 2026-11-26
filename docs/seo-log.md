@@ -148,4 +148,5 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/he/journal/tao-te-ching-on-fear/
 - https://silentpower.me/glossary/heaven/ + /he/glossary/heaven/
 - https://silentpower.me/glossary/the-one/ + /he/glossary/the-one/
+**Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-26 10:00 Asia/Jerusalem (post 442652883); EN on "The Dao" 17:00 (post 442653030).
 **Idea for tomorrow:** HE journal still lags (9 vs EN 15) — translate why-the-weakest-wins to Hebrew (then add it to glossary-he water/te/softness/the-valley/yin-and-yang `journal`; HE yin-and-yang has no journal links yet). Or new topic: patience / waiting (ch 15 "who can wait until the mud settles", 73 "slow, yet plans well"). Terms: straw dogs (5), the myriad things (wanwu).
