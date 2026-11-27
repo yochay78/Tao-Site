@@ -163,5 +163,6 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/he/journal/patience-tao/
 - https://silentpower.me/glossary/straw-dogs/ + /he/glossary/straw-dogs/
 - https://silentpower.me/glossary/myriad-things/ + /he/glossary/myriad-things/
+**Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-27 10:00 Asia/Jerusalem (post 443932983); EN on "The Dao" 17:00 (post 443933106).
 **Idea for tomorrow:** HE journal still lags (10 vs EN 16) — translate why-the-weakest-wins to Hebrew. Or new topic: grief / loss and impermanence (ch 23 "a whirlwind does not last the morning", 16, 5 straw dogs, 76). Terms: dark virtue (xuan de; 10, 51, 65), knowing when to stop (32, 44). Check: /faq/ and /free/ JSON-LD.
 
