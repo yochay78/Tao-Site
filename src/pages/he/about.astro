@@ -1,8 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { site } from '../../data/site';
+const ld = [
+  { '@context':'https://schema.org','@type':'AboutPage', name:'אודות Silent Power', description:"Silent Power הוא פרויקט עצמאי של יוד מם שהופך את הטאו טה צ'ינג לנגיש, בלי להפוך אותו לשטחי.", inLanguage:'he', url:'https://silentpower.me/he/about/', isPartOf:{ '@id':'https://silentpower.me/#website' }, mainEntity:{ '@type':'Organization', '@id':'https://silentpower.me/#org', name:site.name, url:'https://silentpower.me/', email:site.email, founder:{ '@type':'Person', '@id':'https://silentpower.me/#person', name:site.author, url:'https://silentpower.me/about/' }, knowsAbout:['Tao Te Ching','Lao Tzu','Taoism','Wu wei'] } },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[ { '@type':'ListItem', position:1, name:'בית', item:'https://silentpower.me/he/' }, { '@type':'ListItem', position:2, name:'אודות', item:'https://silentpower.me/he/about/' } ] },
+];
 ---
-<Base lang="he" alt="/about/" title="אודות" description="Silent Power הוא פרויקט עצמאי של יוד מם שהופך את הטאו טה צ'ינג לנגיש, בלי להפוך אותו לשטחי.">
+<Base jsonLd={ld} lang="he" alt="/about/" title="אודות" description="Silent Power הוא פרויקט עצמאי של יוד מם שהופך את הטאו טה צ'ינג לנגיש, בלי להפוך אותו לשטחי.">
 <section><div class="wrap narrow prose"><div class="label">אודות</div><h1>Silent Power</h1>
 <p>Silent Power הוא פרויקט עצמאי של יוד מם. הוא התחיל בסרטונים על הטאו טה צ'ינג וצמח לספרים, מוזיקה וספרייה הולכת וגדלה של מאמרים קצרים.</p>
 <p>המטרה פשוטה: להפוך את הטאו לנגיש בלי להפוך אותו לשטחי. שפה פשוטה, בלי מיסטיקה מופגנת, ועומק מספיק כדי שהרעיונות העתיקים עדיין יפתיעו.</p>

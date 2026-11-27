@@ -6,7 +6,7 @@ description: "What is \"the One\" in the Tao Te Ching? What \"the Tao gives birt
 short: "The One (一, yi) in the Tao Te Ching is the first undivided wholeness that comes from the Tao. Chapter 42 says \"The Tao gives birth to one,\" and chapter 39 says heaven, earth and all things became whole by attaining the One."
 order: 20
 chapters: [10, 14, 22, 39, 42]
-related: ["tao", "yin-and-yang", "heaven", "qi", "pu"]
+related: ["tao", "yin-and-yang", "heaven", "qi", "pu", "myriad-things"]
 journal: ["starting-over-tao"]
 faq:
   - q: "What does \"the Tao gives birth to one, one gives birth to two\" mean?"
@@ -17,7 +17,7 @@ faq:
     a: "Chapter 22 says the sage \"embraces the One and becomes the pattern for the world.\" It means staying whole and undivided inside, not torn between many wants. Chapter 10 asks: \"Can you hold body and soul as one and not be torn apart?\""
   - q: "What does chapter 39 say about the One?"
     a: "It says that of old, heaven attained the One and became clear, earth attained the One and became calm, the valley attained the One and became full. \"All this came from the One.\" Wholeness is what keeps each thing itself."
-updated: 2026-11-26
+updated: 2026-11-27
 ---
 **The first step out of the Tao**
 

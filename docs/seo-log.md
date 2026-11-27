@@ -13,6 +13,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: simple-living-tao (19, 12, 48, 80; simplicity / wanting less / minimalism) — 2026-11-24
 - EN+HE: tao-te-ching-on-anger (68, 79, 8, 76, 63; anger, conflict, resentment) — 2026-11-25
 - EN+HE: tao-te-ching-on-fear (67, 73, 13, 33, 16; fear, courage, anxiety) — 2026-11-26
+- EN+HE: patience-tao (15, 73, 41, 24, 64, 8; patience, waiting, timing; FAQ on the misattributed "Nature does not hurry" line) — 2026-11-27
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -28,8 +29,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng), heaven (tian), the-one (yi).
-- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), knowing the masculine, keeping the feminine (28), straw dogs (5), the myriad things (wanwu; 1, 40, 42), the dark virtue / xuan de (10, 51, 65).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng), heaven (tian), the-one (yi), straw-dogs (chu gou), myriad-things (wanwu).
+- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), knowing the masculine, keeping the feminine (28), the dark virtue / xuan de (10, 51, 65).
 
 ---
 
@@ -150,3 +151,17 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/glossary/the-one/ + /he/glossary/the-one/
 **Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-26 10:00 Asia/Jerusalem (post 442652883); EN on "The Dao" 17:00 (post 442653030).
 **Idea for tomorrow:** HE journal still lags (9 vs EN 15) — translate why-the-weakest-wins to Hebrew (then add it to glossary-he water/te/softness/the-valley/yin-and-yang `journal`; HE yin-and-yang has no journal links yet). Or new topic: patience / waiting (ch 15 "who can wait until the mud settles", 73 "slow, yet plans well"). Terms: straw dogs (5), the myriad things (wanwu).
+
+## 2026-11-27
+**Audit:** home, /journal/, /glossary/, /tao/, /he/tao/, /tao/15/, /tao/5/, /he/, /he/journal/, /he/glossary/, /about/, yesterday's EN+HE article, /glossary/the-one/, sitemap, robots, llms.txt all 200. Gaps: /tao/ and /he/tao/ (chapter indexes, key hub pages) had a bare CollectionPage (no description, isPartOf, about Book, no BreadcrumbList), generic titles, and the lede did not link to glossary/journal. /about/ + /he/about/ had no JSON-LD at all (E-E-A-T / entity signal). Search: Ch 15 "do you have the patience to wait until your mud settles" is one of the most quoted Lao Tzu lines; "Nature does not hurry, yet everything is accomplished" is widely attributed to Lao Tzu but is not in the text.
+**Changed:**
+- /tao/ + /he/tao/: CollectionPage with description + isPartOf website + about (Book); BreadcrumbList; titles "Tao Te Ching: All 81 Chapters in Plain English, Explained" / "הטאו טה צ'ינג בעברית: כל 81 הפרקים, עם הסבר פשוט"; ledes link to glossary + journal.
+- /about/ + /he/about/: AboutPage JSON-LD (mainEntity Organization #org with founder Person #person, email, knowsAbout) + BreadcrumbList.
+- Glossary: new terms straw-dogs and myriad-things (EN + HE). wu-wei + heaven list today's article; heaven ↔ straw-dogs, the-one ↔ myriad-things related; updated: 2026-11-27.
+**Published:**
+- https://silentpower.me/journal/patience-tao/
+- https://silentpower.me/he/journal/patience-tao/
+- https://silentpower.me/glossary/straw-dogs/ + /he/glossary/straw-dogs/
+- https://silentpower.me/glossary/myriad-things/ + /he/glossary/myriad-things/
+**Idea for tomorrow:** HE journal still lags (10 vs EN 16) — translate why-the-weakest-wins to Hebrew. Or new topic: grief / loss and impermanence (ch 23 "a whirlwind does not last the morning", 16, 5 straw dogs, 76). Terms: dark virtue (xuan de; 10, 51, 65), knowing when to stop (32, 44). Check: /faq/ and /free/ JSON-LD.
+

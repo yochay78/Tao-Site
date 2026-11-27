@@ -5,13 +5,17 @@ import { notes } from '../../data/tao-notes';
 import { notesHe } from '../../data/tao-notes-he';
 const have = new Set(tao.map(c => c.n));
 const list = Object.entries(notes).sort((a, b) => Number(a[0]) - Number(b[0]));
-const ld = [{ '@context':'https://schema.org','@type':'CollectionPage', name:'Tao Te Ching, chapter by chapter', inLanguage:'en', url:'https://silentpower.me/tao/', mainEntity:{ '@type':'ItemList', numberOfItems:list.length, itemListElement: list.map(([k, v], i) => ({ '@type':'ListItem', position:i+1, url:`https://silentpower.me/tao/${k}/`, name:`Chapter ${k}: ${v.title}` })) } }];
+const desc = 'All 81 chapters of the Tao Te Ching in a spare, poetic English rendering, each with a plain explanation, a short video and answers to the questions people ask most.';
+const ld = [
+  { '@context':'https://schema.org','@type':'CollectionPage', name:'Tao Te Ching: all 81 chapters', description:desc, inLanguage:'en', url:'https://silentpower.me/tao/', isPartOf:{ '@id':'https://silentpower.me/#website' }, about:{ '@type':'Book', name:'Tao Te Ching', author:{ '@type':'Person', name:'Laozi' } }, mainEntity:{ '@type':'ItemList', numberOfItems:list.length, itemListElement: list.map(([k, v], i) => ({ '@type':'ListItem', position:i+1, url:`https://silentpower.me/tao/${k}/`, name:`Chapter ${k}: ${v.title}` })) } },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[ { '@type':'ListItem', position:1, name:'Home', item:'https://silentpower.me/' }, { '@type':'ListItem', position:2, name:'Tao Te Ching', item:'https://silentpower.me/tao/' } ] },
+];
 ---
-<Base title="Tao Te Ching, chapter by chapter" description="All 81 chapters of the Tao Te Ching in a spare poetic English rendering, each with a plain explanation, short video and answers to common questions." jsonLd={ld} alt={Object.keys(notesHe).length ? '/he/tao/' : undefined}>
+<Base title="Tao Te Ching: All 81 Chapters in Plain English, Explained" description={desc} jsonLd={ld} alt={Object.keys(notesHe).length ? '/he/tao/' : undefined}>
 <section><div class="wrap">
   <div class="label">Tao Te Ching</div>
   <h1 style="font-size:clamp(2.2rem,6vw,4rem)">Chapter by chapter.</h1>
-  <p class="lede">Eighty-one short chapters. Each one with the full text, a plain explanation, a short video and the questions people ask most.</p>
+  <p class="lede">Eighty-one short chapters. Each one with the full text, a plain explanation, a short video and the questions people ask most. Key ideas are explained in the <a href="/glossary/">Taoism glossary</a>, and the <a href="/journal/">journal</a> applies them to everyday life.</p>
   <ol class="chlist prose" style="margin-top:24px;list-style:none;padding:0">{list.map(([k, v]) => <li><a href={`/tao/${k}/`}>Chapter {k}: {v.title}</a></li>)}</ol>
   <h2 style="margin-top:40px;font-size:1.3rem">Jump to a chapter</h2>
   <div class="taogrid">{Array.from({length: TOTAL}, (_, i) => i + 1).map(n => have.has(n) ? <a href={`/tao/${n}/`}>{n}</a> : <span class="off">{n}</span>)}</div>

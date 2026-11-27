@@ -6,8 +6,8 @@ description: "What does heaven (tian) mean in the Tao Te Ching? Why \"heaven fol
 short: "Heaven (天, tian) in the Tao Te Ching is the sky and the natural order above us, often paired with earth. It is not the highest thing: chapter 25 says \"Heaven follows the Tao,\" and \"the way of heaven\" means the quiet, impartial way nature works."
 order: 19
 chapters: [5, 7, 9, 16, 25, 73, 77, 81]
-related: ["tao", "ziran", "the-one", "not-contending", "the-nameless"]
-journal: ["tao-te-ching-on-fear", "knowing-when-enough-is-enough"]
+related: ["tao", "ziran", "the-one", "not-contending", "the-nameless", "straw-dogs"]
+journal: ["tao-te-ching-on-fear", "knowing-when-enough-is-enough", "patience-tao"]
 faq:
   - q: "What does heaven mean in Taoism?"
     a: "In the Tao Te Ching, heaven (tian) is the sky and the natural order, usually named together with earth. It is not a paradise or a personal god. Chapter 25 places it under the Tao: \"Earth follows heaven. Heaven follows the Tao.\""
@@ -17,7 +17,7 @@ faq:
     a: "Chapter 5 says heaven and earth \"treat the myriad things like straw dogs.\" Straw dogs were ritual objects, honored and then put aside. Nature does not play favorites; it is impartial. The sage is impartial in the same way."
   - q: "What does \"heaven's net is vast\" mean?"
     a: "It closes chapter 73: \"Heaven's net is vast. Wide-meshed, yet nothing slips through.\" The natural order looks loose and slow, yet in the end everything finds its consequence."
-updated: 2026-11-26
+updated: 2026-11-27
 ---
 **The sky and the order above us**
 

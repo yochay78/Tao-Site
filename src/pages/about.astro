@@ -1,8 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
+const ld = [
+  { '@context':'https://schema.org','@type':'AboutPage', name:'About Silent Power', description:'Silent Power is an independent project by Yod Mem making the Tao Te Ching accessible without making it shallow.', inLanguage:'en', url:'https://silentpower.me/about/', isPartOf:{ '@id':'https://silentpower.me/#website' }, mainEntity:{ '@type':'Organization', '@id':'https://silentpower.me/#org', name:site.name, url:'https://silentpower.me/', email:site.email, founder:{ '@type':'Person', '@id':'https://silentpower.me/#person', name:site.author, url:'https://silentpower.me/about/' }, knowsAbout:['Tao Te Ching','Lao Tzu','Taoism','Wu wei'] } },
+  { '@context':'https://schema.org','@type':'BreadcrumbList', itemListElement:[ { '@type':'ListItem', position:1, name:'Home', item:'https://silentpower.me/' }, { '@type':'ListItem', position:2, name:'About', item:'https://silentpower.me/about/' } ] },
+];
 ---
-<Base alt="/he/about/" title="About" description="Silent Power is an independent project by Yod Mem making the Tao Te Ching accessible without making it shallow.">
+<Base jsonLd={ld} alt="/he/about/" title="About" description="Silent Power is an independent project by Yod Mem making the Tao Te Ching accessible without making it shallow.">
 <section><div class="wrap narrow prose"><div class="label">About</div><h1>Silent Power</h1>
 <p>Silent Power is an independent project by Yod Mem. It began as videos on the Tao Te Ching and grew into books, music and a growing library of short essays.</p>
 <p>The aim is simple: make the Tao accessible without making it shallow. Plain language, no mystical performance, and enough depth that the old ideas can still surprise you.</p>
