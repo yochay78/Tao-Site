@@ -177,4 +177,5 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - https://silentpower.me/he/journal/tao-te-ching-on-grief/
 - https://silentpower.me/glossary/dark-virtue/ + /he/glossary/dark-virtue/
 - https://silentpower.me/glossary/knowing-when-to-stop/ + /he/glossary/knowing-when-to-stop/
+**Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-28 10:00 Asia/Jerusalem (post 445146112); EN on "The Dao" 17:00 (post 445146209).
 **Idea for tomorrow:** HE journal still lags (11 vs EN 17) — translate why-the-weakest-wins to Hebrew. Or new topic: gratitude / contentment in hard times, or "the sage does not hoard" (ch 81, giving). Terms: knowing the masculine, keeping the feminine (28); xuan / the gate of mysteries (1, 6). Consider a Hebrew FAQ page (/he/faq/).
