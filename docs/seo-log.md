@@ -14,6 +14,7 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - EN+HE: tao-te-ching-on-anger (68, 79, 8, 76, 63; anger, conflict, resentment) — 2026-11-25
 - EN+HE: tao-te-ching-on-fear (67, 73, 13, 33, 16; fear, courage, anxiety) — 2026-11-26
 - EN+HE: patience-tao (15, 73, 41, 24, 64, 8; patience, waiting, timing; FAQ on the misattributed "Nature does not hurry" line) — 2026-11-27
+- EN+HE: tao-te-ching-on-grief (23, 16, 33, 5, 76; grief, loss, death, impermanence; Zhuangzi wife story; FAQ on the "all things change, nothing to hold on to" paraphrase of ch 74) — 2026-11-28
 
 ## How the Hebrew journal works
 - Hebrew articles live in `src/content/journal-he/*.md` (collection `journalHe`, cta = Hebrew product slug: effortless-he / frictionless-he).
@@ -29,8 +30,8 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 - Frontmatter: term, aka (Chinese · other spellings), title, description, short (1–2 sentence direct answer, shown as lede + used in llms.txt + DefinedTerm), order, chapters [numbers], related [glossary slugs], journal [journal slugs], faq [{q,a}], updated (date).
 - Pages: /glossary/, /glossary/<slug>/, /he/glossary/, /he/glossary/<slug>/ (DefinedTermSet / DefinedTerm + FAQPage + Breadcrumb JSON-LD). Chapter pages auto-list "Key terms in this chapter" / "מושגים בפרק הזה" from `chapters`. llms.txt + llms-full.txt include the glossary automatically. Links: footer (EN+HE) and home pages.
 - DAILY: add 1–2 new terms (EN + HE) alongside the journal article. Quote only from src/data (site translation). Historical facts only if well established; say "tradition says" / "scholars debate" where relevant.
-- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng), heaven (tian), the-one (yi), straw-dogs (chu gou), myriad-things (wanwu).
-- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing when to stop (32, 44), knowing the masculine, keeping the feminine (28), the dark virtue / xuan de (10, 51, 65).
+- Terms done: tao, te, wu-wei, pu (uncarved block), ziran, yin-and-yang, lao-tzu, zhuangzi, the-nameless (the sage), water, three-treasures, the-valley (feminine), emptiness (wu/xu), returning (fu/fan), the-mother (mu), qi (breath), softness (rou), not-contending (bu zheng), heaven (tian), the-one (yi), straw-dogs (chu gou), myriad-things (wanwu), dark-virtue (xuan de), knowing-when-to-stop (zhi zhi).
+- Next terms (ideas): Taoism vs Confucianism, the Tao Te Ching itself (manuscripts: Guodian, Mawangdui), knowing the masculine, keeping the feminine (28), the sage-ruler / small country (80), the gate of all mysteries / xuan (1, 6), non-knowing (71).
 
 ---
 
@@ -166,3 +167,14 @@ Read this first every run. Append one entry per day at the end. Avoid repeating 
 **Facebook (Metricool):** full article, link in first comment — HE on "דרך הטאו" 2026-11-27 10:00 Asia/Jerusalem (post 443932983); EN on "The Dao" 17:00 (post 443933106).
 **Idea for tomorrow:** HE journal still lags (10 vs EN 16) — translate why-the-weakest-wins to Hebrew. Or new topic: grief / loss and impermanence (ch 23 "a whirlwind does not last the morning", 16, 5 straw dogs, 76). Terms: dark virtue (xuan de; 10, 51, 65), knowing when to stop (32, 44). Check: /faq/ and /free/ JSON-LD.
 
+## 2026-11-28
+**Audit:** home, /faq/, /free/, /he/free/, /journal/, /glossary/, /he/, /tao/23/, yesterday's EN+HE article, sitemap, robots, llms.txt all 200. /faq/ already has FAQPage + BreadcrumbList (OK). Gap: /free/ and /he/free/ (lead-magnet pages) had no JSON-LD at all and weak titles ("Free Books" / "להתחיל בחינם"). Note: /he/faq/ does not exist (404) — the HE menu does not link it, so no broken link; could be built later. Search: Tao Te Ching on grief / death / letting go is a common angle; "If you realize that all things change, there is nothing you will try to hold on to" is widely credited to Lao Tzu but is a free modern rendering of ch 74.
+**Changed:**
+- /free/ + /he/free/: CollectionPage (description, isPartOf website, about Book, mainEntity ItemList of the free products → /shop/<slug>/ or /he/shop/<slug>/) + BreadcrumbList; titles "Free Tao Te Ching Books and Guides" / "להתחיל בחינם: מדריך חינמי על הטאו טה צ'ינג" and accurate descriptions (product data untouched).
+- Glossary: new terms dark-virtue and knowing-when-to-stop (EN + HE). te ↔ dark-virtue, three-treasures ↔ knowing-when-to-stop related; returning, myriad-things, straw-dogs, softness (EN + HE) list today's article; updated: 2026-11-28.
+**Published:**
+- https://silentpower.me/journal/tao-te-ching-on-grief/
+- https://silentpower.me/he/journal/tao-te-ching-on-grief/
+- https://silentpower.me/glossary/dark-virtue/ + /he/glossary/dark-virtue/
+- https://silentpower.me/glossary/knowing-when-to-stop/ + /he/glossary/knowing-when-to-stop/
+**Idea for tomorrow:** HE journal still lags (11 vs EN 17) — translate why-the-weakest-wins to Hebrew. Or new topic: gratitude / contentment in hard times, or "the sage does not hoard" (ch 81, giving). Terms: knowing the masculine, keeping the feminine (28); xuan / the gate of mysteries (1, 6). Consider a Hebrew FAQ page (/he/faq/).

@@ -7,7 +7,7 @@ short: "Softness (柔, rou) is the Tao Te Ching's word for the flexible, yieldin
 order: 17
 chapters: [10, 36, 43, 52, 76, 78]
 related: ["water", "not-contending", "wu-wei", "the-valley", "qi"]
-journal: ["tao-te-ching-on-anger", "why-the-weakest-wins"]
+journal: ["tao-te-ching-on-anger", "why-the-weakest-wins", "tao-te-ching-on-grief"]
 faq:
   - q: "What does \"the soft overcomes the hard\" mean?"
     a: "It comes from chapter 78 (and chapter 36 says the same). Water is the example: nothing is softer, yet nothing beats it against the hard and strong. Softness wins not by force but by not breaking and not stopping."
@@ -17,7 +17,7 @@ faq:
     a: "It says a person is soft and weak at birth and hard and stiff at death, and the same is true of plants and trees. So the hard and stiff are followers of death, and the soft and weak are followers of life. \"A strong tree is cut down.\""
   - q: "How can I practice softness in daily life?"
     a: "Notice where you harden: the jaw, the shoulders, the voice, a fixed opinion. Let one of them soften for a moment. Chapter 10 asks: \"Can you breathe soft as a newborn child?\" Start there."
-updated: 2026-11-25
+updated: 2026-11-28
 ---
 **The quality of living things**
 

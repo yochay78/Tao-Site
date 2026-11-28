@@ -7,7 +7,7 @@ short: "Straw dogs (芻狗, chu gou) were ritual figures made of straw in ancien
 order: 21
 chapters: [5]
 related: ["heaven", "the-nameless", "emptiness", "ziran", "myriad-things"]
-journal: []
+journal: ["tao-te-ching-on-grief"]
 faq:
   - q: "What does \"treat the myriad things like straw dogs\" mean?"
     a: "It comes from chapter 5: \"Heaven and earth are not sentimental. They treat the myriad things like straw dogs.\" Nature does not love one thing and hate another. It lets each thing have its moment and then lets it go, without clinging and without favorites."
@@ -17,7 +17,7 @@ faq:
     a: "No. \"Not sentimental\" is not the same as cruel. The sun shines on everyone, and rain falls on every field. The chapter describes an impartial nature that does not play favorites. For a person, it points to fairness and to not clinging, not to coldness."
   - q: "How does the sage treat people like straw dogs?"
     a: "Chapter 5 says the Nameless (the sage) \"treats people like straw dogs.\" A common reading: the sage serves everyone without favoritism, does not try to own or control people, and lets them go their own way when the time comes."
-updated: 2026-11-27
+updated: 2026-11-28
 ---
 **A shocking line**
 

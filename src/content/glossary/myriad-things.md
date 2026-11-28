@@ -7,7 +7,7 @@ short: "The myriad things (萬物, wanwu), often translated \"the ten thousand t
 order: 22
 chapters: [1, 5, 8, 16, 42, 76]
 related: ["tao", "the-one", "the-mother", "yin-and-yang", "returning", "straw-dogs"]
-journal: ["starting-over-tao", "why-the-weakest-wins"]
+journal: ["starting-over-tao", "why-the-weakest-wins", "tao-te-ching-on-grief"]
 faq:
   - q: "What are the ten thousand things in Taoism?"
     a: "\"The ten thousand things\" (wanwu) means all things: everything that exists, in all its variety. Ten thousand was a traditional way of saying \"countless.\" On this site the phrase is usually rendered \"the myriad things.\""
@@ -17,7 +17,7 @@ faq:
     a: "They rise, flourish and return. Chapter 16 says: \"The myriad things rise and fall and I watch them return. They flourish, and each goes back to its root.\" Returning to the root is stillness."
   - q: "Are the myriad things separate from the Tao?"
     a: "Not in the way we usually think. They come from the Tao, depend on it and return to it. Chapter 42 says they \"carry yin and embrace yang, and blend their breath into harmony.\" The Tao is not one more thing among them, but the source they all share."
-updated: 2026-11-27
+updated: 2026-11-28
 ---
 **Everything that exists**
 
